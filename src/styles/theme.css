@@ -1,0 +1,94 @@
+/*
+ * gnv.beer theme
+ *
+ * Every color, font and text size the site uses is set here. To re-theme the site,
+ * change the values in this file; site.css only refers to these names.
+ *
+ * Naming:
+ *   --color-<what it's used for>   Colors are named by job, not by hue, so a new
+ *                                  theme never leaves "--amber" holding blue.
+ *   --font-<role>                  Typefaces. Load any new font in the <head> of
+ *                                  src/pages/index.astro (the Google Fonts link).
+ *   --text-size-<role>             The type scale, smallest to largest.
+ *
+ * Light mode is the first block; dark mode overrides the colors below it.
+ * Values that refer to another setting (var(--color-text)) follow it automatically.
+ *
+ * Two colors live outside this file because browsers can't read them from CSS:
+ *   - the phone browser toolbar tint: <meta name="theme-color"> in src/pages/index.astro
+ *   - the three-glass logo: public/favicon.svg
+ * Beer colors (the glasses and tap dots) are not theme colors: each one is that beer's
+ * real color, worked out in src/lib/srm.ts.
+ */
+
+:root {
+  /* ---- Backgrounds */
+  --color-page-bg: #edf0ea; /* the page itself */
+  --color-surface-bg: #f7f9f5; /* raised areas, such as an open dropdown list */
+  --color-notice-bg: #fbf1d8; /* "couldn't refresh this brewery" notes */
+
+  /* ---- Text */
+  --color-text: #13201b; /* body text, brewery names, beer names */
+  --color-text-muted: #4c5c55; /* addresses, times, beer styles, footer */
+  --color-link: #1d6a5c; /* links and "Show all" */
+
+  /* ---- Lines */
+  --color-line-strong: var(--color-text); /* brewery dividers, footer rule, control outlines */
+  --color-line-faint: #c9d3cc; /* thin lines between list rows */
+  --color-section-rule: var(--color-accent); /* line under "Food trucks", "Happening", "On tap" */
+
+  /* ---- Accent: the wordmark dot, active filters, "Featured" tag, focus rings */
+  --color-accent: #e4a21b;
+  --color-on-accent: #13201b; /* text and checkmarks placed on the accent color */
+
+  /* ---- Controls */
+  --color-selected-bg: var(--color-text); /* the chosen date button (Today, This weekend…) */
+  --color-selected-text: var(--color-page-bg);
+  --color-focus: var(--color-accent); /* keyboard focus ring */
+  --color-focus-on-accent: var(--color-text); /* focus ring on a control that's already accent-colored */
+
+  /* ---- Status */
+  --color-status-open: #2e7d4f; /* "Open until 9 PM" */
+
+  /* ---- Beer glasses and tap dots (the fill is each beer's own color) */
+  --color-glass-foam: #f6efdc;
+  --color-glass-edge: rgb(19 32 27 / 0.28);
+  --color-swatch-edge: rgb(0 0 0 / 0.12); /* outline on the small tap-list dots */
+
+  /* ---- Fonts */
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif; /* wordmark, brewery names, section headings */
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif; /* everything else */
+
+  /* ---- Text sizes */
+  --text-size-small: 0.875rem; /* labels, times, styles, footer */
+  --text-size-base: 1rem; /* body text */
+  --text-size-large: 1.2rem; /* date line, summary sentence */
+  --text-size-title: clamp(2rem, 6vw, 2.75rem); /* brewery names */
+  --text-size-wordmark: clamp(4rem, 17vw, 8.5rem); /* "gnv.beer" */
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page-bg: #0f1714;
+    --color-surface-bg: #16211d;
+    --color-notice-bg: #2b2412;
+
+    --color-text: #e4ece8;
+    --color-text-muted: #9cafa7;
+    --color-link: #6cc3b1;
+
+    --color-line-faint: #2b3a34;
+
+    --color-accent: #f0b43a;
+    --color-on-accent: #13201b;
+
+    --color-status-open: #6fcf97;
+
+    /* Stouts are nearly black, so glasses and dots get a light edge to stay visible. */
+    --color-glass-foam: #e9e1cb;
+    --color-glass-edge: rgb(255 255 255 / 0.38);
+    --color-swatch-edge: rgb(255 255 255 / 0.16);
+  }
+}

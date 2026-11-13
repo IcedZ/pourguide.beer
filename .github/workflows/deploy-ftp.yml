@@ -1,0 +1,53 @@
+# Builds pourguide.beer and uploads it to your web host over FTP.
+#
+# One-time setup, in this repo on GitHub: Settings → Secrets and variables → Actions → New repository secret
+#   FTP_SERVER     your FastComet server hostname (cPanel → FTP Accounts → Configure FTP Client)
+#   FTP_USERNAME   an FTP account whose folder is pourguide.beer's document root
+#   FTP_PASSWORD
+#   FTP_DIR        ./  (the account already opens in the site's folder)
+#
+# If your host doesn't support FTPS, change `protocol: ftps` to `protocol: ftp`.
+name: Build and upload to web host
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Once a day, so the brewery and beer counts stay current.
+    # 15:07 UTC = 10:07 AM Eastern (11:07 during daylight saving time).
+    - cron: '7 15 * * *'
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Upload to web host
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_DIR }}
+          # Only changed files are sent after the first upload.
+          exclude: |
+            **/.git*
+            **/.git*/**

@@ -1,0 +1,95 @@
+---
+import { loadGuides } from '../lib/guides';
+import '../styles/theme.css';
+import '../styles/site.css';
+
+const guides = await loadGuides();
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pourguide.beer — local brewery guides</title>
+    <meta name="description" content="Local brewery guides: what’s on tap, which food trucks are parked, and what’s happening tonight, city by city." />
+    <!-- Phone browser toolbar tint. Browsers can't read CSS here, so keep it in step with --color-accent in src/styles/theme.css. -->
+    <meta name="theme-color" content="#E4A21B" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="pourguide.beer" />
+    <meta property="og:description" content="Local brewery guides, city by city." />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="pint" viewBox="0 0 20 28">
+        <path d="M1.43 5.5 H18.57 L16.6 26.2 Q16.5 27 15.7 27 H4.3 Q3.5 27 3.4 26.2 Z" fill="currentColor" stroke="none" />
+        <path d="M1 1.6 Q1 1 1.6 1 H18.4 Q19 1 19 1.6 L18.57 5.5 H1.43 Z" style="fill: var(--color-glass-foam)" stroke="none" />
+        <path d="M1 1.6 Q1 1 1.6 1 H18.4 Q19 1 19 1.6 L16.6 26.2 Q16.5 27 15.7 27 H4.3 Q3.5 27 3.4 26.2 Z" fill="none" stroke-width="0.9" />
+      </symbol>
+    </svg>
+
+    <header class="masthead">
+      <h1 class="wordmark">pourguide<span>.</span>beer</h1>
+      <p class="intro">Local brewery guides: what’s on tap, which food trucks are parked, and what’s happening tonight.</p>
+    </header>
+
+    <main class="guides">
+      {
+        guides.map((g) => (
+          <article class:list={['guide', { soon: g.status === 'soon' }]} id={g.id}>
+            <header class="g-head">
+              <h2 class="g-name">
+                {g.status === 'live' ? <a href={g.url}>{g.name}</a> : g.name}
+              </h2>
+              {g.region && <p class="g-region">{g.region}</p>}
+            </header>
+
+            {g.stats && g.stats.colors.length > 0 && (
+              <ol class="pour" aria-label={`Beers on tap in ${g.name}, pale to dark`}>
+                {g.stats.colors.map((c) => (
+                  <li style={`--c:${c}`}>
+                    <svg viewBox="0 0 20 28" aria-hidden="true"><use href="#pint" /></svg>
+                  </li>
+                ))}
+              </ol>
+            )}
+
+            {g.stats && (
+              <>
+                <p class="g-stats">
+                  {plural(g.stats.breweries.length, 'brewery', 'breweries')}, {plural(g.stats.beers, 'beer', 'beers')} on tap.
+                </p>
+                <p class="g-breweries">{g.stats.breweries.join(', ')}</p>
+              </>
+            )}
+
+            {
+              g.status === 'live' ? (
+                <p class="g-actions">
+                  <a class="open-guide" href={g.url}>Open the {g.name} guide</a>
+                  <span class="g-host">{g.host}</span>
+                </p>
+              ) : (
+                <p class="g-actions"><span class="soon-tag">Coming soon</span></p>
+              )
+            }
+          </article>
+        ))
+      }
+    </main>
+
+    <footer class="foot">
+      <p>
+        Each guide is built from the breweries’ own websites and calendars and refreshes through the day. Plans change, so check with
+        the brewery before you head out.
+      </p>
+    </footer>
+  </body>
+</html>

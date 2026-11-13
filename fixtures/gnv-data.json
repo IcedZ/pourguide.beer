@@ -1,0 +1,2080 @@
+{
+  "generatedAt": "2026-11-06T21:00:00.000Z",
+  "windowStart": "2026-11-06T05:00:00.000Z",
+  "windowEnd": "2026-11-15T05:00:00.000Z",
+  "breweries": [
+    {
+      "id": "first-magnitude",
+      "name": "First Magnitude Brewing Co.",
+      "shortName": "First Magnitude",
+      "area": "Depot Park",
+      "address": "1220 SE Veitch St, Gainesville",
+      "mapsUrl": "https://maps.google.com/?q=First+Magnitude+Brewing+Company+Gainesville",
+      "website": "https://www.fmbrewing.com/",
+      "tapsUrl": "https://www.fmbrewing.com/on-tap",
+      "calendarUrl": "https://www.fmbrewing.com/events",
+      "instagram": "https://www.instagram.com/fmbrewing/",
+      "hours": {
+        "0": [
+          "12:00",
+          "20:00"
+        ],
+        "1": null,
+        "2": [
+          "15:00",
+          "22:00"
+        ],
+        "3": [
+          "15:00",
+          "22:00"
+        ],
+        "4": [
+          "15:00",
+          "22:00"
+        ],
+        "5": [
+          "14:00",
+          "23:00"
+        ],
+        "6": [
+          "12:00",
+          "23:00"
+        ]
+      },
+      "taps": [
+        {
+          "name": "72",
+          "style": "Pale Ale",
+          "abv": 5.6,
+          "description": "Bright, citrusy, & floral with a light copper hue.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Titan's Haze",
+          "style": "Hazy IPA",
+          "abv": 7.1,
+          "description": "Lotus, Mandarina Bavaria, Nelson Sauvin, and Strata hops.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "An American Alewolf in London",
+          "style": "Extra Special Bitter",
+          "abv": 5,
+          "description": "Maris Otter base malt and East Kent Goldings hops.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Chomp",
+          "style": "Hazy IPA",
+          "abv": 6.5,
+          "description": "Juicy and tropical waves of citrus, mango, and coconut.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "I <3 Parks",
+          "style": "Hazy IPA",
+          "abv": 6.7,
+          "description": "Lemon, lime, and white flesh peach, brewed with Peacharine.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Ursa",
+          "style": "American IPA",
+          "abv": 7.1,
+          "description": "Medium-bodied, intense citrus hop flavors.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Baby Shark",
+          "style": "Session Hazy IPA",
+          "abv": 3.8,
+          "description": "Low ABV hazy with tropical notes.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Creature from the Black Lagoon",
+          "style": "black IPA",
+          "abv": 5.8,
+          "description": "Chocolate and caramel with Cascade and Citra.",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#300D04",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Quench Your Hearse",
+          "style": "Pilsner",
+          "abv": 4.8,
+          "description": "Crisp, crushable, dry finish.",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Honey Bee",
+          "style": "Citrus Blonde Ale",
+          "abv": 5.4,
+          "description": "Florida wildflower honey and orange zest.",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Vega",
+          "style": "Blonde Ale",
+          "abv": 4.9,
+          "description": "Light, clean, slightly hoppy pale golden ale.",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Wakulla",
+          "style": "Hefeweizen",
+          "abv": 5.4,
+          "description": "Banana, clove, and vanilla notes.",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "Sweater Weather",
+          "style": "Harvest Spice Amber Ale",
+          "abv": 5.7,
+          "description": "Cinnamon, nutmeg, allspice & vanilla.",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Drift",
+          "style": "Session Brown Ale",
+          "abv": 4.4,
+          "description": "Nutty, coffee, and chocolate notes.",
+          "category": "Malt Forward",
+          "notBeer": false,
+          "color": "#7A2A0E",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "The Minnow",
+          "style": "Oatmeal Raisin Cookie Imperial Stout",
+          "abv": 10.3,
+          "description": "Roasted malt with hints of raisin and coffee.",
+          "category": "Malt Forward",
+          "notBeer": false,
+          "color": "#1E0802",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "450",
+          "style": "Blended Amber Ale",
+          "abv": 4.7,
+          "description": "A blend of two core beers.",
+          "category": "Malt Forward",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Black Witch",
+          "style": "Black Rye Ale with Vanilla Beans",
+          "abv": 6.8,
+          "description": "Dark, mysterious, and sweet.",
+          "category": "Malt Forward",
+          "notBeer": false,
+          "color": "#300D04",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "I Yam Dracula",
+          "style": "Ube Sour Ale",
+          "abv": 4,
+          "description": "Ube sour, slightly tangy and salty.",
+          "category": "Sour-fruity",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Mercury in Retrograde",
+          "style": "Tart Cherry + Coconut + Lychee Sour Ale",
+          "abv": 5.5,
+          "description": "Kettle-soured wheat ale.",
+          "category": "Sour-fruity",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Brightside",
+          "style": "Hard Apple Cider",
+          "abv": 6,
+          "description": "Tart and sweet with a hint of oak.",
+          "category": "Cider",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Blackberry Strawberry",
+          "style": "Hard Cider",
+          "abv": 5.5,
+          "description": "Semi-sweet.",
+          "category": "Cider",
+          "notBeer": true,
+          "color": "#B5374C",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Blackberry + Grapefruit Session Mead",
+          "style": "Mead",
+          "abv": 5.8,
+          "description": "A lower ABV hydromel.",
+          "category": "Mead",
+          "notBeer": true,
+          "color": "#B5374C",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Chardonnay",
+          "abv": 13.5,
+          "category": "Wine",
+          "notBeer": true,
+          "color": "#EFE3A8",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Cabernet Sauvignon",
+          "abv": 13.9,
+          "category": "Wine",
+          "notBeer": true,
+          "color": "#6B1D2A",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "House Rosé",
+          "abv": 13.9,
+          "category": "Wine",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Sparkling Seltzer",
+          "description": "Rotating flavors made in-house",
+          "category": "Non-alcoholic",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "Kombucha",
+          "description": "Rotating flavors made in-house",
+          "category": "Non-alcoholic",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        }
+      ],
+      "items": [
+        {
+          "kind": "food",
+          "title": "Brazilian Barbeskew",
+          "start": "2026-11-07T17:00:00.987Z",
+          "end": "2026-11-08T02:00:00.987Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Germains",
+          "start": "2026-11-07T17:00:00.987Z",
+          "end": "2026-11-08T02:00:00.987Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "event",
+          "title": "UF vs. Oklahoma on the Big screen",
+          "start": "2026-11-08T00:45:00.000Z",
+          "end": "2026-11-08T04:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/event-calendar/11-7ufvsoklahomapng",
+          "description": "UF vs Oklahoma on the Big Screen at First Mag!"
+        },
+        {
+          "kind": "food",
+          "title": "Stubbies Sausages",
+          "start": "2026-11-08T17:00:00.743Z",
+          "end": "2026-11-09T01:00:00.743Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Frenchmen",
+          "start": "2026-11-08T17:00:00.743Z",
+          "end": "2026-11-09T01:00:00.743Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "event",
+          "title": "Wildflowers Music Fest Fundraiser",
+          "start": "2026-11-08T21:00:00.000Z",
+          "end": "2026-11-09T01:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/event-calendar/wildflowers-music-fest-fundraiser",
+          "description": "Live music from Weeds of Eden and Potato Clock, a silent auction, and face painting for the kids."
+        },
+        {
+          "kind": "food",
+          "title": "Mayflower",
+          "start": "2026-11-10T21:00:00.329Z",
+          "end": "2026-11-11T02:00:00.329Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Brazilian Barbeskew",
+          "start": "2026-11-11T21:00:00.987Z",
+          "end": "2026-11-12T02:00:00.987Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Stubbies Sausages",
+          "start": "2026-11-12T21:00:00.743Z",
+          "end": "2026-11-13T02:00:00.743Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "event",
+          "title": "Wild Green Film Festival",
+          "start": "2026-11-12T23:00:00.000Z",
+          "end": "2026-11-13T02:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/event-calendar/wild-green-film-festival"
+        },
+        {
+          "kind": "food",
+          "title": "Kalacrow Pizza",
+          "start": "2026-11-13T20:00:00.584Z",
+          "end": "2026-11-14T02:00:00.584Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Tommyknockers",
+          "start": "2026-11-13T20:00:00.584Z",
+          "end": "2026-11-14T02:00:00.584Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "The Good Life",
+          "start": "2026-11-14T17:00:00.171Z",
+          "end": "2026-11-15T02:00:00.171Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "food",
+          "title": "Taino Roots",
+          "start": "2026-11-14T17:00:00.171Z",
+          "end": "2026-11-15T02:00:00.171Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/food-trucks"
+        },
+        {
+          "kind": "event",
+          "title": "UF vs. Kentucky on the Big Screen",
+          "start": "2026-11-14T20:00:00.000Z",
+          "end": "2026-11-14T21:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.fmbrewing.com/event-calendar/uf-vs-kentucky-on-the-big-screen",
+          "description": "Come watch the UF vs. Kentucky game on the biggest screen in town!"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.757Z"
+        },
+        {
+          "name": "Events",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.789Z"
+        },
+        {
+          "name": "Food trucks",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.790Z"
+        }
+      ]
+    },
+    {
+      "id": "swamp-head",
+      "name": "Swamp Head Brewery",
+      "shortName": "Swamp Head",
+      "area": "SW 42nd Ave",
+      "address": "3650 SW 42nd Ave, Gainesville",
+      "mapsUrl": "https://maps.google.com/?q=Swamp+Head+Brewery+Gainesville",
+      "website": "https://swamphead.com/",
+      "tapsUrl": "https://swamphead.com/tasting-room/#ontap",
+      "calendarUrl": "https://swamphead.com/tasting-room/#events",
+      "instagram": "https://www.instagram.com/swamphead/",
+      "hours": {
+        "0": [
+          "12:00",
+          "20:00"
+        ],
+        "1": [
+          "15:00",
+          "22:00"
+        ],
+        "2": [
+          "15:00",
+          "22:00"
+        ],
+        "3": [
+          "15:00",
+          "22:00"
+        ],
+        "4": [
+          "15:00",
+          "22:00"
+        ],
+        "5": [
+          "12:00",
+          "23:00"
+        ],
+        "6": [
+          "12:00",
+          "23:00"
+        ]
+      },
+      "taps": [
+        {
+          "name": "Razz Apple Dippin' Stix",
+          "style": "Sour Ale",
+          "abv": 6.5,
+          "description": "A fun dip-inspired sour ale",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Pink Drink",
+          "style": "Sour Ale",
+          "abv": 5.2,
+          "description": "A sweet and fruity sour ale made with strawberry, coconut, vanilla beans, and a touch of raspberry",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Swallowtail",
+          "style": "Catharina-style Sour Ale",
+          "abv": 5.8,
+          "description": "A sour ale made with passion fruit, guava, and papaya",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#E8962E",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Lemon Eves",
+          "style": "Berliner Weisse",
+          "abv": 4.5,
+          "description": "An autumnal edition of lemon days, made with lemon, blueberry, and cardamom",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Lemon Days",
+          "style": "Berliner",
+          "abv": 4.5,
+          "description": "A light sour ale made with only real lemon juice and zest",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#E9DC7A",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "F.s.h Jam (Fsh Jam, Fish Jam)",
+          "style": "Sour Ale",
+          "abv": 6.8,
+          "description": "A sour ale made with fig, strawberry, and honey",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "A Beer of Thorns and Roses",
+          "style": "Sour Ale",
+          "abv": 6.1,
+          "description": "A cauldron-brewed sour ale of rose, raspberry, and lime",
+          "category": "Sour",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Dead Calm",
+          "style": "Milk Stout",
+          "abv": 6.5,
+          "description": "A creamy milk stout made with chocolate, coconut, graham cracker, and lactose",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#300D04",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Hoot",
+          "style": "German-style Dunkelweizen",
+          "abv": 5.3,
+          "description": "A Cross Between a Dunkel and a Hefeweizen",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#8C3610",
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "Hoggetowne Irish Red",
+          "style": "Irish Red Ale",
+          "abv": 4.8,
+          "description": "An irish-style red ale with an assertive malt aroma",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Beacon",
+          "style": "Helles Bock",
+          "abv": 7.2,
+          "description": "A strong, pale german-style lager",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#7A2A0E",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Oktoberfest",
+          "style": "German-style Marzen",
+          "abv": 5,
+          "description": "A marzen-style lager with a rich malt flavor",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Lil' Ruth",
+          "style": "Double Milk Stout",
+          "abv": 8.6,
+          "description": "A sweet double milk stout made with peanuts, chocolate, and lactose",
+          "category": "Malty",
+          "notBeer": false,
+          "color": "#300D04",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Underground",
+          "style": "Tart Cherry NEIPA",
+          "abv": 6.3,
+          "description": "Our Year-round Hazy IPA with an Addition of Tart Cherry",
+          "category": "Fruity",
+          "notBeer": false,
+          "color": "#E2A93A",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Tropical Disturbance",
+          "style": "Double IPA",
+          "abv": 8.7,
+          "description": "A Classic Double IPA, Piney on the Nose",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Down Deep",
+          "style": "WCIPA",
+          "abv": 7.3,
+          "description": "A west coast-style IPA hopped with citra, mosaic, azacca, and cascade",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Big Nose",
+          "style": "IPA",
+          "abv": 7.3,
+          "description": "Our flagship beer: a balanced, hoppy IPA with a rich malt backbone",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Understory",
+          "style": "Hazy IPA",
+          "abv": 6.7,
+          "description": "Our core hazy IPA",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Lazer Panther",
+          "style": "NEIPA",
+          "abv": 8,
+          "description": "A NEIPA with El Dorado, Azacca, & Citra Hops",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#E2A93A",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Counting Sheep",
+          "style": "New Zealand Pilsner",
+          "abv": 5.4,
+          "description": "Nectaron and nelson sauvin hops",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Gainesville Green",
+          "style": "NEIPA",
+          "abv": 7.5,
+          "description": "A Juicy Ne-style IPA Hopped with Mosaic, Citra, & Galaxy",
+          "category": "Hoppy",
+          "notBeer": false,
+          "color": "#E2A93A",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Mr. Chocula",
+          "style": "Chocolate Cereal White Stout",
+          "abv": 6.1,
+          "description": "A white stout made with chocolate cereal and lactose",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#E2A93A",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Cottontail",
+          "style": "Hefeweizen",
+          "abv": 5.2,
+          "description": "A german-style wheat ale",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "Forever Florida",
+          "style": "American Light Lager",
+          "abv": 4.5,
+          "description": "A light, easy-drinking lager",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Morning Ghoul",
+          "style": "Chai Tea Blonde Ale",
+          "abv": 5.3,
+          "description": "A spooky take on morning glow, with vanilla beans, chai tea, & lactose",
+          "category": "Light",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Jones Root Beer",
+          "style": "Non-alcoholic Root Beer",
+          "abv": 0,
+          "description": "A smooth root beer from jones soda",
+          "category": "Non-alcoholic & Guest Taps",
+          "notBeer": true,
+          "color": "#3A1408",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "Cider - Key Lime",
+          "style": "Hard Cider",
+          "abv": 5.5,
+          "description": "Key lime cider from 3 daughters brewing",
+          "category": "Non-alcoholic & Guest Taps",
+          "notBeer": true,
+          "color": "#E9DC7A",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "House-made Ginger Ale",
+          "style": "Non-alcoholic Ginger Ale",
+          "abv": 0,
+          "description": "Non-alcoholic, house-made ginger ale made with fresh ginger.",
+          "category": "Non-alcoholic & Guest Taps",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "Jacques Dumont",
+          "style": "Sauvignon Blanc",
+          "abv": 12.5,
+          "description": "Round and lush, with bracing citrus",
+          "category": "Wine",
+          "notBeer": true,
+          "color": "#EFE3A8",
+          "na": false,
+          "family": "other"
+        },
+        {
+          "name": "Markstone",
+          "style": "Cabernet Sauvignon",
+          "abv": 13,
+          "description": "Medium-bodied californian wine",
+          "category": "Wine",
+          "notBeer": true,
+          "color": "#6B1D2A",
+          "na": false,
+          "family": "other"
+        }
+      ],
+      "items": [
+        {
+          "kind": "food",
+          "title": "Mayflower",
+          "start": "2026-11-06T20:00:00.000Z",
+          "end": "2026-11-07T02:00:00.000Z",
+          "allDay": false,
+          "url": "https://swamphead.com/event/mayflower-taino-roots/"
+        },
+        {
+          "kind": "food",
+          "title": "Taino Roots",
+          "start": "2026-11-06T20:00:00.000Z",
+          "end": "2026-11-07T02:00:00.000Z",
+          "allDay": false,
+          "url": "https://swamphead.com/event/mayflower-taino-roots/"
+        },
+        {
+          "kind": "food",
+          "title": "Soul Spice",
+          "start": "2026-11-07T18:00:00.000Z",
+          "end": "2026-11-08T02:00:00.000Z",
+          "allDay": false,
+          "url": "https://swamphead.com/event/soul-spice-3/"
+        }
+      ],
+      "sources": [
+        {
+          "name": "Events & food trucks",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.791Z"
+        },
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.768Z"
+        }
+      ]
+    },
+    {
+      "id": "cypress-grove",
+      "name": "Cypress & Grove Brewing Co.",
+      "shortName": "Cypress & Grove",
+      "area": "NW 4th St",
+      "address": "1001 NW 4th St, Gainesville",
+      "mapsUrl": "https://maps.google.com/?q=Cypress+%26+Grove+Brewing+Gainesville",
+      "website": "https://www.cypressandgrove.com/",
+      "tapsUrl": "https://www.cypressandgrove.com/beer",
+      "calendarUrl": "https://www.cypressandgrove.com/calendar",
+      "instagram": "https://www.instagram.com/cypressandgrovebrewing/",
+      "hours": {
+        "0": [
+          "14:00",
+          "20:00"
+        ],
+        "1": [
+          "14:00",
+          "22:00"
+        ],
+        "2": [
+          "14:00",
+          "22:00"
+        ],
+        "3": [
+          "14:00",
+          "22:00"
+        ],
+        "4": [
+          "14:00",
+          "22:00"
+        ],
+        "5": [
+          "14:00",
+          "22:00"
+        ],
+        "6": [
+          "14:00",
+          "22:00"
+        ]
+      },
+      "taps": [
+        {
+          "name": "Well & Good",
+          "style": "West Coast style IPA",
+          "abv": 6.8,
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Prairie Ride",
+          "style": "Pale Ale",
+          "abv": 5.5,
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Keep Shining",
+          "style": "Blonde Ale",
+          "abv": 4.7,
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Crane Song",
+          "style": "Japanese Style Lager",
+          "abv": 4.5,
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        }
+      ],
+      "tapsNote": "Core lineup. Seasonal and rotating taps are posted on their Instagram.",
+      "items": [
+        {
+          "kind": "food",
+          "title": "Everyday Amore",
+          "start": "2026-11-06T22:00:00.000Z",
+          "end": "2026-11-07T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Live music: Richy Stano",
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-07T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Good Life Eats",
+          "start": "2026-11-07T15:00:00.000Z",
+          "end": "2026-11-08T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Eim Thai",
+          "start": "2026-11-08T20:00:00.000Z",
+          "end": "2026-11-09T00:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Cheffrey’s",
+          "start": "2026-11-10T22:00:00.000Z",
+          "end": "2026-11-11T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Eim Thai",
+          "start": "2026-11-12T22:00:00.000Z",
+          "end": "2026-11-13T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Cheffrey’s",
+          "start": "2026-11-13T22:00:00.000Z",
+          "end": "2026-11-14T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Live music: The Deal",
+          "start": "2026-11-14T00:00:00.000Z",
+          "end": "2026-11-14T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Verde Spice",
+          "start": "2026-11-14T15:00:00.000Z",
+          "end": "2026-11-15T02:00:00.000Z",
+          "allDay": false
+        }
+      ],
+      "sources": [
+        {
+          "name": "Calendar",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.785Z"
+        },
+        {
+          "name": "Beer list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.787Z"
+        }
+      ]
+    },
+    {
+      "id": "blackadder",
+      "name": "Blackadder Brewing Company",
+      "shortName": "Blackadder",
+      "area": "NW 60th St",
+      "address": "618 NW 60th St, Suite A, Gainesville",
+      "mapsUrl": "https://maps.google.com/?q=Blackadder+Brewing+Company+Gainesville",
+      "website": "https://www.blackadderbrewing.com/",
+      "tapsUrl": "https://www.blackadderbrewing.com/taplist",
+      "calendarUrl": "https://www.blackadderbrewing.com/events",
+      "instagram": "https://www.instagram.com/blackadderbrewing/",
+      "hours": {
+        "0": [
+          "12:00",
+          "18:00"
+        ],
+        "1": null,
+        "2": [
+          "16:00",
+          "21:00"
+        ],
+        "3": [
+          "16:00",
+          "21:00"
+        ],
+        "4": [
+          "16:00",
+          "21:00"
+        ],
+        "5": [
+          "16:00",
+          "21:00"
+        ],
+        "6": [
+          "12:00",
+          "21:00"
+        ]
+      },
+      "taps": [
+        {
+          "name": "Pumpkinywumpkiny",
+          "style": "Pumpkin",
+          "abv": 10,
+          "description": "A strong British-style beer with moderate cinnamon, clove, nutmeg and vanilla plus pumpkin.",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "specialty"
+        },
+        {
+          "name": "Date Night 2026",
+          "style": "Belgian Quadrupel",
+          "abv": 12,
+          "description": "A Belgian Quad w/ raw date sugar",
+          "notBeer": false,
+          "color": "#5D1D0B",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "Blocktoberfest",
+          "style": "Märzen",
+          "abv": 6.75,
+          "description": "Our traditional Blocktoberfest bier",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "My Blondest Friends",
+          "style": "Hefeweizen",
+          "abv": 5.5,
+          "description": "A classic German Hefeweizen",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "The Pink Rider",
+          "style": "Farmhouse Ale - Saison",
+          "abv": 5.5,
+          "description": "Saison w/ Hibiscus, Pink Peppercorns and Mosaic hops.",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "Saint Sydney",
+          "style": "Belgian Dubbel",
+          "abv": 7.5,
+          "description": "Belgian Dubbel w/ Chickory",
+          "notBeer": false,
+          "color": "#5D1D0B",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "James' Brown",
+          "style": "Brown Ale - Imperial",
+          "abv": 8.75,
+          "description": "A malty Brown Ale with mild smoky character.",
+          "notBeer": false,
+          "color": "#7A2A0E",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Queenie",
+          "style": "Red Ale - Other",
+          "abv": 6,
+          "description": "A Belgian Amber with Golden Naked Oats",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Lord Flashheart's Golden Ale",
+          "style": "Belgian Blonde",
+          "abv": 6.5,
+          "description": "A light-drinking Belgian Blonde",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "Rumpy Pumpy Pepper'd Porter",
+          "style": "Porter",
+          "abv": 7.25,
+          "description": "A Porter with Chipotle peppers for a moderate heat",
+          "notBeer": false,
+          "color": "#461507",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Magnum, Pilsner Investigator",
+          "style": "German Pils",
+          "abv": 6,
+          "description": "German Pilsner using only Magnum hops",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Saturday Night Beaver",
+          "style": "IPA - Hazy",
+          "abv": 6.5,
+          "description": "Hazy IPA",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Vaderade",
+          "style": "Schwarzbier",
+          "abv": 5,
+          "description": "A German Black Lager",
+          "notBeer": false,
+          "color": "#300D04",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Wicked Child",
+          "style": "Belgian Strong Golden Ale",
+          "abv": 14,
+          "description": "Belgian Golden Strong Ale - Schedule the Uber now...",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "Giggling Imbecile",
+          "style": "Belgian Tripel",
+          "abv": 9.75,
+          "description": "Belgian Tripel w/ Candi Syrup & Lyle's Golden Syrup",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "belgian"
+        },
+        {
+          "name": "I Cherries You",
+          "style": "Fruit Beer",
+          "abv": 7,
+          "description": "Belgian Ale w/ sweet & tart cherries",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Firm And Fruity",
+          "style": "Sour - Fruited Gose",
+          "abv": 5.5,
+          "description": "German Gose with Zinfandel Grapes and Pomegranate",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "The Snow Gose",
+          "style": "Sour - Traditional Gose",
+          "abv": 4.5,
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Eyewall",
+          "style": "IPA - Imperial",
+          "abv": 8.5,
+          "description": "Hopped with Rakau, Citra & Galaxy",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "It's Been Awhile",
+          "style": "IPA - American",
+          "abv": 6.5,
+          "description": "West Coast IPA w/ Simcoe, Mosaic & Nelson Sauvin hops",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Original Sin White Widow",
+          "style": "Non-Alcoholic, Sparkling Blackberry w/ Apple Cider Vinegar",
+          "abv": 0,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#B5374C",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "Original Sin Dragon Widow",
+          "style": "Non-Alcoholic - Cider",
+          "abv": 0.5,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "Weihenstephaner Original Helles Alkoholfrei",
+          "style": "Lager - Helles",
+          "abv": 0.5,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#F3CF5D",
+          "na": true,
+          "family": "lager"
+        },
+        {
+          "name": "Deschutes Black Butte Non-Alcoholic",
+          "style": "Porter - American",
+          "abv": 0.5,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#461507",
+          "na": true,
+          "family": "dark"
+        },
+        {
+          "name": "BrewDog Hazy AF",
+          "style": "IPA - New England",
+          "abv": 0.5,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "ipa"
+        },
+        {
+          "name": "Devil's Foot NA Margarita",
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "KOMBUCHA Gingerade",
+          "style": "Hard Kombucha",
+          "abv": 0.5,
+          "category": "Guest",
+          "notBeer": true,
+          "color": "#D9982E",
+          "na": true,
+          "family": "other"
+        }
+      ],
+      "tapsNote": "Plus 7 other guest beers, ciders and wines.",
+      "items": [
+        {
+          "kind": "food",
+          "title": "Strega Nona's Oven",
+          "start": "2026-11-06T22:00:00.000Z",
+          "end": "2026-11-07T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Murder Mystery at The Abbey",
+          "start": "2026-11-07T01:00:00.000Z",
+          "end": "2026-11-07T03:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.blackadderbrewing.com/event-details-registration/murder-mystery-at-the-abbey-2"
+        },
+        {
+          "kind": "event",
+          "title": "No, Soup For You!",
+          "start": "2026-11-07T19:00:00.000Z",
+          "end": "2026-11-07T21:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.facebook.com/events/1069032066116259",
+          "description": "Annual Soup Competition"
+        },
+        {
+          "kind": "event",
+          "title": "Belly Dancing Night",
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-08T02:00:00.000Z",
+          "allDay": false,
+          "url": "https://www.facebook.com/events/1103044272697773"
+        },
+        {
+          "kind": "food",
+          "title": "Banzo's Falafel & Hummus",
+          "start": "2026-11-08T17:00:00.000Z",
+          "end": "2026-11-08T21:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Everyday Amore",
+          "start": "2026-11-10T22:00:00.000Z",
+          "end": "2026-11-11T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Stubbie's Sausages",
+          "start": "2026-11-11T22:00:00.000Z",
+          "end": "2026-11-12T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Trivia Night",
+          "start": "2026-11-12T00:00:00.000Z",
+          "end": "2026-11-12T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Taino Roots",
+          "start": "2026-11-12T22:00:00.000Z",
+          "end": "2026-11-13T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Charity Bingo Night",
+          "start": "2026-11-13T00:00:00.000Z",
+          "end": "2026-11-13T01:30:00.000Z",
+          "allDay": false,
+          "url": "https://www.facebook.com/events/978581448145862"
+        },
+        {
+          "kind": "food",
+          "title": "Strega Nona's Oven",
+          "start": "2026-11-13T22:00:00.000Z",
+          "end": "2026-11-14T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Everyday Amore",
+          "start": "2026-11-14T22:00:00.000Z",
+          "end": "2026-11-15T01:00:00.000Z",
+          "allDay": false
+        }
+      ],
+      "sources": [
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.804Z"
+        },
+        {
+          "name": "Calendar",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.833Z"
+        }
+      ]
+    },
+    {
+      "id": "grand-scheme",
+      "name": "Grand Scheme Brewing",
+      "shortName": "Grand Scheme",
+      "area": "South Main Station",
+      "address": "619 S Main St, Unit 1B, Gainesville",
+      "mapsUrl": "https://maps.google.com/?q=Grand+Scheme+Brewing+Gainesville",
+      "website": "https://www.grandschemebrewing.com/",
+      "tapsUrl": "https://www.instagram.com/grandschemebrewing.ontap",
+      "instagram": "https://www.instagram.com/grandschemebrewing",
+      "hours": {
+        "0": [
+          "11:00",
+          "22:00"
+        ],
+        "1": [
+          "16:00",
+          "22:00"
+        ],
+        "2": [
+          "16:00",
+          "22:00"
+        ],
+        "3": [
+          "16:00",
+          "22:00"
+        ],
+        "4": [
+          "16:00",
+          "22:00"
+        ],
+        "5": [
+          "11:00",
+          "22:00"
+        ],
+        "6": [
+          "11:00",
+          "22:00"
+        ]
+      },
+      "taps": [],
+      "tapsNote": "Grand Scheme posts its tap list as an image on Instagram, so it isn't listed here yet.",
+      "items": [],
+      "sources": [
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.738Z"
+        }
+      ]
+    },
+    {
+      "id": "daft-cow",
+      "name": "Daft Cow Brewery",
+      "shortName": "Daft Cow",
+      "area": "Alachua",
+      "address": "13800 Tech City Cir, Ste 100, Alachua",
+      "mapsUrl": "https://maps.google.com/?q=Daft+Cow+Brewery+Alachua",
+      "website": "https://daftcowbrewery.com/",
+      "tapsUrl": "https://daftcowbrewery.com/beer",
+      "calendarUrl": "https://daftcowbrewery.com/food-truck-calendar",
+      "instagram": "https://www.instagram.com/daftcowbrewery/",
+      "hoursNote": "See daftcowbrewery.com for hours",
+      "taps": [
+        {
+          "name": "Ed’s Cream Ale",
+          "abv": 5.5,
+          "category": "Crisp & Refreshing",
+          "description": "Light, crisp, refreshing",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Bug",
+          "style": "Hoppy Lager",
+          "abv": 6,
+          "category": "Crisp & Refreshing",
+          "description": "Crisp lager bursting with bright hop character, moderate bitterness",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "FestiBULL",
+          "style": "Festbier",
+          "abv": 6.3,
+          "category": "Crisp & Refreshing",
+          "description": "Smooth, clean, pale German style lager",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Hinterwälder",
+          "style": "Kölsch Blonde Ale",
+          "abv": 5.4,
+          "category": "Crisp & Refreshing",
+          "description": "Clean, crisp, lightly hopped",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Ranchero Mexican Lager",
+          "abv": 5.9,
+          "category": "Crisp & Refreshing",
+          "description": "Clean, crisp, refreshing, served with a lime",
+          "notBeer": false,
+          "color": "#F3CF5D",
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Brown Cow",
+          "style": "British Brown Ale",
+          "abv": 5.3,
+          "category": "Browns & Stouts",
+          "description": "Malty, biscuit, toffee richness, light bitterness",
+          "notBeer": false,
+          "color": "#7A2A0E",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Brangus Amber Ale",
+          "abv": 5.4,
+          "category": "Browns & Stouts",
+          "description": "Perfectly blended with Ed’s and British Brown to create a smooth easy drinking amber style",
+          "notBeer": false,
+          "color": "#A44C14",
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Muddy Pig",
+          "style": "Porter",
+          "abv": 6,
+          "category": "Browns & Stouts",
+          "description": "Notes of roasted dark coffee, dark chocolate, caramel, toffee",
+          "notBeer": false,
+          "color": "#461507",
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Cash Cow",
+          "style": "Pale Ale",
+          "abv": 5.6,
+          "category": "IPA & Pale Ales",
+          "description": "Moderate bitterness and hop aroma with balanced malt character",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Cherry Bomb IPA",
+          "abv": 6.8,
+          "category": "IPA & Pale Ales",
+          "description": "Juicy, hazy, and bursting with citrus and black cherry purée",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Cow Jumped Over The Moon",
+          "style": "Hazy IPA",
+          "abv": 7.1,
+          "category": "IPA & Pale Ales",
+          "description": "A Hazy IPA brewed with Mosaic and Galaxy hops",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Sunny Dayz",
+          "style": "Hazy IPA",
+          "abv": 5,
+          "category": "IPA & Pale Ales",
+          "description": "Light body and loaded with Citra hops",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Liquid Therapy",
+          "style": "Hazy IPA",
+          "abv": 7.2,
+          "category": "IPA & Pale Ales",
+          "description": "Double Dry Hopped with Citra, Amarillo, Simcoe hops",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Tropicow",
+          "style": "Coconut Hazy IPA",
+          "abv": 5,
+          "category": "IPA & Pale Ales",
+          "description": "Juicy tropical hazy IPA loaded with Citra hops and creamy sweet coconut.",
+          "notBeer": false,
+          "color": "#D9982E",
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Mango Hefeweizen",
+          "abv": 5.4,
+          "category": "Fruit & Sour Beers",
+          "description": "Juicy burst of sweet mango with notes of banana and clove",
+          "notBeer": false,
+          "color": "#ECBC42",
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "Cherry Lime Sour",
+          "abv": 5.4,
+          "category": "Fruit & Sour Beers",
+          "description": "Tart cherry and refreshing lime. A summertime favorite",
+          "notBeer": false,
+          "color": "#B5374C",
+          "na": false,
+          "family": "sour"
+        },
+        {
+          "name": "Orange Creamsicle",
+          "style": "Sour",
+          "abv": 5.7,
+          "category": "Fruit & Sour Beers",
+          "description": "A nostalgic combination of bright, citrus orange and sweet, smooth vanilla. Handcrafted Seltzer Bold Seltzer Creations Hand crafted cocktails made with our own high ABV seltzer.",
+          "notBeer": false,
+          "color": "#E8962E",
+          "na": false,
+          "family": "sour"
+        }
+      ],
+      "items": [
+        {
+          "kind": "food",
+          "title": "Brazilian Barbeskew",
+          "start": "2026-11-06T21:00:00.000Z",
+          "end": "2026-11-07T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Live Music Clay Brooker",
+          "start": "2026-11-06T23:30:00.000Z",
+          "end": "2026-11-07T02:30:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Filipino Food Express",
+          "start": "2026-11-07T21:00:00.000Z",
+          "end": "2026-11-08T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Pizza and Beer $14",
+          "start": "2026-11-08T17:00:00.000Z",
+          "end": "2026-11-09T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "The Good Life Eats",
+          "start": "2026-11-09T21:00:00.000Z",
+          "end": "2026-11-10T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Open Mic Comedy",
+          "start": "2026-11-09T23:30:00.000Z",
+          "end": "2026-11-10T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "DB’s Rolling Dough",
+          "start": "2026-11-10T21:00:00.000Z",
+          "end": "2026-11-11T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Bingo",
+          "start": "2026-11-10T23:30:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Tommy Knockers",
+          "start": "2026-11-11T21:00:00.000Z",
+          "end": "2026-11-12T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Trivia",
+          "start": "2026-11-11T23:30:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "El Mananero",
+          "start": "2026-11-12T21:00:00.000Z",
+          "end": "2026-11-13T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Mah jongg night",
+          "start": "2026-11-12T23:00:00.000Z",
+          "end": "2026-11-13T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Monsta Lobsta",
+          "start": "2026-11-13T21:00:00.000Z",
+          "end": "2026-11-14T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Live Music The Renny’s",
+          "start": "2026-11-13T23:30:00.000Z",
+          "end": "2026-11-14T02:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Filipino Food Express",
+          "start": "2026-11-14T21:00:00.000Z",
+          "end": "2026-11-15T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Live Music Derek Newborn",
+          "start": "2026-11-14T23:00:00.000Z",
+          "end": "2026-11-15T01:00:00.000Z",
+          "allDay": false
+        }
+      ],
+      "sources": [
+        {
+          "name": "Calendar",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.819Z"
+        },
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.809Z"
+        }
+      ]
+    },
+    {
+      "id": "high-springs",
+      "name": "High Springs Brewing Company",
+      "shortName": "High Springs",
+      "area": "High Springs",
+      "address": "18562 NW 237th St, High Springs",
+      "mapsUrl": "https://maps.google.com/?q=High+Springs+Brewing+Company",
+      "website": "https://highspringsbrewing.com/",
+      "tapsUrl": "https://highspringsbrewing.com/liquid/",
+      "calendarUrl": "https://highspringsbrewing.com/events/",
+      "instagram": "https://www.instagram.com/hsbrewing/",
+      "hours": {
+        "0": [
+          "13:00",
+          "20:00"
+        ],
+        "1": null,
+        "2": [
+          "15:00",
+          "21:00"
+        ],
+        "3": [
+          "15:00",
+          "21:00"
+        ],
+        "4": [
+          "15:00",
+          "21:00"
+        ],
+        "5": [
+          "14:00",
+          "23:00"
+        ],
+        "6": [
+          "12:00",
+          "23:00"
+        ]
+      },
+      "taps": [
+        {
+          "name": "Sandy Britches",
+          "style": "Kölsch",
+          "abv": 5.2,
+          "description": "Crisp, Slightly Sweet",
+          "color": "#FFBF42",
+          "notBeer": false,
+          "na": false,
+          "family": "pale"
+        },
+        {
+          "name": "Heritage",
+          "style": "American Wheat",
+          "abv": 4.8,
+          "description": "Slight Malt & Fruit",
+          "color": "#FFD878",
+          "notBeer": false,
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "32643",
+          "style": "High Springs Common",
+          "abv": 5.2,
+          "description": "Crisp, Hoppy",
+          "color": "#FFD878",
+          "notBeer": false,
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Upstream",
+          "style": "IPA",
+          "abv": 6.5,
+          "description": "Hoppy, Malty",
+          "color": "#1F0D03",
+          "notBeer": false,
+          "na": false,
+          "family": "ipa"
+        },
+        {
+          "name": "Irish Red",
+          "style": "Irish Red",
+          "abv": 4.6,
+          "description": "Malty, Slight Caramel",
+          "color": "#A63E00",
+          "category": "Almost out",
+          "notBeer": false,
+          "na": false,
+          "family": "malty"
+        },
+        {
+          "name": "Wild Bill's",
+          "style": "Sarsaparilla",
+          "abv": 0,
+          "description": "Classic Root Beer",
+          "color": "#5E0B00",
+          "notBeer": true,
+          "na": true,
+          "family": "other"
+        },
+        {
+          "name": "High Rock",
+          "style": "Hefeweizen",
+          "abv": 4.9,
+          "description": "Bready, Clove, Banana",
+          "color": "#FFBF42",
+          "notBeer": false,
+          "na": false,
+          "family": "wheat"
+        },
+        {
+          "name": "Springstoberfest",
+          "style": "Märzen",
+          "abv": 5.4,
+          "description": "Slight Caramel, Malty",
+          "color": "#CF6900",
+          "notBeer": false,
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Campfire",
+          "style": "Oatmeal Stout",
+          "abv": 5.6,
+          "description": "Dark chocolate, Smoke, Vanilla",
+          "color": "#1F0D03",
+          "notBeer": false,
+          "na": false,
+          "family": "dark"
+        },
+        {
+          "name": "Oktoberfest",
+          "style": "Guest tap",
+          "abv": 5.5,
+          "description": "Traditional Oktoberfest",
+          "color": "#CF6900",
+          "notBeer": false,
+          "na": false,
+          "family": "lager"
+        },
+        {
+          "name": "Cider",
+          "style": "Guest tap",
+          "abv": 5,
+          "description": "3Daughters, Blake's and Cider Boys options",
+          "color": "#FFD878",
+          "notBeer": true,
+          "na": false,
+          "family": "other"
+        }
+      ],
+      "tapsNote": "Coming soon: Midnight Train, Clearly Vanilla, HB's, Springs Lite, Grapefruit Springs Lite, Train Hopper, Shandy Britches.",
+      "items": [
+        {
+          "kind": "food",
+          "title": "Tommyknockers",
+          "start": "2026-11-06",
+          "allDay": true
+        },
+        {
+          "kind": "event",
+          "title": "Dead Honey Collective from Michigan",
+          "start": "2026-11-07T00:00:00.000Z",
+          "end": "2026-11-07T03:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Swamp Religion",
+          "start": "2026-11-07",
+          "allDay": true
+        },
+        {
+          "kind": "event",
+          "title": "UF vs Oklahoma (time TBD)",
+          "start": "2026-11-07",
+          "allDay": true
+        },
+        {
+          "kind": "event",
+          "title": "Dead Honey Collective from Michigan",
+          "start": "2026-11-08T00:00:00.000Z",
+          "end": "2026-11-08T03:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "Pappy Electric Co",
+          "start": "2026-11-08T22:00:00.000Z",
+          "end": "2026-11-09T01:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "food",
+          "title": "Soulspice",
+          "start": "2026-11-10",
+          "allDay": true
+        },
+        {
+          "kind": "food",
+          "title": "Bare Bites",
+          "start": "2026-11-12",
+          "allDay": true
+        },
+        {
+          "kind": "food",
+          "title": "The Good Life Eats & Treats",
+          "start": "2026-11-13",
+          "allDay": true
+        },
+        {
+          "kind": "event",
+          "title": "Rewound",
+          "start": "2026-11-14T00:00:00.000Z",
+          "end": "2026-11-14T03:00:00.000Z",
+          "allDay": false
+        },
+        {
+          "kind": "event",
+          "title": "UF vs Kentucky Away (time TBD)",
+          "start": "2026-11-14",
+          "allDay": true
+        },
+        {
+          "kind": "food",
+          "title": "Brazilian Barbeskewers",
+          "start": "2026-11-14",
+          "allDay": true
+        },
+        {
+          "kind": "event",
+          "title": "Been There Done That",
+          "start": "2026-11-15T00:00:00.000Z",
+          "end": "2026-11-15T03:00:00.000Z",
+          "allDay": false
+        }
+      ],
+      "sources": [
+        {
+          "name": "Tap list",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.834Z"
+        },
+        {
+          "name": "Calendar",
+          "ok": true,
+          "fetchedAt": "2026-11-13T19:12:33.829Z"
+        }
+      ]
+    }
+  ]
+}
