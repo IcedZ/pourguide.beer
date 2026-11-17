@@ -27,5 +27,4 @@ locations:
     name: Jacksonville
     region: Florida
     url: https://jax.pourguide.beer
-    # Change to "live" once jax.pourguide.beer is up; the counts and glasses appear on the next build.
-    status: soon
+    status: live
