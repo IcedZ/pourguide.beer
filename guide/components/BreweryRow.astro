@@ -83,9 +83,19 @@ const alsoText =
           ))
         }
       </ul>
-      <p class="empty" hidden={anyFoodToday}>
-        Nothing listed.{b.calendarUrl && <> <a href={b.calendarUrl} rel="noopener">Check their schedule</a></>}
-      </p>
+      {
+        b.kitchen ? (
+          // Breweries with their own kitchen: always say so, trucks or not.
+          <p class="kitchen">
+            {b.kitchen.name ? <>{b.kitchen.name}, their in-house kitchen.</> : <>In-house kitchen.</>}{' '}
+            <a href={b.kitchen.menuUrl} rel="noopener">See the menu</a>
+          </p>
+        ) : (
+          <p class="empty" hidden={anyFoodToday}>
+            Nothing listed.{b.calendarUrl && <> <a href={b.calendarUrl} rel="noopener">Check their schedule</a></>}
+          </p>
+        )
+      }
     </section>
 
     <section class="col col-events" aria-labelledby={`${b.id}-events`}>

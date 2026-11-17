@@ -74,6 +74,7 @@ const aardwolf: BreweryDef = {
 
 const boldCity: BreweryDef = {
   id: 'bold-city',
+  kitchen: { name: 'Mateo’s', menuUrl: 'https://boldcitybrewery.com/#foodmenus' },
   name: 'Bold City Brewery',
   shortName: 'Bold City',
   area: 'Rosselle St',
@@ -96,6 +97,7 @@ const boldCity: BreweryDef = {
 
 const congaree: BreweryDef = {
   id: 'congaree',
+  kitchen: { name: 'The Roost', menuUrl: 'https://www.congareeandpenn.com/reservations' },
   name: 'Congaree and Penn',
   shortName: 'Congaree & Penn',
   area: 'Northside farm',
@@ -110,6 +112,7 @@ const congaree: BreweryDef = {
 
 const engine15: BreweryDef = {
   id: 'engine-15',
+  kitchen: { menuUrl: 'https://engine15.com/food' },
   name: 'Engine 15 Brewing Co.',
   shortName: 'Engine 15',
   area: 'Jax Beach',
@@ -146,8 +149,10 @@ const engine15: BreweryDef = {
           events: 'e15-events.json',
           exceptions: 'e15-exceptions.json',
         });
-        // "Weekly Specials" (happy hour, $5 Guinness Mondays…) are deals, not things happening.
-        const items: Item[] = occ.filter((o) => !/special/i.test(o.category ?? '')).map((o) => ({
+        // Their "Weekly Specials" mix deals (happy hour, $5 Guinness Mondays…) with real nights
+        // like Trivia, so leave out only the deals.
+        const isDeal = (t: string) => /\$\s?\d|happy hour|liquid lunch|\bspecials?\b/i.test(t);
+        const items: Item[] = occ.filter((o) => !isDeal(o.title)).map((o) => ({
           kind: /food\s*truck/i.test(`${o.title} ${o.category ?? ''}`) ? 'food' : 'event',
           title: o.title,
           start: o.start,
@@ -292,6 +297,7 @@ function parseFishweirEvents(html: string, ctx: Ctx): Item[] {
 
 const flyingFish: BreweryDef = {
   id: 'flying-fish',
+  kitchen: { menuUrl: 'https://flyingfishtaphouse.com/menu' },
   name: 'Flying Fish Taphouse',
   shortName: 'Flying Fish',
   area: 'Airport Rd',
@@ -373,6 +379,7 @@ const inkFactory: BreweryDef = {
 
 const legacy: BreweryDef = {
   id: 'legacy',
+  kitchen: { menuUrl: 'https://www.legacyaleworks.com/food' },
   name: 'Legacy Ale Works',
   shortName: 'Legacy',
   area: 'Bartram Park',
@@ -443,6 +450,7 @@ const myrtle: BreweryDef = {
 
 const reve: BreweryDef = {
   id: 'reve',
+  kitchen: { menuUrl: 'https://www.revebrewing.com/menu' },
   name: 'Reve Brewing',
   shortName: 'Reve',
   area: 'Atlantic Beach',
@@ -544,6 +552,7 @@ const STRINGS_SITE = 'https://stringssportsbrewery.com/';
 
 const stringsBeach: BreweryDef = {
   id: 'strings-beach',
+  kitchen: { name: 'Strings Street Fare', menuUrl: 'https://order.toasttab.com/online/strings-sports-brewery-beaches-1618-penman-road' },
   name: 'Strings Sports Brewery – Jax Beach',
   shortName: 'Strings (Jax Beach)',
   area: 'Jax Beach',
@@ -558,6 +567,7 @@ const stringsBeach: BreweryDef = {
 
 const stringsSpringfield: BreweryDef = {
   id: 'strings-springfield',
+  kitchen: { name: 'Strings Street Fare', menuUrl: 'https://order.toasttab.com/online/strings-sports-brewery-springfield-1850-north-main-street' },
   name: 'Strings Sports Brewery – Springfield',
   shortName: 'Strings (Springfield)',
   area: 'Springfield',
@@ -572,6 +582,7 @@ const stringsSpringfield: BreweryDef = {
 
 const tepeyolot: BreweryDef = {
   id: 'tepeyolot',
+  kitchen: { menuUrl: 'https://tepeys.com/jacksonville-east-san-marco-tepeyolot-cerveceria-food-menu' },
   name: 'Tepeyolot Cerveceria',
   shortName: 'Tepeyolot',
   area: 'San Marco',
@@ -651,6 +662,7 @@ const veterans: BreweryDef = {
 
 const wickedBarley: BreweryDef = {
   id: 'wicked-barley',
+  kitchen: { menuUrl: 'https://order.toasttab.com/menu-and-pay/wicked-barley-brewing-company/welcome' },
   name: 'Wicked Barley Brewing Company',
   shortName: 'Wicked Barley',
   area: 'Baymeadows',

@@ -62,6 +62,12 @@ export interface Brewery {
   instagram?: string;
   hours?: Hours;
   hoursNote?: string;
+  /** The brewery serves food from its own kitchen. Shown in the Food trucks column with a link to the menu. */
+  kitchen?: {
+    /** The kitchen's own name, if it has one ("Mateo's"). */
+    name?: string;
+    menuUrl: string;
+  };
 }
 
 export interface BreweryData extends Brewery {

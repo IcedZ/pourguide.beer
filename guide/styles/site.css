@@ -442,7 +442,8 @@ a.item-title:hover {
 }
 
 .empty,
-.empty-taps {
+.empty-taps,
+.kitchen {
   margin: 0;
   padding: 0.3rem 0;
   color: var(--color-text-muted);

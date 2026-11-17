@@ -50,6 +50,8 @@ Each brewery is a `BreweryDef` with its address, hours and one or more `sources`
 | Squarespace menu block / events / summary blocks | `parseSqsMenu`, `parseSqsCollection`, `parseSqsMonthItems` |
 | Nothing readable | `noteOnly('Tap list', 'Where their list lives')`, plus `manual.yaml` |
 
+A brewery that serves food from its own kitchen gets `kitchen: { name?, menuUrl }`. Its Food trucks column then says so and links to the menu, whether or not trucks are listed.
+
 `loc/jax/breweries.ts` and `loc/gnv/breweries.ts` have an example of each. A fix to a parser or the page in `guide/` reaches every location on the next build.
 
 ## When something breaks
