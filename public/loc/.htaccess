@@ -1,0 +1,16 @@
+# Each city guide is served from its own subdomain (loc/gnv -> gnv.pourguide.beer).
+# Visiting the folder through the main address (pourguide.beer/loc/gnv/) would load the
+# page without its styles, so send those visitors to the subdomain instead.
+# Only requests for pourguide.beer itself are redirected; the subdomains and gnv.beer,
+# which are served from folders in here, aren't affected.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # pourguide.beer/loc/<city>/<anything>  ->  <city>.pourguide.beer/<anything>
+  RewriteCond %{HTTP_HOST} ^(www\.)?pourguide\.beer$ [NC]
+  RewriteRule ^([a-z0-9-]+)(?:/(.*))?$ https://$1.pourguide.beer/$2 [R=301,L]
+
+  # pourguide.beer/loc/  ->  pourguide.beer/
+  RewriteCond %{HTTP_HOST} ^(www\.)?pourguide\.beer$ [NC]
+  RewriteRule ^$ https://pourguide.beer/ [R=301,L]
+</IfModule>

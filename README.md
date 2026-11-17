@@ -41,7 +41,7 @@ For a new city `<id>`:
 3. In the city's own repo, set the FTP secrets so it uploads to `loc/<id>`. With an FTP account that opens in that folder, `FTP_DIR` is `./`.
 4. Add the city to `src/data/guides.yaml` here.
 
-This site's own uploads only replace files it put there itself, so they never touch `loc/`.
+This site's own uploads only replace files it put there itself. Inside `loc/`, that's just `loc/.htaccess` (from `public/loc/.htaccess`), which sends anyone who opens a guide through the main address, like `pourguide.beer/loc/gnv/`, to its subdomain. Without it, the guide would load there without its styles. It covers every city automatically, and doesn't affect the subdomains or gnv.beer. A city folder must not have an `.htaccess` that turns on `RewriteEngine`, because Apache would then skip this rule for that folder.
 
 ## Where the numbers come from
 
