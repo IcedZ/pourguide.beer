@@ -1,4 +1,10 @@
-// Runs Astro (`npm run dev`, `npm run build`, `npm run preview`).
+// Runs Astro for one site in this repo: the front page or one location.
+//
+//   node scripts/astro.mjs dev jax            jax guide, live data, http://localhost:4321
+//   node scripts/astro.mjs dev jax --fixtures same, from loc/jax/fixtures
+//   node scripts/astro.mjs dev index          the pourguide.beer front page
+//
+// `npm run build` builds everything through scripts/build-all.mjs, which calls this.
 //
 // Astro uses a few compiled helper files (.node). Some Windows PCs have an
 // Application Control / Smart App Control policy that blocks them, which shows up as
@@ -24,8 +30,19 @@ const astroArgs = process.argv.slice(2);
 const fixturesAt = astroArgs.indexOf('--fixtures');
 if (fixturesAt !== -1) {
   astroArgs.splice(fixturesAt, 1);
-  process.env.POURGUIDE_FIXTURES = '1';
+  process.env.GUIDE_FIXTURES = '1';
 }
+
+// Which site: "index", or a location id with a loc/<id>/ folder. Defaults to the front page.
+const targetAt = astroArgs.findIndex((a, i) => i > 0 && !a.startsWith('-') && (a === 'index' || existsSync(join(root, 'loc', a, 'location.json'))));
+if (targetAt !== -1) {
+  process.env.GUIDE_TARGET = astroArgs[targetAt];
+  astroArgs.splice(targetAt, 1);
+} else if (astroArgs[1] && !astroArgs[1].startsWith('-')) {
+  console.error(`No location "${astroArgs[1]}". Use "index" or a folder name from loc/.`);
+  process.exit(1);
+}
+process.env.GUIDE_TARGET ||= 'index';
 
 // Packages whose compiled helper has a WebAssembly twin, and the folder prefix
 // their compiled helper is installed under.

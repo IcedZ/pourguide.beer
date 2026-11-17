@@ -1,80 +1,111 @@
 # pourguide.beer
 
-The front door for the local brewery guides. It lists every city guide (each on its own subdomain, like `gnv.pourguide.beer`) with a link, and for live guides it shows how many breweries and beers the guide covers, plus a row of pint glasses for that city's beers, pale to dark.
-
-Built with [Astro](https://astro.build) as a static site, and styled with the same `theme.css` as the city guides.
-
-## Adding or changing a city
-
-Edit `src/data/guides.yaml`:
-
-```yaml
-guides:
-  - id: gnv
-    name: Gainesville
-    region: Florida
-    url: https://gnv.pourguide.beer
-    status: live
-  - id: ocala
-    name: Ocala
-    region: Florida
-    url: https://ocala.pourguide.beer
-    status: soon        # shown as "Coming soon", with no link
-```
-
-Cities appear in the order listed. Push the change and the site rebuilds within a couple of minutes.
-
-### Where each guide lives on the host
-
-Every city guide is its own project and repo, and uploads into its own folder under this site's folder:
+The pourguide.beer front page and every city guide, built from this one repo and uploaded together.
 
 ```
-<pourguide.beer folder>/        this site
-<pourguide.beer folder>/loc/gnv/  gnv.pourguide.beer
-<pourguide.beer folder>/loc/jax/  jax.pourguide.beer
+site/                 the pourguide.beer front page
+guide/                the city guide: page, styles, parsers and shared helpers (one copy for every city)
+shared/theme.css      colors, fonts and sizes, used by the front page and every guide
+loc/locations.yaml    the list of locations, in front-page order
+loc/<id>/             one folder per location (jax, gnv…)
+  location.json         name, address, title, the big name at the top, footer note
+  breweries.ts          that city's breweries and where each one's data comes from
+  manual.yaml           hand-entered extras (weekly nights, tap lists that aren't online)
+  placement.yaml        brewery order and paid "Featured" spots
+  fixtures/             saved copies of every source, for offline builds
+scripts/build-all.mjs builds everything into dist/
 ```
 
-For a new city `<id>`:
+`npm run build` builds every location, then the front page, and lays them out in `dist/` exactly as they go on the server:
 
-1. In cPanel, add the subdomain `<id>.pourguide.beer` with its folder set to `loc/<id>` inside pourguide.beer's folder.
-2. In Cloudflare DNS for pourguide.beer, add a record for `<id>` (a `CNAME` to `pourguide.beer`, proxied, works).
-3. In the city's own repo, set the FTP secrets so it uploads to `loc/<id>`. With an FTP account that opens in that folder, `FTP_DIR` is `./`.
-4. Add the city to `src/data/guides.yaml` here.
+```
+dist/              → pourguide.beer
+dist/loc/<id>/     → <id>.pourguide.beer
+dist/loc/.htaccess → sends pourguide.beer/loc/<id>/ to the subdomain
+```
 
-This site's own uploads only replace files it put there itself. Inside `loc/`, that's just `loc/.htaccess` (from `public/loc/.htaccess`), which sends anyone who opens a guide through the main address, like `pourguide.beer/loc/gnv/`, to its subdomain. Without it, the guide would load there without its styles. It covers every city automatically, and doesn't affect the subdomains or gnv.beer. A city folder must not have an `.htaccess` that turns on `RewriteEngine`, because Apache would then skip this rule for that folder.
+GitHub Actions does this every 4 hours and uploads `dist/` over FTP with one account.
 
-## Where the numbers come from
+## Adding a location
 
-Each city guide publishes its whole dataset at `/data.json`. When this site builds, it reads that file for every live guide and counts the breweries and beers. It rebuilds once a day, so the counts stay current.
+1. **Code:** copy `loc/jax/` to `loc/<id>/`. Edit `location.json`, replace the breweries in `breweries.ts`, and empty `manual.yaml`, `placement.yaml` and `fixtures/`.
+2. **List:** add it to `loc/locations.yaml` with `status: soon`.
+3. **Hosting:** in cPanel, add the subdomain `<id>.pourguide.beer` with its folder set to `loc/<id>` inside pourguide.beer's folder. In Cloudflare DNS for pourguide.beer, add a `CNAME` named `<id>` pointing at `pourguide.beer` (proxied).
+4. **Go live:** push. Once the subdomain loads, change it to `status: live` so the front page links to it and shows its counts.
 
-If a guide's data can't be reached, its row still appears with its name and link, just without the numbers. The build log says which address failed.
+No new repo, workflow, secrets or FTP account is needed.
 
-The data is read from `<url>/data.json`, unless the city has a `data:` line pointing somewhere else.
+### Writing a location's `breweries.ts`
 
-## Keeping the look in step with the guides
+Each brewery is a `BreweryDef` with its address, hours and one or more `sources`. A source returns any of `{ taps, tapsNote, items }`. The building blocks are in `guide/lib/kit.ts` and `guide/lib/parsers/`:
 
-`src/styles/theme.css` is a copy of the same file in the gnv guide. It holds every color, font and text size. When you change the look of the guides, copy the updated `theme.css` here too. If the accent color changes, also update `<meta name="theme-color">` in `src/pages/index.astro`.
+| The brewery uses | Use |
+|---|---|
+| Untappd for Business menu (`PreloadEmbedMenu("…", location, theme)` in the page) | `untappdTaps(location, theme, fixture)` |
+| Arryved digital menu (`commerce.arryved.com/digitalmenus/menu/<id>`) | `fetchArryvedMenu` + `parseArryvedMenu` |
+| Update.Beer (`createMenuClient("<id>")` in the site's code) | `fetchUbTaps`, `fetchUbEvents` |
+| Public Google Calendar | `expandIcs(googleIcsUrl(id))` |
+| WordPress *The Events Calendar* | `tribeItems` on `/wp-json/tribe/events/v1/events` |
+| EventsCalendar.co widget | `eventsCalendarUrl` + `expandEventsCalendar` |
+| Squarespace menu block / events / summary blocks | `parseSqsMenu`, `parseSqsCollection`, `parseSqsMonthItems` |
+| Nothing readable | `noteOnly('Tap list', 'Where their list lives')`, plus `manual.yaml` |
 
-`src/styles/site.css` holds this page's layout, and only refers to the settings in `theme.css` by name.
+`loc/jax/breweries.ts` and `loc/gnv/breweries.ts` have an example of each. A fix to a parser or the page in `guide/` reaches every location on the next build.
 
-## Running it
+## When something breaks
+
+- **One brewery source:** each one runs on its own. If it fails, the brewery falls back to the last good copy (in `.cache/`, which the workflow keeps between runs) with a short note to visitors.
+- **A whole location:** if its build fails, `build-all` uses that location's last good build (`.cache/last-good/<id>`), so it stays online unchanged. The build log says which one failed.
+- **The front page:** if it fails, the build stops and nothing is uploaded.
+
+`npm run check-sources` prints which sources worked in the last build, location by location. The workflow runs it on every build.
+
+## Running it locally
 
 ```bash
 npm install
-npm run dev              # http://localhost:4321, reads live guide data
-npm run build            # builds the site into dist/
-npm run build:fixtures   # offline, using fixtures/gnv-data.json
+npm run build                     # everything, live data → dist/
+npm run build:fixtures            # everything, from saved fixtures (no network)
+npm run dev -- jax                # one guide, live data, http://localhost:4321
+npm run dev -- jax --fixtures     # one guide, from loc/jax/fixtures
+npm run dev -- index              # the front page
+npm run check-sources
 ```
 
-### "An Application Control policy has blocked this file"
+On Windows PCs that block Astro's compiled helpers ("An Application Control policy has blocked this file"), the scripts switch the blocked ones to their WebAssembly versions automatically. See `scripts/astro.mjs`.
 
-Some Windows PCs block the compiled helper files (`.node`) that Astro uses. The npm scripts
-check for this first. For each blocked helper, they install its WebAssembly version on that
-computer only (package.json and package-lock.json stay the same), and Astro switches to it by
-itself. Helpers that aren't blocked are left alone. The site comes out the same. The GitHub
-build isn't affected. The check is in `scripts/astro.mjs`. `GUIDE_HELPERS=native` skips it,
-and `GUIDE_HELPERS=wasm` uses WebAssembly for everything.
+To refresh a location's fixtures, run a live build with `GUIDE_RECORD=1`. `GUIDE_NOW` sets the pretend "now" for fixture builds (default: `fixturesNow` in `location.json`).
 
 ## Deploying
 
-`.github/workflows/deploy-ftp.yml` builds the site and uploads it to the web host, the same way the gnv guide does. It needs its own GitHub repo and its own four secrets (`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_DIR`); the comments at the top of the file say what each one is.
+The workflow is `.github/workflows/deploy-ftp.yml`. It needs four repository secrets (**Settings → Secrets and variables → Actions**):
+
+- `FTP_SERVER`: the FastComet server hostname
+- `FTP_USERNAME` / `FTP_PASSWORD`: the FTP account for pourguide.beer's main folder
+- `FTP_DIR`: `./`
+
+The upload only sends files that changed, and only removes files it uploaded itself. A location marked `build: false` in `locations.yaml` is left alone on the server, which is how a location still deployed from somewhere else is kept out of the way.
+
+If your host only offers plain FTP, change `protocol: ftps` to `protocol: ftp` in the workflow. GitHub pauses scheduled workflows in repos with no activity for 60 days. Any commit restarts the clock.
+
+## The guide page
+
+These work the same in every location:
+
+- **Brewery order:** `loc/<id>/placement.yaml`. Breweries under `pinned` come first with a "Featured" label. The rest are shuffled on every page load.
+- **Non-alcoholic filter:** drinks at 0.5% ABV or less, or named as kombucha, soda, NA beer and so on (`isNonAlcoholic` in `guide/lib/srm.ts`). Saved in the address as `?na=1`.
+- **Style filter and ABV sort:** style families are in `guide/lib/styles.ts`. Both are saved in the address (`?style=ipa&sort=abv-desc`).
+- **Hand-entered data:** `loc/<id>/manual.yaml` adds weekly nights, one-off events and tap lists, or hides things a scraper got wrong. The format is described at the top of each file.
+- **Look:** every color, font and size is in `shared/theme.css`. Layout is in `guide/styles/site.css` and `site/styles/site.css`.
+
+Requests identify themselves as `pourguide.beer-aggregator/1.0 (+<the guide's address>)`, and scraped HTML pages are skipped if the site's `robots.txt` disallows them.
+
+## Location notes
+
+### Jacksonville (`loc/jax`)
+
+The breweries on the [Jax Ale Trail](https://www.visitjacksonville.com/jax-ale-trail/breweries/) list as of November 2026, except Disco Witch Brewing, which closed at the end of 2025. Ten publish a readable tap list. Aardwolf (PDF), Congaree and Penn, Grace Note, Green Room, Legacy (image), Myrtle Avenue, Ruby Beach, SJ Brewing, Strings and Wicked Barley don't, so their rows show address, hours and a note. Weekly nights for Bold City, Grace Note, Southern Swells, Strings Jax Beach and SJ are in `manual.yaml`. Tepeyolot's Untappd menu returned "not found" when the guide was built; it comes back on its own if they fix it.
+
+### Gainesville (`loc/gnv`)
+
+First Magnitude, Swamp Head, Cypress & Grove, Blackadder, Grand Scheme, Daft Cow and High Springs. Also served at gnv.beer, whose document root is the same `loc/gnv` folder. Grand Scheme's tap list is an image on Instagram, Cypress & Grove only lists core beers, and Daft Cow's hours aren't published in a readable form.

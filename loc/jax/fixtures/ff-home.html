@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flying Fish Taphouse | Jacksonville, FL</title>
+<style>
+:root{--navy:#061b26;--blue:#07374a;--gold:#dda22d;--cream:#f7ead0;--teal:#54b7bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:var(--navy);color:#fff}a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:10;background:#04141dcc;border-bottom:1px solid #dda22d55;backdrop-filter:blur(8px)}
+.nav{max-width:1200px;margin:auto;min-height:74px;padding:8px 22px;display:flex;align-items:center;gap:26px}
+.nav img{width:110px}.links{display:flex;gap:25px;margin-left:auto;font-weight:700}.call,.btn{background:var(--gold);color:#071821;padding:13px 20px;border-radius:7px;font-weight:900}.call{margin-left:15px}
+.hero{min-height:620px;background:linear-gradient(90deg,#04151ff2 0%,#04151fbb 44%,#04151f38 78%),url('hero.jpg') center/cover;display:flex;align-items:center}
+.wrap{max-width:1200px;width:92%;margin:auto}.hero-inner{max-width:670px;padding:70px 0}.hero-logo{width:260px;max-width:60%;filter:drop-shadow(0 10px 15px #0008)}
+.kicker{color:var(--teal);font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-family:Georgia,serif;font-size:clamp(48px,7vw,88px);line-height:.92;margin:12px 0 22px;text-transform:uppercase}.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:18px;max-width:600px;color:#eee}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn.alt{background:transparent;color:#fff;border:2px solid var(--gold)}
+.perks{background:#082d3e;border-block:1px solid var(--gold)}.perkgrid{display:grid;grid-template-columns:repeat(3,1fr)}.perk{padding:25px;text-align:center;border-right:1px solid #dda22d55}.perk:last-child{border:0}.perk b{display:block;color:var(--gold);font-size:20px;margin-bottom:6px}
+section{padding:78px 0}.title{font-family:Georgia,serif;color:var(--cream);font-size:clamp(36px,5vw,60px);margin:0 0 14px}.lead{color:#cbd4d8;max-width:720px;font-size:17px}
+.patio{background:#0a2633}.split{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}.split img{width:100%;border-radius:14px;border:1px solid #dda22d66;box-shadow:0 18px 40px #0006}
+.brews{background:#061b26}.cards{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:center}.beerphoto{width:100%;max-height:540px;object-fit:cover;border-radius:14px}.beer{padding:20px 0;border-bottom:1px solid #ffffff20}.beer h3{margin:0;color:var(--gold);font-family:Georgia,serif;font-size:25px}.beer p{margin:7px 0 0;color:#cbd4d8}
+.music{background:linear-gradient(120deg,#0a3040,#061b26)}.musicbox{border:1px solid #dda22d66;border-radius:16px;padding:40px;background:#ffffff08}
+.visit{background:#f4e7ce;color:#071821}.visit .title{color:#071821}.visit .lead{color:#34454c}.visitgrid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact{background:#fff;padding:32px;border-radius:14px;box-shadow:0 12px 30px #0002}.contact b{color:#9a6710}.contact .btn.alt{color:#071821;border-color:#9a6710;background:#fff}.contact .btn.alt:hover{background:#f4e7ce}
+footer{padding:30px 4%;text-align:center;color:#aebbc0;border-top:1px solid #ffffff18}
+.gallery{background:#04151f;padding:0}.gallerygrid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:8px}.gallerygrid img{width:100%;height:300px;object-fit:cover;display:block}.gallerygrid img:first-child{height:300px}
+@media(max-width:800px){.gallerygrid{grid-template-columns:1fr}.gallerygrid img{height:240px}.links{display:none}.nav img{width:85px}.call{font-size:13px;padding:10px 12px}.hero{min-height:600px}.hero-logo{width:190px}.perkgrid,.split,.cards,.visitgrid{grid-template-columns:1fr}.perk{border-right:0;border-bottom:1px solid #dda22d55}.split{gap:24px}section{padding:58px 0}}
+
+.food-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.food-gallery figure{margin:0;background:#0b3041;border:1px solid #dda22d55;border-radius:14px;overflow:hidden;box-shadow:0 14px 30px #0004}.food-gallery img{width:100%;height:250px;object-fit:cover;display:block}.food-gallery figcaption{padding:12px 14px;color:#f3dfb0;font-weight:700;text-align:center}.gallery-title{text-align:center;margin-top:42px}.gallery-title .title{font-size:clamp(28px,4vw,44px)}
+@media(max-width:760px){.food-gallery{grid-template-columns:1fr}.food-gallery img{height:240px}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><img src="logo.png" alt="Flying Fish Taphouse logo"><div class="links"><a href='/menu'>MENU</a><a href="#brewery">BREWERY</a><a href="#music">LIVE MUSIC</a><a href="#patio">PATIO</a><a href="#visit">CONTACT</a></div><a class="call" href="https://order.toasttab.com/online/flying-fish-taphouse-1341-airport-rd" target="_blank" rel="noopener">ORDER ONLINE</a><a class="call phone" href="tel:+19045273304">904-527-3304</a></div></nav>
+
+<header class="hero"><div class="wrap hero-inner">
+<img class="hero-logo" src="logo.png" alt="Flying Fish Taphouse">
+<div class="kicker">Jacksonville, Florida</div>
+<h1>Fresh Food.<br><em>Craft Beer.</em><br>Live Music.</h1>
+<p>Jacksonville’s neighborhood taphouse for fresh seafood, burgers, steaks, barbecue, pasta and handcrafted beer — plus live music and a pet-friendly outdoor patio.</p>
+<div class="buttons"><a class='btn' href='/menu'>VIEW OUR MENU</a><a class="btn alt" href="https://order.toasttab.com/online/flying-fish-taphouse-1341-airport-rd" target="_blank" rel="noopener">ORDER ONLINE</a><a class="btn alt" href="#music">LIVE MUSIC & EVENTS</a><a class="btn" href="https://www.toasttab.com/flying-fish-taphouse-1341-airport-rd/rewardsSignup" target="_blank" rel="noopener">JOIN OUR LOYALTY PROGRAM</a></div>
+</div></header>
+
+<div class="perks"><div class="wrap perkgrid">
+<div class="perk"><b>☀ OUTDOOR PATIO</b>Open-air dining, cold drinks and good vibes.</div>
+<div class="perk"><b>🐾 PET FRIENDLY</b>Bring your well-behaved four-legged friends to the patio.</div>
+<div class="perk"><b>♫ LIVE MUSIC</b>Great food, local entertainment and memorable nights.</div>
+</div></div>
+
+<section class="gallery" aria-label="Flying Fish Taphouse gallery"><div class="gallerygrid">
+<img src="seafood.jpg" alt="Flying Fish Taphouse seafood basket">
+<img src="oysters.jpg" alt="Fresh oysters at Flying Fish Taphouse">
+<img src="beer.jpg" alt="Craft beer flight at Flying Fish Taphouse">
+</div></section>
+
+<section id="patio" class="patio"><div class="wrap split">
+<img src="patio.png" alt="Flying Fish Taphouse outdoor patio and bar">
+<div><div class="kicker">Our Patio</div><h2 class="title">Good Food. Cold Beer. Fresh Air.</h2><p class="lead">Kick back and enjoy Jacksonville outdoors at Flying Fish Taphouse. Grab some fresh food, enjoy a cold house-brewed beer, and relax on our spacious outdoor patio.</p><div class="perk" style="margin:18px 0 20px"><b>🐾 PET FRIENDLY PATIO</b>Bring your four-legged friends — dogs are welcome on our outdoor patio.</div><div class="buttons"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Flying+Fish+Taphouse+1341+Airport+Rd+Jacksonville+FL" target="_blank" rel="noopener">GET DIRECTIONS</a></div></div>
+</div></section>
+
+<section id="brewery" class="brews"><div class="wrap cards">
+<img class="beerphoto" src="beer.jpg" alt="Craft beer flight at Flying Fish Taphouse">
+<div><div class="kicker">Handcrafted On Site</div><h2 class="title">Our Beers</h2>
+<p class="lead" style="color:#dda22d;font-weight:900;letter-spacing:1px">3 HOUSE FAVORITES • ALWAYS ON TAP</p>
+<div class="beer"><h3>Puddle Jumper Lager — 4.2% ABV</h3><p>Crisp, clean and refreshing with a smooth, easy-drinking finish.</p></div>
+<div class="beer"><h3>Hop Lobster IPA — 7.3% ABV</h3><p>Bold and hop-forward with bright citrus character and a flavorful finish.</p></div>
+<div class="beer"><h3>Ranch Road Pilsner — 5.5% ABV</h3><p>Clean, crisp and refreshing with a smooth finish.</p></div>
+<div style="margin-top:28px;padding:24px;border:1px solid #dda22d66;border-radius:14px;background:#ffffff08"><h3 style="margin:0 0 8px;color:#dda22d;font-family:Georgia,serif;font-size:26px">14 ROTATING HOUSE BEERS</h3><p class="lead" style="margin:0">There’s always something new on tap. Explore 14 additional rotating house beers, handcrafted right here at Flying Fish Taphouse.</p><div style="display:inline-block;margin-top:18px;background:#dda22d;color:#071821;padding:12px 18px;border-radius:7px;font-weight:900">17 HOUSE BEERS ON TAP</div></div>
+</div></div></section>
+
+<section id="menu" class="patio"><div class="wrap split">
+<div><div class="kicker">From Our Kitchen</div><h2 class="title">Made Fresh. Made to Order.</h2><p class="lead">From fresh seafood and steaks to smoked barbecue, burgers and pasta, there’s something for every appetite at Flying Fish Taphouse.</p><div class="buttons"><a class='btn' href='/menu'>VIEW FULL MENU</a><a class="btn alt" href="tel:+19045273304">CALL US</a></div></div>
+<img src="shrimp.jpg" alt="Seasoned shrimp at Flying Fish Taphouse">
+</div><div class="wrap gallery-title"><div class="kicker">Featured Favorites</div><h2 class="title">A Taste of Flying Fish</h2><div class="food-gallery"><figure><img src="crawfish-esquites.png" alt="Crawfish Esquites with colorful tortilla chips"><figcaption>Crawfish Esquites</figcaption></figure><figure><img src="fried-shrimp.jpg" alt="Fried shrimp platter"><figcaption>Fried Shrimp</figcaption></figure><figure><img src="fish-plate.jpg" alt="Fresh fish entrée"><figcaption>Fresh From Our Kitchen</figcaption></figure></div></div></section>
+
+<section id="music" class="music" style="background:linear-gradient(90deg,#061b26f2,#061b26cc),url('music.jpg') center/cover"><div class="wrap"><div class="musicbox"><div class="kicker">Local Bands • Great Nights</div><h2 class="title">Live Music at Flying Fish</h2><p class="lead">Come for dinner, stay for the music. Follow Flying Fish Taphouse on Facebook for upcoming live music, bands, and special events.</p><div class="buttons"><a class="btn" href="https://www.facebook.com/profile.php?id=100083332509520" target="_blank" rel="noopener noreferrer">FOLLOW US ON FACEBOOK FOR LIVE MUSIC</a></div></div></div></section>
+
+
+<section id="loyalty" class="music"><div class="wrap"><div class="musicbox">
+<div class="kicker">Flying Fish Rewards</div>
+<h2 class="title">Eat. Drink. Earn Rewards.</h2>
+<p class="lead">Join the Flying Fish Taphouse loyalty program and earn rewards when you dine with us.</p>
+<div class="buttons"><a class="btn" href="https://www.toasttab.com/flying-fish-taphouse-1341-airport-rd/rewardsSignup" target="_blank" rel="noopener">JOIN OUR LOYALTY PROGRAM</a></div>
+</div></div></section>
+
+<section id="visit" class="visit"><div class="wrap visitgrid">
+<div><div class="kicker">Visit Us</div><h2 class="title">Flying Fish Taphouse</h2><p class="lead">Restaurant • Brewery • Outdoor Patio • Live Music • Pet Friendly</p></div>
+<div class="contact"><p><b>ADDRESS</b><br>1341 Airport Rd.<br>Jacksonville, FL 32218</p><p><b>PHONE</b><br><a href="tel:+19045273304">904-527-3304</a></p><p><b>HOURS</b><br>Monday–Saturday: 11:00 AM–10:00 PM<br>Sunday: 11:00 AM–9:00 PM</p><div class="buttons"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=1341+Airport+Rd+Jacksonville+FL+32218">GET DIRECTIONS</a><a class="btn alt" href="tel:+19045273304">CALL US</a><a class="btn" target="_blank" rel="noopener" href="https://order.toasttab.com/online/flying-fish-taphouse-1341-airport-rd">ORDER ONLINE</a><a class="btn alt" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100083332509520">FOLLOW US ON FACEBOOK</a></div></div>
+</div></section>
+
+<footer>© Flying Fish Taphouse • Jacksonville, Florida</footer>
+</body></html>

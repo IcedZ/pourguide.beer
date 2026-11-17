@@ -1,5 +1,5 @@
 /*
- * gnv.beer theme
+ * pourguide.beer city guide theme (same as the other guides)
  *
  * Every color, font and text size the site uses is set here. To re-theme the site,
  * change the values in this file; site.css only refers to these names.
@@ -64,7 +64,7 @@
   --text-size-base: 1rem; /* body text */
   --text-size-large: 1.2rem; /* date line, summary sentence */
   --text-size-title: clamp(2rem, 6vw, 2.75rem); /* brewery names */
-  --text-size-wordmark: clamp(4rem, 17vw, 8.5rem); /* "gnv.beer" */
+  --text-size-wordmark: clamp(4rem, 17vw, 8.5rem); /* the city name at the top of a guide */
 
   color-scheme: light dark;
 }

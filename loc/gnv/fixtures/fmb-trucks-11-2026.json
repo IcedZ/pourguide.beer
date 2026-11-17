@@ -1,0 +1,200 @@
+[
+ {
+  "recordType": 12,
+  "title": "Frenchmen",
+  "fullUrl": "/food-truck-cal/t0",
+  "structuredContent": {
+   "startDate": 1795971600542,
+   "endDate": 1796000400542
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Soul Spice + vegan gator",
+  "fullUrl": "/food-truck-cal/t1",
+  "structuredContent": {
+   "startDate": 1795885200171,
+   "endDate": 1795917600171
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Radha’s Kitchen + verde spice",
+  "fullUrl": "/food-truck-cal/t2",
+  "structuredContent": {
+   "startDate": 1795809600584,
+   "endDate": 1795831200584
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Good Life Sausages + eddy’s patty",
+  "fullUrl": "/food-truck-cal/t3",
+  "structuredContent": {
+   "startDate": 1795640400218,
+   "endDate": 1795658400218
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Taino Roots",
+  "fullUrl": "/food-truck-cal/t4",
+  "structuredContent": {
+   "startDate": 1795554000486,
+   "endDate": 1795572000486
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "vegan gator",
+  "fullUrl": "/food-truck-cal/t5",
+  "structuredContent": {
+   "startDate": 1795381200987,
+   "endDate": 1795395600987
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Eim thai + Taino Roots",
+  "fullUrl": "/food-truck-cal/t6",
+  "structuredContent": {
+   "startDate": 1795280400171,
+   "endDate": 1795312800171
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Cheffrey's + Verde Spice",
+  "fullUrl": "/food-truck-cal/t7",
+  "structuredContent": {
+   "startDate": 1795204800938,
+   "endDate": 1795226400938
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Soul Spice",
+  "fullUrl": "/food-truck-cal/t8",
+  "structuredContent": {
+   "startDate": 1795122000171,
+   "endDate": 1795140000171
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Cheffrey's",
+  "fullUrl": "/food-truck-cal/t9",
+  "structuredContent": {
+   "startDate": 1795035600938,
+   "endDate": 1795053600938
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Tommyknockers",
+  "fullUrl": "/food-truck-cal/t10",
+  "structuredContent": {
+   "startDate": 1794949200987,
+   "endDate": 1794967200987
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Cheffrey's",
+  "fullUrl": "/food-truck-cal/t11",
+  "structuredContent": {
+   "startDate": 1794862800938,
+   "endDate": 1794880800938
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Soul Spice + Frenchmen",
+  "fullUrl": "/food-truck-cal/t12",
+  "structuredContent": {
+   "startDate": 1794762000171,
+   "endDate": 1794790800171
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "The Good Life + Taino Roots",
+  "fullUrl": "/food-truck-cal/t13",
+  "structuredContent": {
+   "startDate": 1794675600171,
+   "endDate": 1794708000171
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Kalacrow Pizza + Tommyknockers",
+  "fullUrl": "/food-truck-cal/t14",
+  "structuredContent": {
+   "startDate": 1794600000584,
+   "endDate": 1794621600584
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Stubbies Sausages",
+  "fullUrl": "/food-truck-cal/t15",
+  "structuredContent": {
+   "startDate": 1794517200743,
+   "endDate": 1794535200743
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Brazilian Barbeskew",
+  "fullUrl": "/food-truck-cal/t16",
+  "structuredContent": {
+   "startDate": 1794430800987,
+   "endDate": 1794448800987
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Mayflower",
+  "fullUrl": "/food-truck-cal/t17",
+  "structuredContent": {
+   "startDate": 1794344400329,
+   "endDate": 1794362400329
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Stubbies Sausages + Frenchmen",
+  "fullUrl": "/food-truck-cal/t18",
+  "structuredContent": {
+   "startDate": 1794157200743,
+   "endDate": 1794186000743
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Brazilian Barbeskew + Germains",
+  "fullUrl": "/food-truck-cal/t19",
+  "structuredContent": {
+   "startDate": 1794070800987,
+   "endDate": 1794103200987
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Thai US-A Roll",
+  "fullUrl": "/food-truck-cal/t20",
+  "structuredContent": {
+   "startDate": 1793912400584,
+   "endDate": 1793930400584
+  }
+ },
+ {
+  "recordType": 12,
+  "title": "Brazilian Barbeskew",
+  "fullUrl": "/food-truck-cal/t21",
+  "structuredContent": {
+   "startDate": 1793826000987,
+   "endDate": 1793840400987
+  }
+ }
+]

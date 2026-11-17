@@ -1,0 +1,535 @@
+/* pourguide.beer city guides — layout and components. Colors, fonts and sizes come from theme.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 76rem;
+  padding: 0 clamp(1rem, 4vw, 2.5rem) 4rem;
+  background: var(--color-page-bg);
+  color: var(--color-text);
+  font: 400 var(--text-size-base) / 1.5 var(--font-body);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 1.5rem;
+  padding-top: clamp(1.5rem, 5vw, 3rem);
+}
+
+.wordmark {
+  margin: 0;
+  font: 900 var(--text-size-wordmark) / 0.82 var(--font-display);
+  letter-spacing: -0.01em;
+}
+.wordmark span {
+  color: var(--color-accent);
+}
+
+/* "pourguide.beer" above the city name, linking back to the index of guides. */
+/* A short city name ("jax") with pourguide.beer above it. Leaves room for letters that reach below the line. */
+.wordmark-short {
+  margin-bottom: min(2.2rem, 4.4vw);
+}
+
+.guide-of {
+  margin: 0 0 min(1rem, 2.4vw);
+  font: 700 var(--text-size-large) / 1 var(--font-display);
+  letter-spacing: 0.02em;
+}
+.guide-of a {
+  color: inherit;
+  text-decoration: none;
+}
+.guide-of a:hover {
+  text-decoration: underline;
+}
+.guide-of span {
+  color: var(--color-accent);
+}
+
+.dateline {
+  margin: 0.5rem 0 0;
+  font-size: var(--text-size-large);
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------ range picker */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.75rem;
+}
+
+.ranges {
+  display: inline-flex;
+  border: 2px solid var(--color-line-strong);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+.ranges button {
+  font: 700 var(--text-size-small) / 1 var(--font-body);
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+.ranges button[aria-pressed='true'] {
+  background: var(--color-selected-bg);
+  color: var(--color-selected-text);
+}
+
+.summary {
+  margin: 1rem 0 2rem;
+  font-size: var(--text-size-large);
+  max-width: 40ch;
+}
+
+/* ----------------------------------------------------------------- filters */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.95rem 0.55rem 0.75rem;
+  border: 2px solid var(--color-line-strong);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: var(--text-size-small);
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.chip input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--color-text);
+  cursor: pointer;
+}
+.chip:has(input:checked) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+.chip:has(input:checked) input {
+  accent-color: var(--color-on-accent);
+}
+.chip:has(input:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.chip:has(input:checked):has(input:focus-visible) {
+  outline-color: var(--color-focus-on-accent);
+}
+.chip input:focus-visible {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Style and sort dropdowns, drawn to match the chip. */
+.select {
+  position: relative;
+  display: inline-flex;
+}
+.select select {
+  appearance: none;
+  -webkit-appearance: none;
+  font: 700 var(--text-size-small) / 1 var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-page-bg);
+  border: 2px solid var(--color-line-strong);
+  border-radius: 999px;
+  padding: 0.6rem 2.2rem 0.6rem 0.95rem;
+  cursor: pointer;
+}
+.select::after {
+  content: '';
+  position: absolute;
+  right: 0.95rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+.select select:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.select.on {
+  color: var(--color-on-accent);
+}
+.select.on select {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+.select.on select:focus-visible {
+  outline-color: var(--color-focus-on-accent);
+}
+/* The open list is drawn by the browser; give it the page's colors so the text is always readable. */
+.select option {
+  color: var(--color-text);
+  background-color: var(--color-surface-bg);
+  font-weight: 400;
+}
+.select option:checked {
+  font-weight: 700;
+}
+
+/* Phones: non-alcoholic and sort share a row, style gets its own. */
+@media (max-width: 34rem) {
+  .filters {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'na sort'
+      'style style';
+  }
+  .filters .chip {
+    grid-area: na;
+  }
+  .filters .select:has([data-control='style']) {
+    grid-area: style;
+  }
+  .filters .select:has([data-control='sort']) {
+    grid-area: sort;
+  }
+  .filters .select select {
+    width: 100%;
+    padding-right: 1.9rem;
+  }
+  .filters .select::after {
+    right: 0.8rem;
+  }
+}
+
+/* When every glass is filtered out, keep the gap above the columns. */
+.pour[hidden] + .b-cols {
+  margin-top: 1.25rem;
+}
+
+/* ----------------------------------------------------------------- brewery */
+
+.brewery {
+  border-top: 3px solid var(--color-line-strong);
+  padding: 1.25rem 0 2.25rem;
+}
+
+.b-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'name status'
+    'where where';
+  align-items: baseline;
+  gap: 0.15rem 1rem;
+}
+.b-name {
+  grid-area: name;
+  margin: 0;
+  font: 700 var(--text-size-title) / 1 var(--font-display);
+  letter-spacing: 0.005em;
+}
+.b-name a {
+  color: inherit;
+  text-decoration: none;
+}
+.b-name a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+.b-status {
+  grid-area: status;
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--text-size-small);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+.b-status[data-open='true'] {
+  color: var(--color-status-open);
+}
+.b-status[data-open='true']::before {
+  content: '';
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: 0.05em;
+}
+.b-where {
+  grid-area: where;
+  margin: 0;
+  font-size: var(--text-size-small);
+}
+.b-where a {
+  color: var(--color-text-muted);
+}
+.b-pinned {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 700;
+  font-size: 0.75rem;
+  vertical-align: 0.05em;
+}
+
+/* The pour bar: a row of pint glasses, one per beer on tap, in (roughly) its own color. */
+.pour {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 3px;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+}
+.pour li {
+  flex: none;
+  width: 1.15rem;
+  height: 1.6rem;
+  color: var(--c);
+  stroke: var(--color-glass-edge);
+}
+.pour svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ----------------------------------------------------------------- columns */
+
+.b-head + .b-cols {
+  margin-top: 1.25rem;
+}
+
+.b-cols {
+  display: grid;
+  gap: 1.75rem 2.5rem;
+}
+@media (min-width: 52rem) {
+  .b-cols {
+    grid-template-columns: 1fr 1.15fr 1.5fr;
+  }
+}
+
+/* Column headings: the display face, with a rule that starts each section. */
+.col h3 {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--color-section-rule);
+  font: 700 1.35rem / 1.1 var(--font-display);
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+.col h3 .count {
+  font: 400 var(--text-size-small) / 1 var(--font-body);
+  color: var(--color-text-muted);
+}
+
+.days,
+.days ul,
+.taps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.day + .day {
+  margin-top: 0.6rem;
+}
+.day-label {
+  display: block;
+  font-size: var(--text-size-small);
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+body[data-range='today'] .day-label {
+  display: none;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-line-faint);
+}
+.item-title {
+  font-weight: 700;
+  color: var(--color-text);
+}
+a.item-title {
+  text-decoration: none;
+}
+a.item-title:hover {
+  text-decoration: underline;
+}
+.item-time {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.empty,
+.empty-taps {
+  margin: 0;
+  padding: 0.3rem 0;
+  color: var(--color-text-muted);
+}
+
+/* Taps */
+.tap {
+  display: grid;
+  grid-template-columns: 0.7rem 1fr auto;
+  grid-template-areas:
+    'dot name abv'
+    '.   style style';
+  column-gap: 0.6rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--color-line-faint);
+}
+.tap::before {
+  content: '';
+  grid-area: dot;
+  align-self: center;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: inset 0 0 0 1px var(--color-swatch-edge);
+}
+.tap-name {
+  grid-area: name;
+  font-weight: 700;
+}
+.tap-style {
+  grid-area: style;
+  font-size: var(--text-size-small);
+  color: var(--color-text-muted);
+}
+.tap-abv {
+  grid-area: abv;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.more-btn {
+  padding: 0.45rem 0;
+  border: 0;
+  background: none;
+  font: 700 var(--text-size-base) / 1.5 var(--font-body);
+  color: var(--color-link);
+  cursor: pointer;
+}
+.more-btn::after {
+  content: ' +';
+}
+
+.also,
+.note {
+  margin: 0.5rem 0 0;
+  font-size: var(--text-size-small);
+  color: var(--color-text-muted);
+}
+
+.warn {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-notice-bg);
+  border-left: 3px solid var(--color-accent);
+  font-size: var(--text-size-small);
+}
+
+/* ------------------------------------------------------------------ footer */
+
+.foot {
+  border-top: 3px solid var(--color-line-strong);
+  padding-top: 1.25rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-size-small);
+  max-width: 60ch;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .day,
+  .empty {
+    animation: settle 160ms ease-out;
+  }
+  @keyframes settle {
+    from {
+      opacity: 0.2;
+    }
+  }
+}

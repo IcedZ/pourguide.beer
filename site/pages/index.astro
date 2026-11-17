@@ -1,6 +1,6 @@
 ---
 import { loadGuides } from '../lib/guides';
-import '../styles/theme.css';
+import '../../shared/theme.css';
 import '../styles/site.css';
 
 const guides = await loadGuides();
@@ -14,7 +14,7 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>pourguide.beer — local brewery guides</title>
     <meta name="description" content="Local brewery guides: what’s on tap, which food trucks are parked, and what’s happening tonight, city by city." />
-    <!-- Phone browser toolbar tint. Browsers can't read CSS here, so keep it in step with --color-accent in src/styles/theme.css. -->
+    <!-- Phone browser toolbar tint. Browsers can't read CSS here, so keep it in step with --color-accent in shared/theme.css. -->
     <meta name="theme-color" content="#E4A21B" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

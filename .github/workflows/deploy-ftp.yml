@@ -1,10 +1,10 @@
-# Builds pourguide.beer and uploads it to your web host over FTP.
+# Builds pourguide.beer and every city guide, and uploads them to the web host over FTP.
 #
 # One-time setup, in this repo on GitHub: Settings → Secrets and variables → Actions → New repository secret
 #   FTP_SERVER     your FastComet server hostname (cPanel → FTP Accounts → Configure FTP Client)
-#   FTP_USERNAME   an FTP account whose folder is pourguide.beer's document root
+#   FTP_USERNAME   the FTP account for pourguide.beer's main folder
 #   FTP_PASSWORD
-#   FTP_DIR        ./  (the account already opens in the site's folder)
+#   FTP_DIR        ./  (the account opens in pourguide.beer's folder; guides go in loc/<id>)
 #
 # If your host doesn't support FTPS, change `protocol: ftps` to `protocol: ftp`.
 name: Build and upload to web host
@@ -14,9 +14,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Once a day, so the brewery and beer counts stay current.
-    # 15:07 UTC = 10:07 AM Eastern (11:07 during daylight saving time).
-    - cron: '7 15 * * *'
+    # Every 4 hours. Times are UTC: 3, 7 and 11 AM, 3, 7 and 11 PM Eastern (an hour later during daylight saving time).
+    - cron: '7 */4 * * *'
 
 concurrency:
   group: deploy
@@ -25,8 +24,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      TZ: America/New_York
     steps:
       - uses: actions/checkout@v4
 
@@ -35,8 +32,20 @@ jobs:
           node-version: 22
           cache: npm
 
+      # Last good copy of each brewery source and of each location's build, so one
+      # brewery's site (or one location) being down doesn't blank anything.
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: sources-${{ github.run_id }}
+          restore-keys: sources-
+
       - run: npm ci
       - run: npm run build
+
+      - name: Report source health
+        run: node scripts/check-sources.mjs
+        continue-on-error: true
 
       - name: Upload to web host
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5

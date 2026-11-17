@@ -1,0 +1,59 @@
+# Manual additions, merged on top of what the scrapers find.
+#
+# Use this for breweries without a machine-readable source, for recurring weekly
+# events a brewery only describes in prose on its website, or to fix something
+# the scrapers got wrong.
+#
+# Times are Jacksonville local time. Dates are YYYY-MM-DD.
+#
+#   <brewery-id>:
+#     tapsNote: "Shown under the tap list"
+#     taps:                    # replaces the scraped tap list if present
+#       - { name: Some Beer, style: Blonde Ale, abv: 4.8 }
+#     items:                   # one-off food trucks / events
+#       - { kind: food, title: Some Truck, date: 2026-11-21, start: "17:00", end: "21:00" }
+#       - { kind: event, title: Trivia, date: 2026-11-18, start: "19:00" }
+#     recurring:               # weekly; weekday = sun|mon|tue|wed|thu|fri|sat
+#       - { kind: event, title: Bingo, weekday: tue, start: "18:30", until: 2027-06-01 }
+#     hide:                    # case-insensitive title patterns to drop
+#       - "staff meeting"
+#
+# Brewery ids: 2nd-bay, aardwolf, bold-city, congaree, engine-15, fishweir,
+# flying-fish, grace-note, green-room, ink-factory, legacy, mayport,
+# myrtle-avenue, reve, ruby-beach, sj, southern-swells, strings-beach,
+# strings-springfield, tepeyolot, veterans-united, wicked-barley
+#
+# The weekly nights below were copied from each brewery's website in November 2026.
+# Check them every so often; delete a line when a brewery drops a night.
+
+bold-city:
+  # boldcitybrewery.com — "Weekly Events"
+  recurring:
+    - { kind: event, title: Trivia, weekday: wed, start: "19:00" }
+    - { kind: event, title: Bingo, weekday: thu, start: "18:30" }
+
+grace-note:
+  # gracenote.beer — "Upcoming Events"
+  recurring:
+    - { kind: event, title: Open mic night, weekday: wed, start: "19:00" }
+    - { kind: event, title: Name That Tune music trivia, weekday: thu, start: "19:00" }
+
+southern-swells:
+  # southernswells.com/events-releases — Jax Beach taproom
+  recurring:
+    - { kind: event, title: Local vendor pop-ups, weekday: fri, start: "17:30" }
+    - { kind: event, title: Live music, weekday: fri, start: "18:00" }
+    - { kind: event, title: Yoga ($5), weekday: sun, start: "11:00" }
+
+strings-beach:
+  # stringssportsbrewery.com/events
+  recurring:
+    - { kind: event, title: Bingo with Zach, weekday: tue, start: "18:00", end: "19:30" }
+    - { kind: event, title: Brews & Beats live music, weekday: fri, start: "19:30", end: "22:30" }
+    - { kind: event, title: Brews & Beats live music, weekday: sat, start: "19:30", end: "22:30" }
+
+sj:
+  # From SJ Brewing's Visit Jacksonville listing (their website was down).
+  recurring:
+    - { kind: event, title: Trivia, weekday: tue, start: "19:00", end: "21:00" }
+    - { kind: event, title: Run club, weekday: wed, start: "18:30" }

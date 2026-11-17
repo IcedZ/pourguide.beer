@@ -1,0 +1,19 @@
+# Brewery order on jax.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: 2nd-bay, aardwolf, bold-city, congaree, engine-15, fishweir,
+# flying-fish, grace-note, green-room, ink-factory, legacy, mayport,
+# myrtle-avenue, reve, ruby-beach, sj, southern-swells, strings-beach,
+# strings-springfield, tepeyolot, veterans-united, wicked-barley
+#
+# Example:
+#   pinned:
+#     - fishweir
+#     - engine-15
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

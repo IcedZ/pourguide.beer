@@ -1,20 +1,23 @@
 {
   "name": "pourguide-beer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "pourguide.beer \u2014 an index of local brewery guides.",
+  "description": "pourguide.beer and its city guides, built from one repo.",
   "scripts": {
+    "build": "node scripts/build-all.mjs",
+    "build:fixtures": "node scripts/build-all.mjs --fixtures",
     "dev": "node scripts/astro.mjs dev",
-    "build": "node scripts/astro.mjs build",
-    "build:fixtures": "node scripts/astro.mjs build --fixtures",
-    "preview": "node scripts/astro.mjs preview"
+    "preview": "node scripts/astro.mjs preview",
+    "check-sources": "node scripts/check-sources.mjs"
   },
   "engines": {
     "node": ">=22.23.4"
   },
   "dependencies": {
     "astro": "^7.4.7",
+    "cheerio": "^1.2.0",
+    "ical.js": "^2.2.1",
     "yaml": "^2.9.1"
   }
 }

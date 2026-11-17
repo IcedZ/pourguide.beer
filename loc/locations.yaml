@@ -1,0 +1,31 @@
+# Every location on pourguide.beer, in the order shown on the front page.
+#
+#   id       Short name. It's the subdomain (jax → jax.pourguide.beer), the folder
+#            loc/<id>/ with that location's breweries, and the server folder loc/<id>.
+#   name     The city or region, as it should appear
+#   region   Shown under the name
+#   url      The guide's address
+#   status   live, or soon (shown on the front page without a link, as "Coming soon")
+#   build    Optional. Set to false to leave a location out of this repo's build and
+#            upload (for example while it's still deployed from somewhere else).
+#   data     Optional. Only for a location with build: false: where its data.json is,
+#            for the counts on the front page. Defaults to <url>/data.json.
+#
+# To add a location: create loc/<id>/ (copy an existing one), then add it here.
+# The README has the hosting steps.
+
+locations:
+  - id: gnv
+    name: Gainesville
+    region: Florida
+    url: https://gnv.pourguide.beer
+    status: live
+    # Still deployed from the gnv-beer repo. Remove this line when switching it over
+    # (and turn off the gnv-beer repo's workflow at the same time).
+    build: false
+  - id: jax
+    name: Jacksonville
+    region: Florida
+    url: https://jax.pourguide.beer
+    # Change to "live" once jax.pourguide.beer is up; the counts and glasses appear on the next build.
+    status: soon

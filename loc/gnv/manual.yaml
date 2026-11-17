@@ -1,0 +1,32 @@
+# Manual additions, merged on top of what the scrapers find.
+#
+# Use this for breweries without a machine-readable source (Grand Scheme),
+# for recurring weekly events a brewery only describes in prose, or to fix
+# something the scrapers got wrong.
+#
+# Times are Gainesville local time. Dates are YYYY-MM-DD.
+#
+#   <brewery-id>:
+#     tapsNote: "Shown under the tap list"
+#     taps:                    # replaces the scraped tap list if present
+#       - { name: Placebo Effect, style: Blonde Ale, abv: 4.8 }
+#     items:                   # one-off food trucks / events
+#       - { kind: food, title: Some Truck, date: 2026-11-07, start: "17:00", end: "21:00" }
+#       - { kind: event, title: Trivia, date: 2026-11-11, start: "19:00" }
+#     recurring:               # weekly; weekday = sun|mon|tue|wed|thu|fri|sat
+#       - { kind: event, title: Bingo, weekday: tue, start: "18:30", until: 2027-06-01 }
+#     hide:                    # case-insensitive title patterns to drop
+#       - "staff meeting"
+#
+# Brewery ids: first-magnitude, swamp-head, cypress-grove, blackadder,
+# grand-scheme, daft-cow, high-springs
+
+daft-cow:
+  # From daftcowbrewery.com/events — weekly nights that aren't always on their calendar.
+  recurring:
+    - { kind: event, title: Bingo, weekday: tue, start: "18:30" }
+    - { kind: event, title: Trivia, weekday: wed, start: "18:30" }
+
+grand-scheme:
+  tapsNote: >-
+    Grand Scheme posts its tap list as an image on Instagram, so it isn't listed here yet.

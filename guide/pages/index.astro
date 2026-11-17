@@ -1,0 +1,142 @@
+---
+import BreweryRow from '../components/BreweryRow.astro';
+import { getSiteData } from '../lib/aggregate';
+import { loadPlacement, orderBreweries } from '../lib/placement';
+import { FAMILIES } from '../lib/styles';
+import { TZ, dayKey, formatTime } from '../lib/time';
+import { LOCATION } from '../lib/location';
+import '../../shared/theme.css';
+import '../styles/site.css';
+
+const data = await getSiteData();
+const placement = await loadPlacement(data.breweries.map((b) => b.id));
+const breweries = orderBreweries(data.breweries, placement.pinned);
+// Only offer styles that are actually pouring somewhere, with a count.
+const familyCounts = new Map<string, number>();
+for (const b of data.breweries) for (const t of b.taps) familyCounts.set(t.family!, (familyCounts.get(t.family!) ?? 0) + 1);
+const styleOptions = FAMILIES.filter((f) => familyCounts.has(f.id)).map((f) => ({ ...f, count: familyCounts.get(f.id)! }));
+const now = new Date(data.generatedAt);
+const today = dayKey(now);
+const parts = new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(now);
+const dow = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.find((p) => p.type === 'weekday')!.value);
+const minutes = Number(parts.find((p) => p.type === 'hour')!.value) * 60 + Number(parts.find((p) => p.type === 'minute')!.value);
+const longDate = new Intl.DateTimeFormat('en-US', { timeZone: TZ, weekday: 'long', month: 'long', day: 'numeric' }).format(now);
+
+const countToday = (kind: 'food' | 'event') =>
+  data.breweries.reduce((n, b) => n + b.items.filter((i) => i.kind === kind && (i.allDay ? i.start : dayKey(i.start)) === today).length, 0);
+const trucks = countToday('food');
+const events = countToday('event');
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{LOCATION.title}</title>
+    <meta name="description" content={LOCATION.description} />
+    <!-- Phone browser toolbar tint. Browsers can't read CSS here, so keep it in step with --color-accent in shared/theme.css. -->
+    <meta name="theme-color" content="#E4A21B" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content={LOCATION.shareTitle} />
+    <meta property="og:description" content={LOCATION.shareDescription} />
+  </head>
+  <body data-range="today">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="pint" viewBox="0 0 20 28">
+        <path d="M1.43 5.5 H18.57 L16.6 26.2 Q16.5 27 15.7 27 H4.3 Q3.5 27 3.4 26.2 Z" fill="currentColor" stroke="none" />
+        <path d="M1 1.6 Q1 1 1.6 1 H18.4 Q19 1 19 1.6 L18.57 5.5 H1.43 Z" style="fill: var(--color-glass-foam)" stroke="none" />
+        <path d="M1 1.6 Q1 1 1.6 1 H18.4 Q19 1 19 1.6 L16.6 26.2 Q16.5 27 15.7 27 H4.3 Q3.5 27 3.4 26.2 Z" fill="none" stroke-width="0.9" />
+      </symbol>
+    </svg>
+    <header class="masthead">
+      <div class="brand">
+        {LOCATION.showPourguideAbove && <p class="guide-of"><a href="https://pourguide.beer">pourguide<span>.</span>beer</a></p>}
+        <h1 class:list={['wordmark', { 'wordmark-short': LOCATION.showPourguideAbove }]} set:html={LOCATION.wordmark} />
+      </div>
+      <p class="dateline" data-dateline>{longDate}</p>
+    </header>
+
+    <div class="controls">
+      <nav class="ranges" aria-label="Time range">
+        <button type="button" data-set-range="today" aria-pressed="true">Today</button>
+        <button type="button" data-set-range="weekend" aria-pressed="false">This weekend</button>
+        <button type="button" data-set-range="week" aria-pressed="false">Next 7 days</button>
+      </nav>
+      <fieldset class="filters">
+        <legend class="visually-hidden">Filter drinks</legend>
+        <label class="chip"><input type="checkbox" data-filter="na" /> Non-alcoholic</label>
+        <label class="select">
+          <span class="visually-hidden">Beer style</span>
+          <select data-control="style">
+            <option value="">All styles</option>
+            {styleOptions.map((f) => <option value={f.id}>{f.label} ({f.count})</option>)}
+          </select>
+        </label>
+        <label class="select">
+          <span class="visually-hidden">Sort drinks</span>
+          <select data-control="sort">
+            <option value="">Tap order</option>
+            <option value="abv-desc">Highest ABV</option>
+            <option value="abv-asc">Lowest ABV</option>
+          </select>
+        </label>
+      </fieldset>
+    </div>
+
+    <p class="summary" data-summary>
+      {plural(trucks, 'food truck', 'food trucks')} and {plural(events, 'event', 'events')} at {data.breweries.length} breweries today.
+    </p>
+
+    <main class="list" data-list>
+      {
+        breweries.map((b) => (
+          <BreweryRow
+            brewery={b}
+            today={today}
+            dow={dow}
+            minutes={minutes}
+            pinned={placement.pinned.includes(b.id)}
+            pinnedLabel={placement.pinnedLabel}
+          />
+        ))
+      }
+    </main>
+    <script is:inline>
+      // Shuffle the unpinned breweries on every visit. Runs before the page is first drawn, so nothing jumps.
+      (function () {
+        var list = document.querySelector('[data-list]');
+        if (!list) return;
+        var rows = Array.prototype.slice.call(list.querySelectorAll('article[data-shuffle]'));
+        for (var i = rows.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var t = rows[i]; rows[i] = rows[j]; rows[j] = t;
+        }
+        rows.forEach(function (r) { list.appendChild(r); });
+      })();
+    </script>
+
+    <footer class="foot">
+      <p>
+        Updated {formatTime(data.generatedAt)}, {new Intl.DateTimeFormat('en-US', { timeZone: TZ, month: 'short', day: 'numeric' }).format(now)}.
+        Plans change, so check with the brewery before you go out there.
+      </p>
+      <p>{LOCATION.footerNote && <Fragment set:html={LOCATION.footerNote + ' '} />}<a href="/data.json">All of this as JSON</a> · <a href="https://pourguide.beer">More city guides at pourguide.beer</a></p>
+    </footer>
+
+    <script is:inline define:vars={{ generatedAt: data.generatedAt }}>
+      window.__GUIDE = { generatedAt };
+    </script>
+    <script>
+      import { initPage } from '../lib/client';
+      initPage();
+    </script>
+  </body>
+</html>

@@ -18,12 +18,12 @@ export interface Guide {
   };
 }
 
-const useFixtures = process.env.POURGUIDE_FIXTURES === '1';
+const useFixtures = process.env.GUIDE_FIXTURES === '1';
 
-/** Reads src/data/guides.yaml and, for live guides, each guide's data.json. */
+/** Reads loc/locations.yaml and, for live locations, each one's data.json. */
 export async function loadGuides(): Promise<Guide[]> {
-  const raw = parseYaml(await readFile(path.join(process.cwd(), 'src/data/guides.yaml'), 'utf8')) ?? {};
-  const list: any[] = Array.isArray(raw.guides) ? raw.guides : [];
+  const raw = parseYaml(await readFile(path.join(process.cwd(), 'loc/locations.yaml'), 'utf8')) ?? {};
+  const list: any[] = Array.isArray(raw.locations) ? raw.locations : [];
   return Promise.all(
     list.map(async (g) => {
       const url = String(g.url ?? '').replace(/\/$/, '');
@@ -35,17 +35,32 @@ export async function loadGuides(): Promise<Guide[]> {
         status: g.status === 'soon' ? 'soon' : 'live',
         host: url.replace(/^https?:\/\//, ''),
       };
-      if (guide.status === 'live') guide.stats = await readStats(guide.id, g.data ? String(g.data) : `${url}/data.json`);
+      if (guide.status === 'live') {
+        // A location built in this run: read its data.json straight from the build.
+        const local = g.build === false ? undefined : await readLocal(guide.id);
+        guide.stats = local ? summarize(local) : await readStats(guide.id, g.data ? String(g.data) : `${url}/data.json`);
+      }
       return guide;
     }),
   );
+}
+
+async function readLocal(id: string): Promise<any | undefined> {
+  for (const dir of [path.join('.build', id), path.join('.cache', 'last-good', id)]) {
+    try {
+      return JSON.parse(await readFile(path.join(process.cwd(), dir, 'data.json'), 'utf8'));
+    } catch {
+      // not built yet
+    }
+  }
+  return undefined;
 }
 
 async function readStats(id: string, dataUrl: string): Promise<Guide['stats']> {
   let data: any;
   try {
     if (useFixtures) {
-      data = JSON.parse(await readFile(path.join(process.cwd(), 'fixtures', `${id}-data.json`), 'utf8'));
+      data = JSON.parse(await readFile(path.join(process.cwd(), 'site', 'fixtures', `${id}-data.json`), 'utf8'));
     } else {
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 10_000);
@@ -59,6 +74,10 @@ async function readStats(id: string, dataUrl: string): Promise<Guide['stats']> {
     console.warn(`[pourguide] Couldn't read ${dataUrl}: ${(err as Error).message}`);
     return undefined;
   }
+  return summarize(data);
+}
+
+function summarize(data: any): Guide['stats'] {
   const breweries: any[] = Array.isArray(data?.breweries) ? data.breweries : [];
   const beers = breweries.flatMap((b) => (Array.isArray(b.taps) ? b.taps : [])).filter((t) => !t.notBeer && t.color);
   return {

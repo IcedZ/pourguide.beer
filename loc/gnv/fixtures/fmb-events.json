@@ -1,0 +1,50 @@
+{
+ "collection": {
+  "id": "69c5e22ffa7e467f522ee59a"
+ },
+ "upcoming": [
+  {
+   "title": "UF vs. Oklahoma on the Big screen",
+   "startDate": 1794098700000,
+   "endDate": 1794110400000,
+   "fullUrl": "/event-calendar/11-7ufvsoklahomapng",
+   "excerpt": "<p>UF vs Oklahoma on the Big Screen at First Mag!</p>"
+  },
+  {
+   "title": "Wildflowers Music Fest Fundraiser",
+   "startDate": 1794171600000,
+   "endDate": 1794186000000,
+   "fullUrl": "/event-calendar/wildflowers-music-fest-fundraiser",
+   "excerpt": "<p>Live music from Weeds of Eden and Potato Clock, a silent auction, and face painting for the kids.</p>"
+  },
+  {
+   "title": "Wild Green Film Festival",
+   "startDate": 1794524400000,
+   "endDate": 1794535200000,
+   "fullUrl": "/event-calendar/wild-green-film-festival",
+   "excerpt": ""
+  },
+  {
+   "title": "UF vs. Kentucky on the Big Screen",
+   "startDate": 1794686400000,
+   "endDate": 1794690000000,
+   "fullUrl": "/event-calendar/uf-vs-kentucky-on-the-big-screen",
+   "excerpt": "<p>Come watch the UF vs. Kentucky game on the biggest screen in town!</p>"
+  },
+  {
+   "title": "Belong Festival",
+   "startDate": 1794772800000,
+   "endDate": 1794776400000,
+   "fullUrl": "/event-calendar/belong-festival",
+   "excerpt": ""
+  },
+  {
+   "title": "UF vs. Vanderbilt on the Big Screen!",
+   "startDate": 1795291200000,
+   "endDate": 1795294800000,
+   "fullUrl": "/event-calendar/uf-vs-vanderbilt-on-the-big-screen",
+   "excerpt": ""
+  }
+ ],
+ "past": []
+}

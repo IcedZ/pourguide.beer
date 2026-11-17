@@ -1,0 +1,182 @@
+[
+ {
+  "name": "Sandy Britches",
+  "style": "Kölsch",
+  "abv": 5.2,
+  "desc": "Crisp, Slightly Sweet",
+  "status": "On Tap",
+  "srmHex": "#FFBF42",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Midnight Train",
+  "style": "Porter",
+  "abv": 5.5,
+  "desc": "Coffee, Dark Chocolate",
+  "status": "Coming Soon",
+  "srmHex": "#1F0D03",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Clearly Vanilla",
+  "style": "Cream Soda",
+  "abv": 0,
+  "desc": "Vanilla, Sweet",
+  "status": "Coming Soon",
+  "srmHex": "#FFD878",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "HB's",
+  "style": "Ginger Seltzer",
+  "abv": 0,
+  "desc": "Gingery, Sweet",
+  "status": "Coming Soon",
+  "srmHex": "#FFD878",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Heritage",
+  "style": "American Wheat",
+  "abv": 4.8,
+  "desc": "Slight Malt & Fruit",
+  "status": "On Tap",
+  "srmHex": "#FFD878",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": 32643,
+  "style": "High Springs Common",
+  "abv": 5.2,
+  "desc": "Crisp, Hoppy",
+  "status": "On Tap",
+  "srmHex": "#FFD878",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Springs Lite",
+  "style": "American Light Lager",
+  "abv": 4,
+  "desc": "Crisp, Slightly Malty",
+  "status": "Coming Soon",
+  "srmHex": "#FFBF42",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Grapefruit Springs Lite",
+  "style": "American Light Lager",
+  "abv": 4,
+  "desc": "Crisp, Slightly Malty",
+  "status": "Coming Soon",
+  "srmHex": "#FFBF42",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Train Hopper",
+  "style": "IPA",
+  "abv": 6.4,
+  "desc": "Balanced Hop & Maltiness",
+  "status": "Coming Soon",
+  "srmHex": "#A63E00",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Upstream",
+  "style": "IPA",
+  "abv": 6.5,
+  "desc": "Hoppy, Malty",
+  "status": "On Tap",
+  "srmHex": "#1F0D03",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Irish Red",
+  "style": "Irish Red",
+  "abv": 4.6,
+  "desc": "Malty, Slight Caramel",
+  "status": "Almost Out",
+  "srmHex": "#A63E00",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Shandy Britches",
+  "style": "Lemon Kölsch",
+  "abv": 5.2,
+  "desc": "Crisp, Lemonade Sweetness",
+  "status": "Coming Soon",
+  "srmHex": "#FFBF42",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Wild Bill's",
+  "style": "Sarsaparilla",
+  "abv": 0,
+  "desc": "Classic Root Beer",
+  "status": "On Tap",
+  "srmHex": "#5E0B00",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "High Rock",
+  "style": "Hefeweizen",
+  "abv": 4.9,
+  "desc": "Bready, Clove, Banana",
+  "status": "On Tap",
+  "srmHex": "#FFBF42",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Springstoberfest",
+  "style": "Märzen",
+  "abv": 5.4,
+  "desc": "Slight Caramel, Malty",
+  "status": "On Tap",
+  "srmHex": "#CF6900",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "Campfire",
+  "style": "Oatmeal Stout",
+  "abv": 5.6,
+  "desc": "Dark chocolate, Smoke, Vanilla",
+  "status": "On Tap",
+  "srmHex": "#1F0D03",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "GUEST: Beers",
+  "style": "Oktoberfest",
+  "abv": 5.5,
+  "desc": "Traditional Oktoberfest",
+  "status": "On Tap",
+  "srmHex": "#CF6900",
+  "ibuLevel": "",
+  "link": ""
+ },
+ {
+  "name": "GUEST: Cider",
+  "style": "Cider",
+  "abv": 5,
+  "desc": "3Daughters, Blake's and Cider Boys options",
+  "status": "On Tap",
+  "srmHex": "#FFD878",
+  "ibuLevel": "",
+  "link": ""
+ }
+]

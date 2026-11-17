@@ -1,0 +1,167 @@
+---
+import type { BreweryData } from '../lib/types';
+import { beersOnly, groupByDay, itemTime, openStatus, otherPours } from '../lib/view';
+import { formatStamp } from '../lib/time';
+
+interface Props {
+  brewery: BreweryData;
+  today: string;
+  dow: number;
+  minutes: number;
+  /** Pinned rows stay at the top; the rest are shuffled in the browser. */
+  pinned?: boolean;
+  pinnedLabel?: string;
+}
+const { brewery: b, today, dow, minutes, pinned = false, pinnedLabel = '' } = Astro.props;
+
+const food = groupByDay(b.items.filter((i) => i.kind === 'food'));
+const events = groupByDay(b.items.filter((i) => i.kind === 'event'));
+const beers = beersOnly(b);
+const others = otherPours(b);
+const status = openStatus(b.hours, dow, minutes);
+const VISIBLE = 6;
+const failed = b.sources.filter((s) => !s.ok);
+const fmtAbv = (n?: number) => (n === undefined || Number.isNaN(n) ? '' : `${Number(n.toFixed(2))}%`);
+const anyFoodToday = food.some((g) => g.day === today);
+const anyEventToday = events.some((g) => g.day === today);
+// Position of each beer among beers only, so the first six show before "Show all".
+const beerIndex = new Map(beers.map((t, i) => [t, i]));
+// Keep "Also pouring" to one readable line.
+const ALSO_MAX = 4;
+const alsoText =
+  others.length > ALSO_MAX
+    ? `${others.slice(0, ALSO_MAX).map((o) => o.name).join(', ')} and ${others.length - ALSO_MAX} more`
+    : others.map((o) => o.name).join(', ');
+---
+
+<article
+  class:list={['brewery', { pinned }]}
+  id={b.id}
+  data-hours={b.hours ? JSON.stringify(b.hours) : undefined}
+  data-shuffle={pinned ? undefined : ''}
+>
+  <header class="b-head">
+    <h2 class="b-name"><a href={b.website} rel="noopener">{b.shortName ?? b.name}</a></h2>
+    <p class="b-status" data-status data-open={status?.open ? 'true' : 'false'}>
+      {status ? status.text : b.hoursNote}
+    </p>
+    <p class="b-where">
+      <a href={b.mapsUrl} rel="noopener">{b.address}</a>
+      {pinned && pinnedLabel && <span class="b-pinned">{pinnedLabel}</span>}
+    </p>
+  </header>
+
+  {
+    beers.length > 0 && (
+      <ol class="pour" data-pour aria-label={`${beers.length} beers on tap, by color`}>
+        {beers.map((t) => (
+          <li style={`--c:${t.color}`} data-order={b.taps.indexOf(t)} data-abv={t.abv ?? ''} data-family={t.family} data-na={t.na ? '1' : '0'} title={`${t.name}${t.style ? ` · ${t.style}` : ''}${t.abv ? ` · ${fmtAbv(t.abv)}` : ''}`}>
+            <svg viewBox="0 0 20 28" aria-hidden="true"><use href="#pint" /></svg>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+
+  <div class="b-cols">
+    <section class="col col-food" aria-labelledby={`${b.id}-food`}>
+      <h3 id={`${b.id}-food`}>Food trucks</h3>
+      <ul class="days">
+        {
+          food.map((g) => (
+            <li class="day" data-day={g.day} hidden={g.day !== today}>
+              <span class="day-label">{g.label}</span>
+              <ul>
+                {g.items.map((it) => (
+                  <li class="item">
+                    {it.url ? <a href={it.url} rel="noopener" class="item-title">{it.title}</a> : <span class="item-title">{it.title}</span>}
+                    {itemTime(it) && <span class="item-time">{itemTime(it)}</span>}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="empty" hidden={anyFoodToday}>
+        Nothing listed.{b.calendarUrl && <> <a href={b.calendarUrl} rel="noopener">Check their schedule</a></>}
+      </p>
+    </section>
+
+    <section class="col col-events" aria-labelledby={`${b.id}-events`}>
+      <h3 id={`${b.id}-events`}>Happening</h3>
+      <ul class="days">
+        {
+          events.map((g) => (
+            <li class="day" data-day={g.day} hidden={g.day !== today}>
+              <span class="day-label">{g.label}</span>
+              <ul>
+                {g.items.map((it) => (
+                  <li class="item">
+                    {it.url ? <a href={it.url} rel="noopener" class="item-title">{it.title}</a> : <span class="item-title">{it.title}</span>}
+                    {itemTime(it) && <span class="item-time">{itemTime(it)}</span>}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="empty" hidden={anyEventToday}>
+        Nothing listed.{b.calendarUrl && <> <a href={b.calendarUrl} rel="noopener">See their calendar</a></>}
+      </p>
+    </section>
+
+    <section class="col col-taps" aria-labelledby={`${b.id}-taps`}>
+      <h3 id={`${b.id}-taps`}>
+        <span data-tap-heading>On tap</span><span class="count" data-tap-count>{beers.length > 0 ? beers.length : ''}</span>
+      </h3>
+      {
+        b.taps.length > 0 ? (
+          <>
+            {/* Every drink is here. Non-beer pours start hidden; the filters and sort decide what shows. */}
+            <ul class="taps" data-taps>
+              {b.taps.map((t, i) => (
+                <li
+                  class="tap"
+                  style={`--c:${t.color}`}
+                  data-order={i}
+                  data-abv={t.abv ?? ''}
+                  data-family={t.family}
+                  data-na={t.na ? '1' : '0'}
+                  data-beer={t.notBeer ? '0' : '1'}
+                  hidden={t.notBeer || (beerIndex.get(t) ?? 0) >= VISIBLE}
+                >
+                  <span class="tap-name">{t.name}</span>
+                  <span class="tap-style">{t.style}</span>
+                  <span class="tap-abv">{fmtAbv(t.abv)}</span>
+                </li>
+              ))}
+            </ul>
+            <button type="button" class="more-btn" data-more hidden={beers.length <= VISIBLE}>Show all {beers.length}</button>
+            <p class="empty-taps" data-no-match hidden>No non-alcoholic drinks listed.</p>
+          </>
+        ) : (
+          <p class="empty-taps">No tap list online.</p>
+        )
+      }
+      {others.length > 0 && <p class="also" data-also>Also pouring {alsoText}.</p>}
+      {b.tapsNote && <p class="note">{b.tapsNote}</p>}
+      {b.tapsUrl && <p class="note"><a href={b.tapsUrl} rel="noopener">Their tap list</a></p>}
+    </section>
+  </div>
+
+  {
+    failed.length > 0 && (
+      <ul class="warn">
+        {failed.map((s) => (
+          <li>
+            {s.stale
+              ? `Couldn’t refresh the ${s.name.toLowerCase()}, so this is from ${formatStamp(s.fetchedAt!)}.`
+              : <>Couldn’t load the {s.name.toLowerCase()} just now. <a href={b.website} rel="noopener">Check {b.shortName ?? b.name}’s site</a>.</>}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</article>

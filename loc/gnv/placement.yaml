@@ -1,0 +1,17 @@
+# Brewery order on gnv.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: first-magnitude, swamp-head, cypress-grove, blackadder,
+# grand-scheme, daft-cow, high-springs
+#
+# Example:
+#   pinned:
+#     - blackadder
+#     - swamp-head
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

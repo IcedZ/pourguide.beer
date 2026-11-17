@@ -1,0 +1,13 @@
+{
+  "name": "Jacksonville",
+  "url": "https://jax.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "Jacksonville breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at Jacksonville-area breweries.",
+  "shareTitle": "Jacksonville breweries today",
+  "shareDescription": "Taps, food trucks and events at Jacksonville breweries, on one page.",
+  "wordmark": "jax",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from the <a href=\"https://www.visitjacksonville.com/jax-ale-trail/breweries/\">Jax Ale Trail</a>.",
+  "fixturesNow": "2026-11-16T16:00:00-05:00"
+}
