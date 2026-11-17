@@ -17,6 +17,3 @@ guides:
     region: Florida
     url: https://gnv.pourguide.beer
     status: live
-    # gnv.pourguide.beer isn't set up yet, so read the numbers from the current address.
-    # Delete this line once the guide has moved; it will then use the url above.
-    data: https://gnv.beer/data.json

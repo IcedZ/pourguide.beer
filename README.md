@@ -49,7 +49,7 @@ Each city guide publishes its whole dataset at `/data.json`. When this site buil
 
 If a guide's data can't be reached, its row still appears with its name and link, just without the numbers. The build log says which address failed.
 
-By default the data is read from `<url>/data.json`. Gainesville has a `data:` line pointing at `https://gnv.beer/data.json` while the guide is still at its old address; delete that line once `gnv.pourguide.beer` is live.
+The data is read from `<url>/data.json`, unless the city has a `data:` line pointing somewhere else.
 
 ## Keeping the look in step with the guides
 
