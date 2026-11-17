@@ -20,9 +20,6 @@ locations:
     region: Florida
     url: https://gnv.pourguide.beer
     status: live
-    # Still deployed from the gnv-beer repo. Remove this line when switching it over
-    # (and turn off the gnv-beer repo's workflow at the same time).
-    build: false
   - id: jax
     name: Jacksonville
     region: Florida
