@@ -28,7 +28,14 @@ const firstMagnitude: BreweryDef = {
       name: 'Tap list',
       async run() {
         const html = await fetchText('https://www.fmbrewing.com/on-tap', { fixture: 'fmb-on-tap.html', respectRobots: true });
-        const taps = parseSqsMenu(html).map((m) => {
+        const menu = parseSqsMenu(html);
+        // The "Beer To-Go" tab is cans and bottles; it's listed apart from the taps.
+        const isToGo = (m: { menu: string }) => /to[\s-]?go|package/i.test(m.menu);
+        const toGo = menu.filter(isToGo).map((m) => {
+          const [name, ...rest] = m.title.split(/\s+-\s+/);
+          return { name: tidyCase(name), style: rest.join(' - ') || m.description || undefined, size: m.section || undefined };
+        });
+        const taps = menu.filter((m) => !isToGo(m)).map((m) => {
           const [name, ...rest] = m.title.split(/\s+-\s+/);
           const style = rest.join(' - ') || (/(wine|non-alcoholic)/i.test(m.menu) ? undefined : m.section);
           return beer({
@@ -40,7 +47,7 @@ const firstMagnitude: BreweryDef = {
             notBeer: /wine|non-alcoholic/i.test(m.menu) || /cider|mead/i.test(m.section || '') ? true : undefined,
           });
         });
-        return { taps };
+        return { taps, toGo };
       },
     },
     {

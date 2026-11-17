@@ -32,6 +32,13 @@ const alsoText =
   others.length > ALSO_MAX
     ? `${others.slice(0, ALSO_MAX).map((o) => o.name).join(', ')} and ${others.length - ALSO_MAX} more`
     : others.map((o) => o.name).join(', ');
+// Packaged beer to go, grouped by how it's sold ("12 oz 6-packs"…), in the brewery's order.
+const toGoGroups: { size?: string; items: NonNullable<BreweryData['toGo']> }[] = [];
+for (const t of b.toGo ?? []) {
+  const last = toGoGroups[toGoGroups.length - 1];
+  if (last && last.size === t.size) last.items.push(t);
+  else toGoGroups.push({ size: t.size, items: [t] });
+}
 ---
 
 <article
@@ -157,6 +164,26 @@ const alsoText =
       }
       {others.length > 0 && <p class="also" data-also>Also pouring {alsoText}.</p>}
       {b.tapsNote && <p class="note">{b.tapsNote}</p>}
+      {
+        b.toGo && b.toGo.length > 0 && (
+          <details class="to-go">
+            <summary>To go: {b.toGo.length} {b.toGo.length === 1 ? 'can or bottle' : 'cans and bottles'}</summary>
+            {toGoGroups.map((g) => (
+              <>
+                {g.size && <p class="to-go-size">{g.size}</p>}
+                <ul>
+                  {g.items.map((t) => (
+                    <li>
+                      <span class="tap-name">{t.name}</span>
+                      {t.style && <span class="tap-style">{t.style}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ))}
+          </details>
+        )
+      }
       {b.tapsUrl && <p class="note"><a href={b.tapsUrl} rel="noopener">Their tap list</a></p>}
     </section>
   </div>

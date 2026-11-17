@@ -504,6 +504,42 @@ a.item-title:hover {
   color: var(--color-text-muted);
 }
 
+/* Cans and bottles to go, for breweries that list them. Collapsed under the tap list. */
+.to-go {
+  margin: 0.5rem 0 0;
+  font-size: var(--text-size-small);
+}
+.to-go summary {
+  padding: 0.3rem 0;
+  font-weight: 700;
+  color: var(--color-link);
+  cursor: pointer;
+}
+.to-go ul {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+.to-go li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  padding: 0.15rem 0;
+}
+.to-go .tap-name {
+  font-weight: 700;
+}
+.to-go .tap-style {
+  color: var(--color-text-muted);
+}
+.to-go-size {
+  margin: 0.5rem 0 0.1rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+}
+
 .warn {
   list-style: none;
   margin: 1.25rem 0 0;

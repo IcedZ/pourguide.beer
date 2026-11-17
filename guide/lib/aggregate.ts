@@ -8,12 +8,15 @@ import { loadLastGood, saveLastGood, useFixtures, RobotsDisallowed } from './fet
 import { addDays, dayKey, fromLocal, itemDayKey, startOfDay } from './time';
 import { colorFor, isNonAlcoholic, isNotBeer } from './srm';
 import { styleFamily } from './styles';
-import type { Beer, BreweryData, Item, SiteData, SourceResult, SourceStatus } from './types';
+import type { Beer, BreweryData, Item, SiteData, SourceResult, SourceStatus, ToGoItem } from './types';
 
 /** How far ahead to collect. The page shows today / this weekend / next 7 days. */
 const DAYS_AHEAD = 9;
 
 const WEEKDAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+/** Tap categories that mean packaged beer, not draft. */
+const PACKAGED = /\b(to[\s-]?go|packaged|retail|bottles?|cans?|[46][\s-]?packs?|crowlers?)\b/i;
 
 interface ManualEntry {
   tapsNote?: string;
@@ -44,6 +47,7 @@ async function build(): Promise<SiteData> {
       const statuses = results.map((r) => r.status);
       let taps: Beer[] = results.flatMap((r) => r.data?.taps ?? []);
       let tapsNote = results.map((r) => r.data?.tapsNote).filter(Boolean).join(' ') || undefined;
+      const toGo: ToGoItem[] = results.flatMap((r) => r.data?.toGo ?? []);
       let items: Item[] = results.flatMap((r) => r.data?.items ?? []);
 
       const m = manual[brewery.id];
@@ -59,10 +63,17 @@ async function build(): Promise<SiteData> {
         }
       }
 
+      // The tap list is what's pouring. Anything an adapter tagged as packaged (cans, bottles,
+      // "to go") moves to the to-go list instead, so it can't inflate the tap count.
+      const packaged = taps.filter((t) => PACKAGED.test(t.category ?? ''));
+      taps = taps.filter((t) => !packaged.includes(t));
+      toGo.push(...packaged.map((t) => ({ name: t.name, style: t.style, size: t.category })));
+
       const data: BreweryData = {
         ...brewery,
         taps: dedupeTaps(taps).map((t) => ({ ...t, na: t.na ?? isNonAlcoholic(t), family: t.family ?? styleFamily(t) })),
         tapsNote,
+        toGo: toGo.length ? toGo : undefined,
         items: dedupeItems(inWindow(items, ctx)).sort(byStart),
         sources: statuses,
       };

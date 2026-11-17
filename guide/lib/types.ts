@@ -37,10 +37,20 @@ export interface SourceStatus {
   error?: string;
 }
 
+/** A can, bottle or other package sold to go. Kept out of the tap list. */
+export interface ToGoItem {
+  name: string;
+  style?: string;
+  /** How it's sold, e.g. "16 oz 4-packs". */
+  size?: string;
+}
+
 /** What one adapter returns. Any field it doesn't handle stays undefined. */
 export interface SourceResult {
   taps?: Beer[];
   tapsNote?: string;
+  /** Packaged beer to go, for the few breweries that list it. Shown apart from the taps. */
+  toGo?: ToGoItem[];
   items?: Item[];
 }
 
@@ -73,6 +83,7 @@ export interface Brewery {
 export interface BreweryData extends Brewery {
   taps: Beer[];
   tapsNote?: string;
+  toGo?: ToGoItem[];
   items: Item[];
   sources: SourceStatus[];
 }
