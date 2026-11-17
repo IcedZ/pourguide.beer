@@ -24,6 +24,25 @@ guides:
 
 Cities appear in the order listed. Push the change and the site rebuilds within a couple of minutes.
 
+### Where each guide lives on the host
+
+Every city guide is its own project and repo, and uploads into its own folder under this site's folder:
+
+```
+<pourguide.beer folder>/        this site
+<pourguide.beer folder>/loc/gnv/  gnv.pourguide.beer
+<pourguide.beer folder>/loc/jax/  jax.pourguide.beer
+```
+
+For a new city `<id>`:
+
+1. In cPanel, add the subdomain `<id>.pourguide.beer` with its folder set to `loc/<id>` inside pourguide.beer's folder.
+2. In Cloudflare DNS for pourguide.beer, add a record for `<id>` (a `CNAME` to `pourguide.beer`, proxied, works).
+3. In the city's own repo, set the FTP secrets so it uploads to `loc/<id>`. With an FTP account that opens in that folder, `FTP_DIR` is `./`.
+4. Add the city to `src/data/guides.yaml` here.
+
+This site's own uploads only replace files it put there itself, so they never touch `loc/`.
+
 ## Where the numbers come from
 
 Each city guide publishes its whole dataset at `/data.json`. When this site builds, it reads that file for every live guide and counts the breweries and beers. It rebuilds once a day, so the counts stay current.

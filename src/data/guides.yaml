@@ -9,6 +9,7 @@
 #            count and the row of glasses. Leave it out to use <url>/data.json.
 #
 # To add a city, copy the gnv block below and change the values.
+# Setting up the city's subdomain and folder (loc/<id>) is described in README.md.
 
 guides:
   - id: gnv
