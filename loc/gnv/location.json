@@ -1,6 +1,7 @@
 {
   "name": "Gainesville",
   "url": "https://gnv.pourguide.beer",
+  "canonicalUrl": "https://gnv.beer",
   "timezone": "America/New_York",
   "title": "gnv.beer — Gainesville breweries today",
   "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at Gainesville-area breweries.",

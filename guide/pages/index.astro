@@ -4,7 +4,7 @@ import { getSiteData } from '../lib/aggregate';
 import { loadPlacement, orderBreweries } from '../lib/placement';
 import { FAMILIES } from '../lib/styles';
 import { TZ, dayKey, formatTime } from '../lib/time';
-import { LOCATION } from '../lib/location';
+import { CANONICAL, LOCATION } from '../lib/location';
 import '../../shared/theme.css';
 import '../styles/site.css';
 
@@ -59,6 +59,7 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
     <meta name="description" content={LOCATION.description} />
     <!-- Phone browser toolbar tint. Browsers can't read CSS here, so keep it in step with --color-accent in shared/theme.css. -->
     <meta name="theme-color" content="#E4A21B" />
+    <link rel="canonical" href={`${CANONICAL}/`} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,7 +68,7 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
       rel="stylesheet"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={LOCATION.url} />
+    <meta property="og:url" content={`${CANONICAL}/`} />
     <meta property="og:title" content={LOCATION.shareTitle} />
     <meta property="og:description" content={LOCATION.shareDescription} />
     <meta property="og:image" content={`${LOCATION.url}/og.png`} />

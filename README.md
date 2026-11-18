@@ -64,6 +64,8 @@ A location can group its breweries into colored clusters by neighborhood with `a
 
 `manual.yaml` recurring items can take `weeks: [1, 3]` (1st and 3rd of the month) or `weeks: [-1]` (last).
 
+Each guide serves `/sitemap.xml` and `/robots.txt`, and its page has a canonical link. Both use `canonicalUrl` from `location.json` when set (gnv's is gnv.beer, so search engines treat that as the main Gainesville address), otherwise `url`. The front page's sitemap lists pourguide.beer and every live guide on a pourguide.beer subdomain.
+
 Each location has a share image, `loc/<id>/og.png` (1200×630), shown when its link is posted on Reddit, Facebook, in texts and so on; the front page's is `site/public/og.png`. A location without one uses the front page's. `scripts/og-images.py` regenerates them (optional; needs Python and Playwright).
 
 A location can name places that aren't breweries (distilleries, a winery) in `location.json` under `alsoNearby: { heading, intro, places: [{ name, url, note }] }`. They're listed and linked under the breweries, with no taps or hours. `loc/staug/location.json` has an example.

@@ -17,6 +17,11 @@ export interface Location {
   showPourguideAbove: boolean;
   /** Optional HTML at the start of the footer's second line. */
   footerNote: string;
+  /**
+   * Optional: the address search engines should treat as this guide's main one, when it's
+   * served from more than one (gnv is also gnv.beer). Defaults to `url`.
+   */
+  canonicalUrl?: string;
   /** Pretend "now" for offline builds, when the fixtures were captured. */
   fixturesNow: string;
   /**
@@ -49,5 +54,7 @@ export interface Location {
 
 export const LOC_ID = process.env.GUIDE_TARGET ?? '';
 export const LOCATION = location as Location;
+/** The guide's main address, without a trailing slash. */
+export const CANONICAL = (LOCATION.canonicalUrl ?? LOCATION.url).replace(/\/$/, '');
 /** loc/<id>, where this location's breweries, manual.yaml, placement.yaml and fixtures live. */
 export const LOC_DIR = path.join(process.cwd(), 'loc', LOC_ID);
