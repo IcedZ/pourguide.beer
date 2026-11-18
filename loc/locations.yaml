@@ -29,5 +29,4 @@ locations:
     name: St. Augustine
     region: Florida
     url: https://staug.pourguide.beer
-    # Change to "live" once staug.pourguide.beer is up.
-    status: soon
+    status: live
