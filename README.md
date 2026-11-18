@@ -64,6 +64,8 @@ A location can group its breweries into colored clusters by neighborhood with `a
 
 `manual.yaml` recurring items can take `weeks: [1, 3]` (1st and 3rd of the month) or `weeks: [-1]` (last).
 
+Each location has a share image, `loc/<id>/og.png` (1200×630), shown when its link is posted on Reddit, Facebook, in texts and so on; the front page's is `site/public/og.png`. A location without one uses the front page's. `scripts/og-images.py` regenerates them (optional; needs Python and Playwright).
+
 A location can name places that aren't breweries (distilleries, a winery) in `location.json` under `alsoNearby: { heading, intro, places: [{ name, url, note }] }`. They're listed and linked under the breweries, with no taps or hours. `loc/staug/location.json` has an example.
 
 `loc/jax/breweries.ts`, `loc/gnv/breweries.ts` and `loc/staug/breweries.ts` have an example of each. A fix to a parser or the page in `guide/` reaches every location on the next build.

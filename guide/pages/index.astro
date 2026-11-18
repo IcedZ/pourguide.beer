@@ -66,8 +66,15 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&display=swap"
       rel="stylesheet"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={LOCATION.url} />
     <meta property="og:title" content={LOCATION.shareTitle} />
     <meta property="og:description" content={LOCATION.shareDescription} />
+    <meta property="og:image" content={`${LOCATION.url}/og.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${LOCATION.name} brewery guide: what’s on tap, food trucks and events`} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body data-range="today">
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">

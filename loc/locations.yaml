@@ -34,19 +34,19 @@ locations:
     name: Dunedin
     region: Florida
     url: https://dunedin.pourguide.beer
-    status: soon
+    status: live
   - id: stpete
     name: St. Pete
     region: Florida
     url: https://stpete.pourguide.beer
-    status: soon
+    status: live
   - id: tpa
     name: Tampa
     region: Florida
     url: https://tpa.pourguide.beer
-    status: soon
+    status: live
   - id: clw
     name: Clearwater
     region: Florida
     url: https://clw.pourguide.beer
-    status: soon
+    status: live
