@@ -1,0 +1,23 @@
+{
+  "name": "St. Augustine",
+  "url": "https://staug.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "St. Augustine breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at St. Augustine breweries.",
+  "shareTitle": "St. Augustine breweries today",
+  "shareDescription": "Taps, food trucks and events at St. Augustine breweries, on one page.",
+  "wordmark": "st. augustine",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from Florida’s Historic Coast <a href=\"https://www.floridashistoriccoast.com/food-drink/craft-beverages/\">craft beverages</a> list.",
+  "fixturesNow": "2026-11-17T16:00:00-05:00",
+  "alsoNearby": {
+    "heading": "Not beer, but nearby",
+    "intro": "St. Augustine’s distilleries and winery, for when someone in the group wants something else.",
+    "places": [
+      { "name": "The St. Augustine Distillery", "url": "https://www.staugustinedistillery.com/", "note": "Lincolnville" },
+      { "name": "Sailbird Distilling", "url": "https://www.sailbirddistilling.com/", "note": "West King Street" },
+      { "name": "City Gate Spirits", "url": "https://www.floridashistoriccoast.com/directory/city-gate-spirits/", "note": "St. George Street" },
+      { "name": "San Sebastian Winery", "url": "https://www.sansebastianwinery.com/", "note": "winery" }
+    ]
+  }
+}

@@ -94,8 +94,8 @@ for (const t of b.toGo ?? []) {
         b.kitchen ? (
           // Breweries with their own kitchen: always say so, trucks or not.
           <p class="kitchen">
-            {b.kitchen.name ? <>{b.kitchen.name}, their in-house kitchen.</> : <>In-house kitchen.</>}{' '}
-            <a href={b.kitchen.menuUrl} rel="noopener">See the menu</a>
+            {b.kitchen.name ? <>{b.kitchen.name}, their in-house kitchen.</> : <>In-house kitchen.</>}
+            {b.kitchen.menuUrl && <> <a href={b.kitchen.menuUrl} rel="noopener">See the menu</a></>}
           </p>
         ) : (
           <p class="empty" hidden={anyFoodToday}>

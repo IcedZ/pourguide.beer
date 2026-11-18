@@ -25,3 +25,9 @@ locations:
     region: Florida
     url: https://jax.pourguide.beer
     status: live
+  - id: staug
+    name: St. Augustine
+    region: Florida
+    url: https://staug.pourguide.beer
+    # Change to "live" once staug.pourguide.beer is up.
+    status: soon

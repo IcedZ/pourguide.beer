@@ -19,6 +19,15 @@ export interface Location {
   footerNote: string;
   /** Pretend "now" for offline builds, when the fixtures were captured. */
   fixturesNow: string;
+  /**
+   * Optional short list under the breweries for places that aren't breweries
+   * (distilleries, a winery…): named and linked, nothing more.
+   */
+  alsoNearby?: {
+    heading: string;
+    intro?: string;
+    places: { name: string; url: string; note?: string }[];
+  };
 }
 
 export const LOC_ID = process.env.GUIDE_TARGET ?? '';

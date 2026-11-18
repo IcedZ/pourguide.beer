@@ -1,0 +1,14 @@
+# Manual additions, merged on top of what the scrapers find.
+# The format is described at the top of loc/jax/manual.yaml.
+#
+# Brewery ids: bog, bootlegger-beach, dog-rose, hornskis, old-coast
+#
+# The weekly items below were copied from each brewery's website in November 2026.
+# Check them every so often; delete a line when a brewery drops it.
+
+dog-rose:
+  # dogrosebrewing.com/events/ — repeating events have no dates on their pages
+  recurring:
+    - { kind: food, title: Uptown Artisan Pizza, weekday: fri, start: "18:00" }
+    - { kind: food, title: Uptown Artisan Pizza, weekday: sun, start: "15:30" }
+    - { kind: event, title: Sunday Funday with the Dewey Via Band, weekday: sun }

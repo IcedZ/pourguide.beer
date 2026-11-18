@@ -76,7 +76,8 @@ export interface Brewery {
   kitchen?: {
     /** The kitchen's own name, if it has one ("Mateo's"). */
     name?: string;
-    menuUrl: string;
+    /** Leave out if the menu isn't online. */
+    menuUrl?: string;
   };
 }
 

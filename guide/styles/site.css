@@ -504,6 +504,36 @@ a.item-title:hover {
   color: var(--color-text-muted);
 }
 
+/* "Also nearby": distilleries, a winery… named and linked under the breweries. */
+.nearby {
+  margin: 2.5rem 0;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-line-strong);
+}
+.nearby h2 {
+  margin: 0 0 0.4rem;
+  font: 700 var(--text-size-large) / 1.2 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.nearby p {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-size-small);
+}
+.nearby ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+}
+.nearby-note {
+  color: var(--color-text-muted);
+  font-size: var(--text-size-small);
+}
+
 /* Cans and bottles to go, for breweries that list them. Collapsed under the tap list. */
 .to-go {
   margin: 0.5rem 0 0;

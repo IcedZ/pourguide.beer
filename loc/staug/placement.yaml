@@ -1,0 +1,11 @@
+# Brewery order on staug.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: bog, bootlegger-beach, dog-rose, hornskis, old-coast
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

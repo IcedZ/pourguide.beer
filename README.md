@@ -48,11 +48,16 @@ Each brewery is a `BreweryDef` with its address, hours and one or more `sources`
 | WordPress *The Events Calendar* | `tribeItems` on `/wp-json/tribe/events/v1/events` |
 | EventsCalendar.co widget | `eventsCalendarUrl` + `expandEventsCalendar` |
 | Squarespace menu block / events / summary blocks | `parseSqsMenu`, `parseSqsCollection`, `parseSqsMonthItems` |
+| Squarespace list sections (one list per group of beers) | `parseSqsUserItems` |
+| iMenuPro menu (`imenupro.com/!<code>`) | `fetchIMenuPro` + `parseIMenuPro` |
+| BentoBox site with dated event pages | `fetchBentoEvents(origin, fixturePrefix)` |
 | Nothing readable | `noteOnly('Tap list', 'Where their list lives')`, plus `manual.yaml` |
 
-A brewery that serves food from its own kitchen gets `kitchen: { name?, menuUrl }`. Its Food trucks column then says so and links to the menu, whether or not trucks are listed.
+A brewery that serves food from its own kitchen gets `kitchen: { name?, menuUrl? }`. Its Food trucks column then says so and links to the menu (if there is one online), whether or not trucks are listed.
 
-`loc/jax/breweries.ts` and `loc/gnv/breweries.ts` have an example of each. A fix to a parser or the page in `guide/` reaches every location on the next build.
+A location can name places that aren't breweries (distilleries, a winery) in `location.json` under `alsoNearby: { heading, intro, places: [{ name, url, note }] }`. They're listed and linked under the breweries, with no taps or hours. `loc/staug/location.json` has an example.
+
+`loc/jax/breweries.ts`, `loc/gnv/breweries.ts` and `loc/staug/breweries.ts` have an example of each. A fix to a parser or the page in `guide/` reaches every location on the next build.
 
 ## When something breaks
 
@@ -111,3 +116,7 @@ The breweries on the [Jax Ale Trail](https://www.visitjacksonville.com/jax-ale-t
 ### Gainesville (`loc/gnv`)
 
 First Magnitude, Swamp Head, Cypress & Grove, Blackadder, Grand Scheme, Daft Cow and High Springs. Also served at gnv.beer, whose document root is the same `loc/gnv` folder. Grand Scheme's tap list is an image on Instagram, Cypress & Grove only lists core beers, and Daft Cow's hours aren't published in a readable form.
+
+### St. Augustine (`loc/staug`)
+
+The breweries on Florida's Historic Coast [craft beverages](https://www.floridashistoriccoast.com/food-drink/craft-beverages/) list as of November 2026: The Bog, Bootlegger Beach (at Jack's Bar-B-Que), Dog Rose, Hornski's and Old Coast Ales. Ancient City Brewing, Disco Witch and King Maker are closed, and A1A Ale Works no longer brews, so they're left out. The distilleries and San Sebastian Winery are named under "Not beer, but nearby" (`alsoNearby` in `location.json`). Dog Rose posts its beer menu as an image and Bootlegger Beach only uses Instagram, so their rows show a note; Dog Rose's weekly pizza and Sunday band are in `manual.yaml`, and its dated events and food trucks come from its BentoBox event pages. Old Coast's dated music line-up on its home page was out of date when the guide was built, so the guide also shows "Live music" on Wednesday evenings for any week without a named act.

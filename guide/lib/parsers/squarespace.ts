@@ -92,3 +92,45 @@ function absolute(url: string | undefined, origin: string): string {
   if (!url) return origin;
   return url.startsWith('http') ? url : origin.replace(/\/$/, '') + url;
 }
+
+export interface SqsListItem {
+  /** The list's own title, or else the heading above it ("Lagers", "Hoppy"…). */
+  section?: string;
+  title: string;
+  description?: string;
+}
+
+/**
+ * Squarespace "list" sections (user items). The items are in the list's
+ * `data-current-context` JSON; the section name is the last heading before
+ * the list on the page (headings inside lists don't count).
+ */
+export function parseSqsUserItems(html: string): SqsListItem[] {
+  const $ = cheerio.load(html);
+  const out: SqsListItem[] = [];
+  let lastHeading = '';
+  $('h1, h2, h3, h4, [data-current-context]').each((_, el) => {
+    if (!$(el).is('[data-current-context]')) {
+      if ($(el).closest('[data-current-context]').length) return;
+      const t = $(el).text().replace(/\s+/g, ' ').trim();
+      if (t) lastHeading = t;
+      return;
+    }
+    let ctx: any;
+    try {
+      ctx = JSON.parse($(el).attr('data-current-context') ?? '');
+    } catch {
+      return;
+    }
+    const items: any[] = ctx?.userItems ?? [];
+    if (!items.length) return;
+    // The list's own title, when it has one; otherwise the heading above it.
+    const section = ctx?.isSectionTitleEnabled && ctx?.sectionTitle ? stripHtml(String(ctx.sectionTitle)) : lastHeading;
+    for (const it of items) {
+      const title = String(it.title ?? '').replace(/\s+/g, ' ').trim();
+      if (!title) continue;
+      out.push({ section: section || undefined, title, description: it.description ? stripHtml(it.description) || undefined : undefined });
+    }
+  });
+  return out;
+}

@@ -123,6 +123,23 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
       })();
     </script>
 
+    {
+      LOCATION.alsoNearby && (
+        <aside class="nearby" aria-labelledby="nearby-heading">
+          <h2 id="nearby-heading">{LOCATION.alsoNearby.heading}</h2>
+          {LOCATION.alsoNearby.intro && <p>{LOCATION.alsoNearby.intro}</p>}
+          <ul>
+            {LOCATION.alsoNearby.places.map((p) => (
+              <li>
+                <a href={p.url} rel="noopener">{p.name}</a>
+                {p.note && <span class="nearby-note"> · {p.note}</span>}
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+
     <footer class="foot">
       <p>
         Updated {formatTime(data.generatedAt)}, {new Intl.DateTimeFormat('en-US', { timeZone: TZ, month: 'short', day: 'numeric' }).format(now)}.
