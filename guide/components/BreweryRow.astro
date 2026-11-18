@@ -11,8 +11,11 @@ interface Props {
   /** Pinned rows stay at the top; the rest are shuffled in the browser. */
   pinned?: boolean;
   pinnedLabel?: string;
+  /** h3 when the row sits under an area heading. */
+  headingLevel?: 2 | 3;
 }
-const { brewery: b, today, dow, minutes, pinned = false, pinnedLabel = '' } = Astro.props;
+const { brewery: b, today, dow, minutes, pinned = false, pinnedLabel = '', headingLevel = 2 } = Astro.props;
+const Heading = headingLevel === 3 ? 'h3' : 'h2';
 
 const food = groupByDay(b.items.filter((i) => i.kind === 'food'));
 const events = groupByDay(b.items.filter((i) => i.kind === 'event'));
@@ -48,7 +51,7 @@ for (const t of b.toGo ?? []) {
   data-shuffle={pinned ? undefined : ''}
 >
   <header class="b-head">
-    <h2 class="b-name"><a href={b.website} rel="noopener">{b.shortName ?? b.name}</a></h2>
+    <Heading class="b-name"><a href={b.website} rel="noopener">{b.shortName ?? b.name}</a></Heading>
     <p class="b-status" data-status data-open={status?.open ? 'true' : 'false'}>
       {status ? status.text : b.hoursNote}
     </p>

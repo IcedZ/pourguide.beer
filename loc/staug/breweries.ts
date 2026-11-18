@@ -5,7 +5,7 @@ import { cheerio, parseAbv, tidyCase } from '@guide/lib/parsers/html';
 import { fetchIMenuPro } from '@guide/lib/parsers/imenupro';
 import { fetchBentoEvents } from '@guide/lib/parsers/bentobox';
 import { addDays, dayKey, fromLocal } from '@guide/lib/time';
-import { beer, inWindow, noteOnly, PRIVATE, type BreweryDef, type Ctx } from '@guide/lib/kit';
+import { beer, inWindow, noteOnly, PRIVATE, styleFromName, type BreweryDef, type Ctx } from '@guide/lib/kit';
 
 // The breweries on Florida's Historic Coast "Craft Beverages" list
 // (floridashistoriccoast.com/food-drink/craft-beverages/), November 2026.
@@ -63,14 +63,6 @@ const bog: BreweryDef = {
     },
   ],
 };
-
-/** "House Pilsner" → "Pilsner", "Float Away IPA" → "IPA". For lists that only give a name. */
-function styleFromName(name: string): string | undefined {
-  const m = name.match(
-    /\b(Hazy IPA|West Coast IPA|Double IPA|IPA|Pilsner|Helles|Lager|Kolsch|Kölsch|Hefeweizen|Witbier|Wheat|Cream Ale|Pale Ale|Amber|Red Ale|Brown Ale|Porter|Stout|Sour|Gose|Saison|Tripel|Dubbel|Bock|Marzen|Märzen|Oktoberfest|ESB|Barleywine|Blonde)\b/i,
-  );
-  return m ? tidyCase(m[1]) : undefined;
-}
 
 const bootlegger: BreweryDef = {
   id: 'bootlegger-beach',

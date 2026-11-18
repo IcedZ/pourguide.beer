@@ -1,0 +1,12 @@
+# Brewery order on tpa.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first in their area, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: angry-chair, barriehaus, cigar-city, common-dialect, coppertail, green-bench-tampa,
+# hidden-springs, magnanimous-seminole, magnanimous-tampa-heights, ology, sky-puppy, tbbc-westchase
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

@@ -1,0 +1,33 @@
+# Manual additions, merged on top of what the scrapers find.
+#
+# Use this for breweries without a machine-readable source, for recurring weekly
+# events a brewery only describes in prose on its website, or to fix something
+# the scrapers got wrong.
+#
+# Times are Dunedin local time. Dates are YYYY-MM-DD.
+#
+#   <brewery-id>:
+#     tapsNote: "Shown under the tap list"
+#     taps:                    # replaces the scraped tap list if present
+#       - { name: Some Beer, style: Blonde Ale, abv: 4.8 }
+#     items:                   # one-off food trucks / events
+#       - { kind: food, title: Some Truck, date: 2026-11-21, start: "17:00", end: "21:00" }
+#     recurring:               # weekday = sun|mon|tue|wed|thu|fri|sat
+#       - { kind: event, title: Bingo, weekday: tue, start: "18:30" }
+#       - { kind: event, title: Book club, weekday: wed, weeks: [3], start: "19:00" }   # 3rd Wednesday
+#     hide:                    # case-insensitive title patterns to drop
+#       - "staff meeting"
+#
+# Brewery ids: 7venth-sun, caledonia, cueni, dunedin-brewery, hob, soggy-bottom, woodwright
+#
+# The nights below were copied from each brewery's website in November 2026.
+# Check them every so often; delete a line when a brewery drops a night.
+
+caledonia:
+  # caledoniabrewing.com/upcoming-events — "Weekly and Monthly Events"
+  recurring:
+    - { kind: event, title: Music trivia, weekday: thu, start: "19:30" }
+    - { kind: event, title: Game Show Challenge, weekday: tue, weeks: [1, 3], start: "19:30" }
+    - { kind: event, title: Bubbles and Bingo, weekday: tue, weeks: [2, 4], start: "19:30" }
+    - { kind: event, title: Bonsai and Brews, weekday: wed, weeks: [3] }
+    - { kind: event, title: Mandala Monday, weekday: mon, weeks: [-1], start: "18:30" }

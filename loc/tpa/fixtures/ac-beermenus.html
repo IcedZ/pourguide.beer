@@ -1,0 +1,1546 @@
+<!doctype html>
+<head></head>
+<body>
+
+  <style>
+    @font-face {
+  font-family: "Work Sans";
+  src: url(https://d2sochvv0rudri.cloudfront.net/font_files/work-sans-41/work-sans-300-normal-cdbc5f66.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url(https://d2sochvv0rudri.cloudfront.net/font_files/work-sans-41/work-sans-400-normal-9bedf2b1.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url(https://d2sochvv0rudri.cloudfront.net/font_files/work-sans-41/work-sans-700-normal-9f118d3b.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Trade Gothic";
+  src: url(https://d2sochvv0rudri.cloudfront.net/font_files/trade-gothic-4/trade-gothic-300-normal-b9bf0d27.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Trade Gothic";
+  src: url(https://d2sochvv0rudri.cloudfront.net/font_files/trade-gothic-4/trade-gothic-400-normal-42964db2.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+  </style>
+  <beermenus-web menu-id="301" previewing>
+    <template shadowrootmode="open">
+      
+<style>
+  :host {
+  display: block;
+}
+
+/*reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+[id]:focus-visible {
+  outline: none;
+}
+
+/* Menu overview */
+
+#menu{
+  container: menu / inline-size;
+  background-color: #000000;
+}
+
+#menu *{
+  border-color: #e1e2e4;
+}
+
+#menu-container{
+  font-family: "Work Sans";
+  color: #9a9a9a;
+  font-size: 16px;
+}
+
+#menu-container.align-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu-container.align-right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-overview-matter, .menu-navigation, .powered-by-beermenus{
+  font-size: calc(16em/16);
+}
+
+.updated-container-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.align-center .updated-container-wrapper{
+  align-items: center;
+}
+
+ .align-right .updated-container-wrapper{
+  align-items: flex-end;
+ }
+
+.powered-by-beermenus{
+  margin-top: 3rem;
+}
+
+a{
+  color: #f1f1f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.menu-navigation{
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  background-color: #ffffff;
+  margin-top: 2em;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.05);
+}
+
+.menu-navigation li:first-child{
+  background-color: #fafafa;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.menu-navigation li{
+  position: relative;
+  padding-right: 2rem;
+}
+
+.menu-navigation li a{
+  padding: 0.75rem 1rem;
+  display: block;
+  width: 100%;
+  line-height: 1;
+}
+
+.menu-navigation li + li{
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: inherit;
+}
+
+.menu-navigation li .menu-nav-arrow{
+  height: 0.5rem;
+  width: 0.5rem;
+  border-right: 1px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
+  transform: rotate(-45deg);
+  right: 1rem;
+  top: calc(50% - 0.25rem);
+  position: absolute;
+  transition: all 0.25s ease;
+}
+
+.menu-navigation li a:hover + .menu-nav-arrow{
+  right: .75rem;
+}
+
+.align-center .menu-navigation{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-right .menu-navigation{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.follow-button-container{
+  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+}
+
+.align-center .follow-button-container{
+  text-align: center;
+}
+
+.align-right .follow-button-container{
+  text-align: right;
+}
+
+.follow-button{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #040101;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  line-height: 1;
+  transition: all 0.3s ease;
+  padding: 0.75em 1.25em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.follow-button:hover{
+  text-decoration: none;
+}
+
+/*Header and Footers*/
+
+.header{
+  display: block;
+  width: 100%;
+}
+
+.align-center .header{
+  text-align: center;
+}
+
+.align-right .header{
+  text-align: right;
+}
+
+.header{
+  margin-bottom: 2rem;
+}
+
+.header-subject{
+  font-family: "Trade Gothic";
+  color: #9a9a9a;
+  font-size: calc(32em/16);
+}
+
+.header-body{
+  font-family: "Trade Gothic";
+  color: #9a9a9a;
+  font-size: calc(20em/16);
+  margin-top: 0.75em;
+}
+
+.header-body p + p{
+  margin-top: 0.5em;
+}
+
+/*Menus*/
+
+.menu-section{
+  margin-top: 3rem;
+}
+
+.menu-section{
+  max-width: 900px;
+  display: block;
+  line-height: 1.3;
+}
+
+.column-count-2 .menu-section,
+.column-count-3 .menu-section{
+  max-width: 1280px;
+}
+
+.menu-wrapper{
+  display: block;
+}
+
+.column-count-2 .menu-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.column-count-3 .menu-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.column-count-2 .menu-section.sort-by-style .menu-wrapper,
+.column-count-3 .menu-section.sort-by-style .menu-wrapper{
+  display: block;
+}
+
+.section-name-container{
+  margin-bottom: 1.5rem;
+}
+
+.column-count-2 .section-name-container,
+.column-count-3 .section-name-container{
+  margin-bottom: 0;
+}
+
+.column-count-2 .section-name-container,
+.column-count-3 .section-name-container{
+  grid-column: 1 / -1;
+}
+
+.section-name{
+  font-family: "Work Sans";
+  color: #e94f37;
+  font-size: calc(32em/16);
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#menu-container.align-center .section-name{
+  text-align: center;
+}
+
+#menu-container.align-right .section-name{
+  text-align: right;
+}
+
+.flavor{
+  margin-top: 2em;
+}
+
+.column-count-2 .menu-section.sort-by-style .flavor{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.column-count-3 .menu-section.sort-by-style .flavor{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.flavor-name{
+  font-family: "Trade Gothic";
+  color: #2f3746;
+  border-bottom: #2f3746 0.125em solid;
+  padding-bottom: 0.2em;
+  margin-bottom: 1.5rem;
+  font-size: calc(24em/16);
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.column-count-2 .menu-section.sort-by-style .flavor-name,
+.column-count-3 .menu-section.sort-by-style .flavor-name{
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+#menu-container.align-center .flavor-name{
+  text-align: center;
+}
+
+#menu-container.align-right .flavor-name{
+  text-align: right;
+}
+
+.item-wrapper{
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#menu-container.align-center .item-wrapper{
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-wrapper + .item-wrapper{
+  margin-top: 2rem;
+}
+
+.column-count-2 .item-wrapper + .item-wrapper,
+.column-count-3 .item-wrapper + .item-wrapper{
+  margin-top: 0;
+}
+
+.item-image-wrapper{
+  height: 100px;
+  width: 100px;
+}
+
+#menu-container.align-right .item-image-wrapper{
+  order: 1;
+}
+
+.item-image{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.placeholder{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.placeholder svg{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  fill: ;
+}
+
+.item{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+#menu-container.align-center .item{
+  text-align: center;
+}
+
+#menu-container.align-right .item{
+  text-align: right;
+}
+
+.item-wrapper.servings-right .item-info{
+  width: 75%;
+}
+
+.item-name{
+  font-size: calc(20em/16);
+  font-family: "Trade Gothic";
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.item-name a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.item-name a:hover{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.item-meta{
+  font-size: 1rem;
+  font-family: "Trade Gothic";
+  font-size: calc(16em/16);
+  color: #9a9a9a;
+  font-weight: 400;
+}
+
+.item-meta > span:after{
+  content: '\00B7';
+  padding: 0 0.25rem;
+}
+
+.item-meta > span:last-child::after{
+  content: none;
+}
+
+.item-description{
+  font-family: "Trade Gothic";
+  font-size: calc(16em/16);
+  color: #9a9a9a;
+  margin-top: 0.25rem;
+}
+
+.item-servings{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+
+#menu-container.align-center .item-servings{
+  justify-content: center;
+}
+
+#menu-container.align-right .item-servings{
+  justify-content: flex-end;
+}
+
+.item-serving{
+  font-family: "Trade Gothic";
+  font-size: calc(16em/16);
+  color: #9a9a9a;
+}
+
+.serving-price{
+  font-weight: 700;
+}
+
+.hide-info{
+  display: none;
+}
+
+.serving-price{
+  display: ;
+}
+
+.follow-button-container{
+  display: ;
+}
+.updated-at{
+  display: ;
+}
+.container-counts{
+  display: ;
+}
+
+.servings{
+  width: 100%;
+  font-size: calc(16em/16);
+  font-family: "Trade Gothic";
+  color: #9a9a9a;
+  font-weight: 300;
+}
+
+.item-wrapper.servings-right .servings{
+  flex: 1;
+  text-align: right;
+  width: auto;
+}
+
+/* coming soon */
+
+#coming-soon{
+  margin-top: 6em;
+}
+
+
+#coming-soon > h2{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  line-height: 1;
+}
+
+#coming-soon > h2:after{
+  content: '';
+  height: 0.075em;
+  flex: 1;
+  width: 100%;
+  background: #9a9a9a;
+}
+
+.align-center #coming-soon > h2:before{
+  content: '';
+  height: 0.075em;
+  flex: 1;
+  width: 100%;
+  background: #9a9a9a;
+}
+
+.align-right #coming-soon > h2:after{
+  content: none;
+}
+
+.align-center #coming-soon{
+  text-align: center;
+}
+
+.align-right #coming-soon{
+  text-align: right;
+}
+
+#coming-soon .menu-section:nth-child(2){
+  margin-top: 4em;
+}
+
+#coming-soon + .menu-section{
+  margin-top: 5em;
+}
+
+#coming-soon + .menu-section:before{
+  content: '';
+  display: block;
+  height: 0.125em;
+  width: 100%;
+  background: #9a9a9a;
+  margin-bottom: 5em;
+}
+
+.modal-wrapper{
+  z-index: 2000;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*sizing*/
+
+.cozy-spacing#menu-container{
+  font-size: 15px;
+}
+
+.compact-spacing#menu-container{
+  font-size: 14px;
+}
+
+.cozy-spacing .header,
+.cozy-spacing .follow-button-container{
+  margin-bottom: 1.5rem;
+}
+
+.compact-spacing .header,
+.compact-spacing .follow-button-container{
+  margin-bottom: 1rem;
+}
+
+.cozy-spacing .menu-navigation{
+  margin-top: 1.5rem;
+}
+
+.compact-spacing .menu-navigation{
+  margin-top: 1rem;
+}
+
+.cozy-spacing .item-wrapper + .item-wrapper{
+  margin-top: 1.5rem;
+}
+
+.compact-spacing .item-wrapper + .item-wrapper{
+  margin-top: 1rem;
+}
+
+.cozy-spacing.column-count-2 .item-wrapper + .item-wrapper,
+.cozy-spacing.column-count-3 .item-wrapper + .item-wrapper,
+.compact-spacing.column-count-2 .item-wrapper + .item-wrapper,
+.compact-spacing.column-count-3 .item-wrapper + .item-wrapper{
+  margin-top: 0;
+}
+
+.cozy-spacing.column-count-2 .menu-wrapper{
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+}
+
+.compact-spacing.column-count-2 .menu-wrapper{
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.cozy-spacing .menu-section,
+.cozy-spacing .powered-by-beermenus{
+  margin-top: 2rem;
+}
+
+.compact-spacing .menu-section,
+.compact-spacing .powered-by-beermenus{
+  margin-top: 1.5rem;
+}
+
+.cozy-spacing #coming-soon{
+  margin-top: 5em;
+}
+
+.compact-spacing #coming-soon{
+  margin-top: 4em;
+}
+
+.cozy-spacing #coming-soon .menu-section:nth-child(2),
+.cozy-spacing #coming-soon + .menu-section{
+  margin-top: 4em;
+}
+
+.compact-spacing #coming-soon .menu-section:nth-child(2),
+.compact-spacing #coming-soon + .menu-section{
+  margin-top: 3em;
+}
+
+.cozy-spacing #coming-soon + .menu-section:before{
+  margin-bottom: 5em;
+}
+
+.compact-spacing #coming-soon + .menu-section:before{
+  margin-bottom: 4em;
+}
+
+.cozy-spacing .flavor{
+  margin-top: 1.5rem;
+}
+
+.compact-spacing .flavor{
+  margin-top: 1rem;
+}
+
+.cozy-spacing.column-count-2 .menu-section.sort-by-style .flavor,
+.cozy-spacing.column-count-3 .menu-section.sort-by-style .flavor{
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+}
+
+.compact-spacing.column-count-2 .menu-section.sort-by-style .flavor,
+.compact-spacing.column-count-3 .menu-section.sort-by-style .flavor{
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+.cozy-spacing .section-name-container{
+  margin-bottom: 1rem;
+}
+
+.compact-spacing .section-name-container{
+  margin-bottom: 0.75rem;
+}
+
+.cozy-spacing .item-wrapper{
+  gap: 0.75rem;
+}
+
+.compact-spacing .item-wrapper{
+  gap: 0.5rem;
+}
+
+.cozy-spacing .item{
+  gap: 0.375rem;
+}
+
+.compact-spacing .item{
+  gap: 0.25rem;
+}
+
+.compact-spacing .item-image-wrapper{
+  width: 75px;
+  height: 75px;
+}
+
+/*responsive*/
+
+
+@container menu (inline-size < 767px){
+
+  #menu-container{
+    font-size: 14px;
+  }
+
+  .column-count-3 .menu-wrapper,
+  .column-count-3 .sort-by-style.menu-section .flavor{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item-image-wrapper{
+    width: 75px;
+    height: 75px;
+  }
+
+  .item{
+    flex-direction: column;
+  }
+
+  /*spacing responsive*/
+
+  .cozy-spacing#menu-container{
+    font-size: 13px;
+  }
+
+  .compact-spacing#menu-container{
+    font-size: 12px;
+  }
+
+  .compact-spacing .item-image-wrapper{
+    width: 50px;
+    height: 50px;
+  }
+
+  /*coming soon */
+
+  #coming-soon{
+    margin-top: 5em;
+  }
+
+  #coming-soon h2{
+    font-size: 1.5em;
+  }
+
+  #coming-soon .menu-section:nth-child(2){
+    margin-top: 3em;
+  }
+
+  #coming-soon + .menu-section:before{
+    height: 0.1125em;
+  }
+}
+
+@container menu (inline-size < 480px){
+
+  .item-image-wrapper{
+    width: 50px;
+    height: 50px;
+  }
+
+  .column-count-2 .menu-wrapper,
+  .column-count-3 .menu-wrapper,
+  .column-count-2 .sort-by-style.menu-section .flavor,
+  .column-count-3 .sort-by-style.menu-section .flavor{
+    grid-template-columns: 1fr;
+  }
+
+  #coming-soon{
+    margin-top: 4em;
+  }
+
+  #coming-soon h2{
+    font-size: 1.25em;
+  }
+
+  #coming-soon + .menu-section{
+    margin-top: 3em;
+  }
+
+  #coming-soon + .menu-section:before{
+    height: 0.09375em;
+    margin-bottom: 3em;
+  }
+}
+
+  .item{
+  gap: 0.25em;
+}
+
+.menu-section{
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-section + .menu-section{
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.cozy-spacing .menu-section + .menu-section{
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.compact-spacing .menu-section + .menu-section{
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.menu-navigation{
+  display: none;
+}
+    #menu{
+  text-transform: uppercase
+}
+</style>
+
+<div id="menu">
+  <div id="menu-container" class="column-count-1 align-left cozy-spacing">
+    <div class="header">
+    </div>
+
+    <div class="follow-button-container menu-overview-matter">
+      <a class="follow-button" href="https://www.beermenus.com/places/87951-angry-chair-brewing?follow=1">Follow us on BeerMenus</a>
+    </div>
+
+    <div class="updated-container-wrapper menu-overview-matter">
+      <p class="updated-at">Updated 11/17/2026</p>
+      <p class="container-counts">On Tap: 361 <span class='soft'>|</span> Bottles: 2 <span class='soft'>|</span> Cans: 28</p>
+    </div>
+
+    <div class="menu-sections-wrapper">
+      <ul class="menu-navigation">
+        <li>Jump to Menu Section</li>
+          <li>
+            <a class="section-link" href="#web-menu-section-12">
+              On Tap
+</a>            <span class="menu-nav-arrow"></span>
+          </li>
+          <li>
+            <a class="section-link" href="#web-menu-section-19545">
+              TO GO
+</a>            <span class="menu-nav-arrow"></span>
+          </li>
+</ul>
+      <div class="menu-sections">
+            
+<div id="web-menu-section-12" class="menu-section" tabindex="-1">
+  <div class="menu-wrapper">
+    <div class="section-name-container row">
+      <h2 class="section-name">On Tap</h2>
+    </div>
+      
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/567283-angry-chair-cycle-ology-dark-embrace-2023-ga">Angry Chair + Cycle + Ology Dark Embrace 2023 GA</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Barrel Aged
+        </span>
+
+          <span class="item-abv">
+            12.0%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Imperial Sweet Stout with coconut and vanilla aged in bourbon barrels
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$10</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$16</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/595705-angry-chair-coconut-cauldron">Coconut Cauldron</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Pastry Stout
+        </span>
+
+          <span class="item-abv">
+            10.0%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Imperial Sweet Stout with Coconut and Chocolate
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$10</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/359460-angry-chair-full-circle">Full Circle</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Lager
+        </span>
+
+          <span class="item-abv">
+            4.1%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            American lite lager
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$2</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$4</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$6</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/547574-angry-chair-holiday-trail">Holiday Trail</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Imperial Stout
+        </span>
+
+          <span class="item-abv">
+            11.5%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Imperial Stout W/ Coconut &amp; Mint Coffee. Contains Lactose
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$10</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/553681-angry-chair-melon-baller">Melon Baller</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Hard Seltzer
+        </span>
+
+          <span class="item-abv">
+            5.5%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Hard Seltzer with Watermelon and Lemon
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$3</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$7</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/595704-angry-chair-punkin-chunkin">Punkin Chunkin</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Pastry Stout
+        </span>
+
+          <span class="item-abv">
+            10.0%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Imperial Sweet Stout with Pumpkin
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$10</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/346028-fat-orange-cat-baby-kittens">Fat Orange Cat Baby Kittens</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          NE/Hazy IPA
+        </span>
+
+          <span class="item-abv">
+            6.5%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            East Hampton, CT
+          </span>
+</div>
+        <div class="item-description">
+            Hazy IPA
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$4</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$6</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$8</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/345256-late-start-serious-moonlight">Late Start Serious Moonlight</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Porter
+        </span>
+
+          <span class="item-abv">
+            6.0%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Oatmeal Porter
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">3oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$3</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$7</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/580925-potter-s-sweet-blossom-cider">Potter’s Sweet Blossom Cider</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Cider
+        </span>
+
+          <span class="item-abv">
+            5.5%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Free Union, VA
+          </span>
+</div>
+        <div class="item-description">
+            Sweet Hard Cider
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">5oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$3</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">12oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$5</span>
+        </p>
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            Draft
+          </span>
+          <span class="serving-price">$7</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+</div></div>
+            
+<div id="web-menu-section-19545" class="menu-section" tabindex="-1">
+  <div class="menu-wrapper">
+    <div class="section-name-container row">
+      <h2 class="section-name">TO GO</h2>
+    </div>
+      
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/359460-angry-chair-full-circle">Full Circle</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Lager
+        </span>
+
+          <span class="item-abv">
+            4.1%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            American lite lager
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            4 Pack Cans
+          </span>
+          <span class="serving-price">$12</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/553681-angry-chair-melon-baller">Melon Baller</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Hard Seltzer
+        </span>
+
+          <span class="item-abv">
+            5.5%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Hard Seltzer with Watermelon and Lemon
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            4 Pack Cans
+          </span>
+          <span class="serving-price">$18</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="item-wrapper">
+    <div class="item">
+    <div class="item-info">
+      <h3 class="item-name">
+           <a target="_blank" href="https://www.beermenus.com/beers/105493-angry-chair-oktoberfist">Oktoberfist</a>
+      </h3>
+
+      <div class="item-meta">
+        <span class="item-style">
+          Oktoberfest
+        </span>
+
+          <span class="item-abv">
+            5.6%
+          </span>
+
+
+
+          <span class="item-producer-location" %>
+            Tampa, FL
+          </span>
+</div>
+        <div class="item-description">
+            Marzen Lager
+        </div>
+    </div>
+    <div class="item-servings">
+        <p class="item-serving">
+          <span class="serving-size">16oz</span>
+          <span class="serving-type">
+            4 Pack Cans
+          </span>
+          <span class="serving-price">$13</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+
+</div></div>
+      </div>
+    </div>
+
+
+    <p class="powered-by-beermenus">
+      Powered by BeerMenus
+      &middot; <a target="_blank" href="https://www.beermenus.com/?ref=">Find Great Beer</a>
+      &middot; <a target="_blank" href="https://www.beermenus.com/places/new?ref=bar-87951">Add My Business</a>
+</p>
+    <div class="footer"></div>
+  </div>
+</div>
+    </template>
+  </beermenus-web>
+
+</body>
+</html>

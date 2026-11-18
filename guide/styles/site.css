@@ -266,6 +266,72 @@ a:hover {
   margin-top: 1.25rem;
 }
 
+/* ------------------------------------------------------------------- areas */
+/* Clusters of breweries close together (location.json `areas`). Each gets a colored
+   rail down its left side; the links under the summary jump to each one. */
+
+.area-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -1rem 0 2rem;
+}
+.area-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem 0.5rem 0.7rem;
+  border: 2px solid var(--color-line-strong);
+  border-radius: 999px;
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: var(--text-size-small);
+  line-height: 1;
+  text-decoration: none;
+}
+.area-nav a::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--area, var(--color-line-faint));
+}
+.area-nav a:hover {
+  background: var(--color-surface-bg);
+}
+.area-count {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.area {
+  --area-rail: var(--area, var(--color-line-faint));
+  margin: 0 0 3rem;
+  padding-left: clamp(0.9rem, 2.5vw, 1.75rem);
+  border-left: 6px solid var(--area-rail);
+  scroll-margin-top: 1rem;
+}
+.area-head {
+  padding: 0.25rem 0 1rem;
+}
+.area-head h2 {
+  margin: 0;
+  font: 900 clamp(2.2rem, 6vw, 3.4rem) / 0.95 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.area-head p {
+  margin: 0.4rem 0 0;
+  color: var(--color-text-muted);
+}
+/* Brewery dividers inside an area take its color. */
+.area .brewery {
+  border-top-color: var(--area-rail);
+}
+.area-plain .brewery {
+  border-top-color: var(--color-line-strong);
+}
+
 /* ----------------------------------------------------------------- brewery */
 
 .brewery {
@@ -303,6 +369,15 @@ a:hover {
   font-size: var(--text-size-small);
   color: var(--color-text-muted);
   white-space: nowrap;
+}
+@media (max-width: 34rem) {
+  /* Long notes ("See their site for hours") wrap instead of running off a phone screen. */
+  .b-status {
+    max-width: 9.5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: right;
+  }
 }
 .b-status[data-open='true'] {
   color: var(--color-status-open);

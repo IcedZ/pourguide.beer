@@ -1,0 +1,26 @@
+{
+  "name": "St. Pete",
+  "url": "https://stpete.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "St. Pete breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at breweries in St. Petersburg, Gulfport and the beaches.",
+  "shareTitle": "St. Pete breweries today",
+  "shareDescription": "Taps, food trucks and events at St. Pete’s breweries, on one page.",
+  "wordmark": "st. pete",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from Visit St. Pete/Clearwater’s <a href=\"https://www.visitstpeteclearwater.com/eat-drink/gulp-coast-beer-trail/south\">Gulp Coast beer trail</a>.",
+  "fixturesNow": "2026-11-17T16:00:00-05:00",
+  "areas": [
+    { "name": "Grand Central & Warehouse Arts", "match": ["Grand Central District", "Warehouse Arts District"], "note": "All within about a mile" },
+    { "name": "Downtown & the Edge", "match": ["Downtown", "Edge District"], "note": "A short walk apart" },
+    { "name": "The Beaches", "match": ["St. Pete Beach", "Treasure Island", "Madeira Beach"], "note": "St. Pete Beach to John’s Pass" }
+  ],
+  "otherAreasHeading": "Gulfport",
+  "alsoNearby": {
+    "heading": "Also nearby",
+    "intro": "Not breweries, but worth knowing.",
+    "places": [
+      { "name": "Webb’s City Cellar", "url": "https://greenbenchbrewing.com/webbs-city-cellar", "note": "Green Bench’s beer and wine cellar, next door" }
+    ]
+  }
+}

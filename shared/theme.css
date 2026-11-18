@@ -48,6 +48,14 @@
   --color-focus-on-accent: var(--color-text); /* focus ring on a control that's already accent-colored */
 
   /* ---- Status */
+  /* Area clusters (Ybor City, Seminole Heights…), in the order a guide lists them.
+     Kept away from beer colors, and at least 3:1 against the page so the rails show. */
+  --color-area-1: #2f7f8f; /* teal */
+  --color-area-2: #c4513a; /* brick */
+  --color-area-3: #6b5bb5; /* violet */
+  --color-area-4: #3c6fb3; /* blue */
+  --color-area-5: #7c8b2a; /* olive */
+  --color-area-6: #b04a83; /* magenta */
   --color-status-open: #2e7d4f; /* "Open until 9 PM" */
 
   /* ---- Beer glasses and tap dots (the fill is each beer's own color) */
@@ -85,6 +93,13 @@
     --color-on-accent: #13201b;
 
     --color-status-open: #6fcf97;
+
+    --color-area-1: #5fb8c7;
+    --color-area-2: #e57f66;
+    --color-area-3: #a596e6;
+    --color-area-4: #74a3e6;
+    --color-area-5: #b3c25a;
+    --color-area-6: #e07fb6;
 
     /* Stouts are nearly black, so glasses and dots get a light edge to stay visible. */
     --color-glass-foam: #e9e1cb;

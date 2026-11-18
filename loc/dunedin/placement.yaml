@@ -1,0 +1,15 @@
+# Brewery order on dunedin.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: 7venth-sun, caledonia, cueni, dunedin-brewery, hob, soggy-bottom, woodwright
+#
+# Example:
+#   pinned:
+#     - dunedin-brewery
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

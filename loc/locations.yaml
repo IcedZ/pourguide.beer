@@ -30,3 +30,23 @@ locations:
     region: Florida
     url: https://staug.pourguide.beer
     status: live
+  - id: dunedin
+    name: Dunedin
+    region: Florida
+    url: https://dunedin.pourguide.beer
+    status: soon
+  - id: stpete
+    name: St. Pete
+    region: Florida
+    url: https://stpete.pourguide.beer
+    status: soon
+  - id: tpa
+    name: Tampa
+    region: Florida
+    url: https://tpa.pourguide.beer
+    status: soon
+  - id: clw
+    name: Clearwater
+    region: Florida
+    url: https://clw.pourguide.beer
+    status: soon

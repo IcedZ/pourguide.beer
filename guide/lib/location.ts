@@ -23,6 +23,23 @@ export interface Location {
    * Optional short list under the breweries for places that aren't breweries
    * (distilleries, a winery…): named and linked, nothing more.
    */
+  /**
+   * Optional clusters of breweries, each shown as its own colored group ("Ybor City",
+   * "Seminole Heights"…). A brewery joins a cluster when its `area` is the cluster's
+   * name or one of `match`. Breweries in no cluster are listed after the clusters,
+   * under `otherAreasHeading`. Leave out for one plain list.
+   */
+  areas?: {
+    name: string;
+    /** Other `area` values that belong to this cluster. */
+    match?: string[];
+    /** Short line under the name ("All within a few blocks"). */
+    note?: string;
+    /** Any CSS color. Defaults to the next color in the area palette (shared/theme.css). */
+    color?: string;
+  }[];
+  /** Heading for breweries outside every cluster. Defaults to "Around town". */
+  otherAreasHeading?: string;
   alsoNearby?: {
     heading: string;
     intro?: string;

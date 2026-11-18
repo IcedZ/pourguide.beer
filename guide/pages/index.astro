@@ -11,6 +11,27 @@ import '../styles/site.css';
 const data = await getSiteData();
 const placement = await loadPlacement(data.breweries.map((b) => b.id));
 const breweries = orderBreweries(data.breweries, placement.pinned);
+
+// Area clusters (location.json `areas`): one colored group per cluster, then everyone else.
+// Without clusters, one plain group.
+const AREA_PALETTE = 6;
+const slug = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+type Group = { id?: string; name?: string; note?: string; color?: string; rows: typeof breweries };
+const groups: Group[] = [];
+if (LOCATION.areas?.length) {
+  const placed = new Set<string>();
+  LOCATION.areas.forEach((a, i) => {
+    const names = new Set([a.name, ...(a.match ?? [])].map((n) => n.toLowerCase()));
+    const rows = breweries.filter((b) => !placed.has(b.id) && names.has((b.area ?? '').toLowerCase()));
+    rows.forEach((b) => placed.add(b.id));
+    if (rows.length) groups.push({ id: `area-${slug(a.name)}`, name: a.name, note: a.note, color: a.color ?? `var(--color-area-${(i % AREA_PALETTE) + 1})`, rows });
+  });
+  const rest = breweries.filter((b) => !placed.has(b.id));
+  if (rest.length) groups.push({ id: 'area-other', name: LOCATION.otherAreasHeading ?? 'Around town', rows: rest });
+} else {
+  groups.push({ rows: breweries });
+}
+const clustered = groups.some((g) => g.name);
 // Only offer styles that are actually pouring somewhere, with a count.
 const familyCounts = new Map<string, number>();
 for (const b of data.breweries) for (const t of b.taps) familyCounts.set(t.family!, (familyCounts.get(t.family!) ?? 0) + 1);
@@ -95,31 +116,58 @@ const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one :
       {plural(trucks, 'food truck', 'food trucks')} and {plural(events, 'event', 'events')} at {data.breweries.length} breweries today.
     </p>
 
-    <main class="list" data-list>
+    {
+      clustered && (
+        <nav class="area-nav" aria-label="Areas">
+          {groups.map((g) => (
+            <a href={`#${g.id}`} style={g.color ? `--area: ${g.color}` : undefined} class:list={{ 'area-plain': !g.color }}>
+              {g.name} <span class="area-count">{g.rows.length}</span>
+            </a>
+          ))}
+        </nav>
+      )
+    }
+
+    <main class:list={['list', { clustered }]} data-list>
       {
-        breweries.map((b) => (
-          <BreweryRow
-            brewery={b}
-            today={today}
-            dow={dow}
-            minutes={minutes}
-            pinned={placement.pinned.includes(b.id)}
-            pinnedLabel={placement.pinnedLabel}
-          />
-        ))
+        groups.map((g) =>
+          g.name ? (
+            <section class:list={['area', { 'area-plain': !g.color }]} id={g.id} style={g.color ? `--area: ${g.color}` : undefined} aria-labelledby={`${g.id}-h`}>
+              <header class="area-head">
+                <h2 id={`${g.id}-h`}>{g.name}</h2>
+                <p>
+                  {g.rows.length === 1 ? '1 brewery' : `${g.rows.length} breweries`}
+                  {g.note && <> · {g.note}</>}
+                </p>
+              </header>
+              <div class="area-rows" data-rows>
+                {g.rows.map((b) => (
+                  <BreweryRow brewery={b} today={today} dow={dow} minutes={minutes} pinned={placement.pinned.includes(b.id)} pinnedLabel={placement.pinnedLabel} headingLevel={3} />
+                ))}
+              </div>
+            </section>
+          ) : (
+            <div data-rows>
+              {g.rows.map((b) => (
+                <BreweryRow brewery={b} today={today} dow={dow} minutes={minutes} pinned={placement.pinned.includes(b.id)} pinnedLabel={placement.pinnedLabel} />
+              ))}
+            </div>
+          ),
+        )
       }
     </main>
     <script is:inline>
-      // Shuffle the unpinned breweries on every visit. Runs before the page is first drawn, so nothing jumps.
+      // Shuffle the unpinned breweries on every visit (within each area, when there are areas).
+      // Runs before the page is first drawn, so nothing jumps.
       (function () {
-        var list = document.querySelector('[data-list]');
-        if (!list) return;
-        var rows = Array.prototype.slice.call(list.querySelectorAll('article[data-shuffle]'));
-        for (var i = rows.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var t = rows[i]; rows[i] = rows[j]; rows[j] = t;
-        }
-        rows.forEach(function (r) { list.appendChild(r); });
+        document.querySelectorAll('[data-rows]').forEach(function (box) {
+          var rows = Array.prototype.slice.call(box.querySelectorAll(':scope > article[data-shuffle]'));
+          for (var i = rows.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = rows[i]; rows[i] = rows[j]; rows[j] = t;
+          }
+          rows.forEach(function (r) { box.appendChild(r); });
+        });
       })();
     </script>
 

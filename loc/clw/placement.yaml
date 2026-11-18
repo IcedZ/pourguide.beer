@@ -1,0 +1,12 @@
+# Brewery order on clw.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first in their area, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: 3-daughters-beach, anecdote, arkane, brighter-days, crooked-thumb, de-bine,
+# grindhaus, rapp, southern-lights, stilt-house, two-frogs, unrefined
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

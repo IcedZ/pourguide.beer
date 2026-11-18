@@ -164,3 +164,11 @@ export function inWindow(items: Item[], ctx: Ctx): Item[] {
     return e >= ws && s < we;
   });
 }
+
+/** "House Pilsner" → "Pilsner", "Float Away IPA" → "IPA". For lists that only give a name. */
+export function styleFromName(name: string): string | undefined {
+  const m = name.match(
+    /\b(Hazy IPA|West Coast IPA|Double IPA|DIPA|IPA|Pilsner|Helles|Lager|Dunkel|Kolsch|Kölsch|Hefeweizen|Witbier|Wheat|Cream Ale|Pale Ale|Amber|Red Ale|Brown Ale|Porter|Stout|Sour|Gose|Saison|Tripel|Dubbel|Bock|Marzen|Märzen|Oktoberfest|ESB|Barleywine|Blonde|Root Beer|Cider|Seltzer)\b/i,
+  );
+  return m ? tidyCase(m[1]) : undefined;
+}

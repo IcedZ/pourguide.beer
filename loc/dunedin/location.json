@@ -1,0 +1,20 @@
+{
+  "name": "Dunedin",
+  "url": "https://dunedin.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "Dunedin breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at Dunedin’s breweries.",
+  "shareTitle": "Dunedin breweries today",
+  "shareDescription": "Taps, food trucks and events at Dunedin’s breweries, on one page.",
+  "wordmark": "dunedin",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from Visit St. Pete/Clearwater’s <a href=\"https://www.visitstpeteclearwater.com/eat-drink/gulp-coast-beer-trail/north\">Gulp Coast beer trail</a>.",
+  "fixturesNow": "2026-11-17T16:00:00-05:00",
+  "alsoNearby": {
+    "heading": "Not beer, but nearby",
+    "intro": "Dunedin’s distillery, a block from the breweries on Huntley Avenue.",
+    "places": [
+      { "name": "Cotherman Distilling Co.", "url": "https://www.visitstpeteclearwater.com/profile/cotherman-distilling-company/140511", "note": "Huntley Avenue" }
+    ]
+  }
+}

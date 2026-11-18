@@ -1,0 +1,26 @@
+{
+  "name": "Tampa",
+  "url": "https://tpa.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "Tampa breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at Tampa breweries, from Ybor City to Seminole Heights.",
+  "shareTitle": "Tampa breweries today",
+  "shareDescription": "Taps, food trucks and events at Tampa’s breweries, by neighborhood, on one page.",
+  "wordmark": "tampa",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from Visit Tampa Bay’s <a href=\"https://visittampabay.com/baycrafted\">Bay Crafted</a> guide and local news, checked November 2026.",
+  "fixturesNow": "2026-11-17T16:00:00-05:00",
+  "areas": [
+    { "name": "Ybor City", "note": "Walkable, a few blocks apart" },
+    { "name": "Seminole Heights", "note": "Along Florida and Nebraska avenues" },
+    { "name": "Tampa Heights & Downtown", "match": ["Tampa Heights", "Downtown"], "note": "Between downtown and the Heights" }
+  ],
+  "otherAreasHeading": "Around town",
+  "alsoNearby": {
+    "heading": "Not beer, but nearby",
+    "intro": "Ybor City’s distillery, for when someone in the group wants something else.",
+    "places": [
+      { "name": "Florida Cane Distillery", "url": "https://visittampabay.com/baycrafted", "note": "Ybor City" }
+    ]
+  }
+}

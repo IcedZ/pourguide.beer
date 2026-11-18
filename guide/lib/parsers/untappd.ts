@@ -23,7 +23,10 @@ export function extractUntappdHtml(js: string): string {
   if (!m) throw new Error('Untappd embed: menu HTML not found');
   // JS string literal → JSON string literal: drop escapes JSON doesn't allow (\' \$ …).
   // Walk escape pairs left to right so an escaped backslash (\\) stays intact.
-  const json = m[1].replace(/\\(.)/gs, (_, c: string) => ('"\\/bfnrtu'.includes(c) ? `\\${c}` : c));
+  const json = m[1]
+    .replace(/\\(.)/gs, (_, c: string) => ('"\\/bfnrtu'.includes(c) ? `\\${c}` : c))
+    // Raw tabs and other control characters are fine in JS strings but not in JSON.
+    .replace(/[\u0000-\u001f]/g, (c) => `\\u${c.charCodeAt(0).toString(16).padStart(4, '0')}`);
   return JSON.parse(json);
 }
 

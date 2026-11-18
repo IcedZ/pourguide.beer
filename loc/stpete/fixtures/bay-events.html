@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | Bayboro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=1791922561">
+  <link rel="stylesheet" href="styles-antigravity.css?v=1791922561">
+  </head>
+<!-- Antigravity is the site design. styles.css provides the structure,
+     styles-antigravity.css restyles it via this data-theme attribute. -->
+<body data-theme="antigravity">
+
+  <!-- Header -->
+  <header class="site-header site-header-textonly">
+    <p class="header-tagline"><span>Craft Cocktails &nbsp;|&nbsp; Craft Beer &nbsp;|&nbsp; Local Eatery</span></p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <button class="nav-toggle" id="navToggleBtn" onclick="toggleMobileNav(event)" aria-label="Toggle Navigation Menu">
+      <span class="nav-toggle-icon">&#9776;</span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.php">Our Story</a></li>
+      <li class="active">
+        <a href="#" onclick="return false;" style="cursor:default;">Events</a>
+        <div class="dropdown-menu">
+          <a href="upcoming-events.php">Upcoming Events</a>
+          <a href="annual-events.php">Annual Events</a>
+        </div>
+      </li>
+      <li>
+        <a href="menus.php">Menus</a>
+        <div class="dropdown-menu">
+          <a href="beer-info.php">Beer Info &amp; FAQs</a>
+        </div>
+      </li>
+      <li>
+        <a href="catering.php">Catering</a>
+        <div class="dropdown-menu">
+          <a href="biergarten.php">Biergarten</a>
+        </div>
+      </li>
+      <li>
+        <a href="virtual-tour.php">Virtual Tour</a>
+      </li>
+      <li><a href="community-tap.php">Community Tap</a></li>
+      <li><a href="contact.php">Contact Us</a></li>
+      <li>
+        <a href="event-venue.php">Private Bookings</a>
+        <div class="dropdown-menu">
+          <a href="corporate-events.php">Corporate &amp; Private Bookings</a>
+          <a href="event-spaces.php">Event Spaces</a>
+        </div>
+      </li>
+            <li><a href="/live/" class="nav-live-link">Bayboro Live</a></li>
+    </ul>
+  </nav>
+
+  <script>
+  function toggleMobileNav(e) {
+    if (e) e.stopPropagation();
+    var navUl = document.querySelector('.main-nav ul');
+    var btn = document.getElementById('navToggleBtn');
+    if (!navUl || !btn) return;
+    var isOpen = navUl.classList.toggle('open');
+    btn.classList.toggle('active', isOpen);
+    var iconEl = btn.querySelector('.nav-toggle-icon');
+    var textEl = btn.querySelector('.nav-toggle-text');
+    if (iconEl) iconEl.innerHTML = isOpen ? '&times;' : '&#9776;';
+    if (textEl) textEl.textContent = isOpen ? 'Close' : 'Menu';
+  }
+  document.addEventListener('click', function(e) {
+    var nav = document.querySelector('.main-nav');
+    if (nav && !nav.contains(e.target)) {
+      var navUl = document.querySelector('.main-nav ul');
+      var btn = document.getElementById('navToggleBtn');
+      if (navUl && navUl.classList.contains('open')) {
+        navUl.classList.remove('open');
+        if (btn) {
+          btn.classList.remove('active');
+          var iconEl = btn.querySelector('.nav-toggle-icon');
+          var textEl = btn.querySelector('.nav-toggle-text');
+          if (iconEl) iconEl.innerHTML = '&#9776;';
+          if (textEl) textEl.textContent = 'Menu';
+        }
+      }
+    }
+  });
+  </script>
+
+  <!-- Hero -->
+  <section class="hero-full" data-hero-video="/images/cms/20260922-8c6afcd11e42.mp4" style="position:relative;overflow:hidden;" data-photo-page="upcoming-events" data-photo-key="hero.bg">
+    <div class="hero-text">
+      <h1><span>Upcoming Events</span></h1>
+      <p><span>Unless specified, attendees must be 18+ to enter. Under-18s can attend with adult accompaniment. Certain events are restricted to ages 21+ and will be specified in event details.</span></p>
+    </div>
+  </section>
+
+    <!-- Upcoming Events Scroll (non-music: admin calendar + Eventbrite) -->
+  <section class="photo-scroll-section">
+    <div class="photo-scroll-header">
+      <div>
+        <h2 class="photo-scroll-title"><span>Coming Up at Bayboro</span></h2>
+        <p class="photo-scroll-subtitle"><span>Swipe or scroll through what's on the calendar</span></p>
+      </div>
+    </div>
+    <div class="photo-scroll-container">
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488474826" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">MON NOV 23</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">7:00pm</p>
+        </div>
+      </a>
+            <a href="event-detail.php?id=54" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="Bayboro Website Photos/Events/Corporate/bayboro beer garden.jpg" alt="Thanksgiving">
+          <span class="photo-scroll-tag">THU NOV 26</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">Thanksgiving</h3>
+          <p class="photo-scroll-card-desc">Closed for Thanksgiving</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488475829" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">MON NOV 30</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">7:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488476832" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">MON DEC 7</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">7:00pm</p>
+        </div>
+      </a>
+            <a href="event-detail.php?id=65" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="uploads/events/event_1793465867_a74de897.jpg" alt="Wippersnap pre party and DTMP holiday party">
+          <span class="photo-scroll-tag">SAT DEC 12</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">Wippersnap pre party and DTMP holiday party</h3>
+          <p class="photo-scroll-card-desc">Whippersnap and DTMP are teaming up for a very special holiday party at Bayboro. MiniM and Zenzi will be thro…</p>
+        </div>
+      </a>
+            <a href="event-detail.php?id=119" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="Bayboro Website Photos/Events/Corporate/bayboro beer garden.jpg" alt="Jordan Sneed Music School show">
+          <span class="photo-scroll-tag">SUN DEC 13</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">Jordan Sneed Music School show</h3>
+          <p class="photo-scroll-card-desc">Jordan Sneed Music School show</p>
+        </div>
+      </a>
+            <a href="event-detail.php?id=141" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="Bayboro Website Photos/Events/Corporate/bayboro beer garden.jpg" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">MON DEC 14</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">7:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488478838" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">MON DEC 21</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">7:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381771674" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">TUE JAN 5</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">5:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381772677" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">TUE JAN 12</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">5:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381773680" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">TUE JAN 19</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">5:00pm</p>
+        </div>
+      </a>
+            <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381774683" target="_blank" rel="noopener" class="photo-scroll-card photo-scroll-link">
+        <div class="photo-scroll-img-wrap">
+          <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming">
+          <span class="photo-scroll-tag">TUE JAN 26</span>
+        </div>
+        <div class="photo-scroll-body">
+          <h3 class="photo-scroll-card-title">BAYBORO BREWING - Mondays are for Gaming</h3>
+          <p class="photo-scroll-card-desc">5:00pm</p>
+        </div>
+      </a>
+          </div>
+  </section>
+  
+  <!-- Annual events cross-link -->
+  <section class="centered-text" style="padding: 10px 20px 30px;">
+    <p style="color:#aaa;margin-bottom:18px;"><span>Crawfish Boil, Oktoberfest, St. Patrick's Day and more &mdash; see all our signature traditions.</span></p>
+    <a href="annual-events.php" class="btn-outline"><span>View Annual Events</span></a>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events-section">
+    <!-- View Toggle -->
+    <div class="events-toolbar">
+      <button class="view-btn active" id="btnFeed" onclick="switchView('feed')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+        Feed
+      </button>
+      <button class="view-btn" id="btnCalendar" onclick="switchView('calendar')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+        Calendar
+      </button>
+    </div>
+
+    <!-- ═══ FEED VIEW ═══ -->
+    <div class="events-feed" id="feedView">
+                      <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>18</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621356714" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d', 'Bayboro Presents: Uncle John\&#039;s Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d" alt="Bayboro Presents: Uncle John&#039;s Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>19</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Bayboro Presents: Uncle John&#039;s Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-presents-uncle-johns-band-tickets-1978777799666" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/ticketspot_f6d6c8d2-4d24-4775-a75d-09b0a2a87b10.png', 'Cherry Flavored ENT')">
+              <img src="uploads/events/ticketspot_f6d6c8d2-4d24-4775-a75d-09b0a2a87b10.png" alt="Cherry Flavored ENT flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>20</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Cherry Flavored ENT</h3>
+                <p class="event-time">
+                  7:00pm                   – 8:00pm                </p>
+              </div>
+            </div>
+                          <p class="event-description">Come and support your local bands! Get 4 shows for the price of one! Discover new quality music with us on Friday night!<br />
+<br />
+Rice Paper Scissors<br />
+The Pilot Waves<br />
+Mirror Parts<br />
+The Jackettes</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">Music</span>
+                                <span class="event-badge event-badge-price">See tickets</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/cherry-flavored-local-band-night-tickets-1999390485765?aff=oddtdtcreator&amp;keep_tld=true" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/ticketspot_5c1d0a1b-9ad6-4bce-a191-f8a5dca99b51.jpg', 'Road to Nowhere (Talking Heads Tribute) with Special Guests The Family Funk')">
+              <img src="uploads/events/ticketspot_5c1d0a1b-9ad6-4bce-a191-f8a5dca99b51.jpg" alt="Road to Nowhere (Talking Heads Tribute) with Special Guests The Family Funk flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>21</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Road to Nowhere (Talking Heads Tribute) with Special Guests The Family Funk</h3>
+                <p class="event-time">
+                  9:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">Music</span>
+                                <span class="event-badge event-badge-price"></span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/road-to-nowhere-talking-heads-tribute-with-special-guests-the-family-funk-tickets-2002677296705" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>22</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Dyke Night</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>23</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488474826" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>25</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621357717" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>26</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Thanksgiving</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Closed for Thanksgiving</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793225020_88e1e675.jpg', 'Cherry Flavored ENT presents')">
+              <img src="uploads/events/event_1793225020_88e1e675.jpg" alt="Cherry Flavored ENT presents flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>28</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Cherry Flavored ENT presents</h3>
+                <p class="event-time">
+                  6:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Get ready for an awesome night out! Cherry Flavored Local Band Night: Vol. 2 is back. Join us in person to catch some amazing local bands rocking the stage. It&#039;s the perfect chance to hang with friends, discover new music, and soak up a chill, fun vibe. See you there!<br />
+<br />
+Fireplace<br />
+POCKET.KNIFE.DANCE.PARTY<br />
+Fiendish Thingies<br />
+Foxlair</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/cherry-flavored-local-band-night-vol-2-tickets-2000994589683" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Nov</strong>
+                <span>30</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488475829" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>2</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621358720" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d', 'Bayboro Presents: Uncle John\&#039;s Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d" alt="Bayboro Presents: Uncle John&#039;s Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>3</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Bayboro Presents: Uncle John&#039;s Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-presents-uncle-johns-band-tickets-1978777801672" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793289690_6c6824b8.jpg', 'Mia Marlene Album release')">
+              <img src="uploads/events/event_1793289690_6c6824b8.jpg" alt="Mia Marlene Album release flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>4</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Mia Marlene Album release</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Everything Happens in Allamakee County : Album Release</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://tickets.venuepilot.com/e/mia-marlene-album-release-show-2026-12-04-bayboro-brewing-st-petersburg-ffe607" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1792030285_0d39d98c.png', 'CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT 🐰')">
+              <img src="uploads/events/event_1792030285_0d39d98c.png" alt="CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT 🐰 flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>5</span>
+              </span>
+              <div class="event-card-info">
+                <h3>CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT 🐰</h3>
+                <p class="event-time">
+                  9:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT 🐰<br />
+<br />
+WOR$T PARTY IN ST. PETERSBURG:</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">dance</span>
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://wl.eventim.us/event/club-slayyy-slayyyter-hyperpop-night/708533?afflky=GloryDaysPresents" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>7</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488476832" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>8</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431399138" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793063448_f511dbf7.jpg', 'RadioStPete fundraiser w/ The Petty Experience')">
+              <img src="uploads/events/event_1793063448_f511dbf7.jpg" alt="RadioStPete fundraiser w/ The Petty Experience flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>9</span>
+              </span>
+              <div class="event-card-info">
+                <h3>RadioStPete fundraiser w/ The Petty Experience</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">RadioStPete fundraiser w/ The Petty Experience</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/ticketspot_a03b6ab8-992f-4e18-b594-e3a44b4f3a28.png', 'Brothers Within x TreeHouse!')">
+              <img src="uploads/events/ticketspot_a03b6ab8-992f-4e18-b594-e3a44b4f3a28.png" alt="Brothers Within x TreeHouse! flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>11</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Brothers Within x TreeHouse!</h3>
+                <p class="event-time">
+                  8:00pm                   – 9:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">Music</span>
+                                <span class="event-badge event-badge-price">See tickets</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventliveus.com/event/10484/treehouse-brotherswithin" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793465867_a74de897.jpg', 'Wippersnap pre party and DTMP holiday party')">
+              <img src="uploads/events/event_1793465867_a74de897.jpg" alt="Wippersnap pre party and DTMP holiday party flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>12</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wippersnap pre party and DTMP holiday party</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Whippersnap and DTMP are teaming up for a very special holiday party at Bayboro. MiniM and Zenzi will be throwing down all night, and we’ll have Whippersnap ticket giveaways and special prices on merch bundles.</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://tickets.venuepilot.com/e/dtmp-holiday-party-whippersnap-pregame-feat-minim-and-zenzi-2026-12-12-bayboro-brewing-st-petersburg-13be33" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>13</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Jordan Sneed Music School show</h3>
+                <p class="event-time">
+                  5:30pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Jordan Sneed Music School show</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">music school</span>
+                                <span class="event-badge event-badge-price"></span>
+                <span class="event-badge event-badge-age">All Ages</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>14</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  7:00pm                                  </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488477835" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>16</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621360726" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d', 'Bayboro Presents: Uncle John\&#039;s Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d" alt="Bayboro Presents: Uncle John&#039;s Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>17</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Bayboro Presents: Uncle John&#039;s Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-presents-uncle-johns-band-tickets-1978777803678" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793673460_820b63aa.jpg', 'Akin to Fire')">
+              <img src="uploads/events/event_1793673460_820b63aa.jpg" alt="Akin to Fire flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>18</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Akin to Fire</h3>
+                <p class="event-time">
+                  7:00pm                   – 9:30pm                </p>
+              </div>
+            </div>
+                          <p class="event-description">Akin to Fire Joined by Before Arcadia and Common Ground<br />
+<br />
+doors 6 pm<br />
+Show at 7 pm</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://tickets.venuepilot.com/e/akin-to-fire-album-release-party-2026-12-18-bayboro-brewing-st-petersburg-fb03ca" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>20</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Dyke Night</h3>
+                <p class="event-time">
+                  8:00pm                   – 1:00am                </p>
+              </div>
+            </div>
+                          <p class="event-description">12/20 Dyke Night 8-1am full venue (confirmed)</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>21</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998488478838" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>23</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621361729" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d', 'Bayboro Presents: Uncle John\&#039;s Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d" alt="Bayboro Presents: Uncle John&#039;s Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>24</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Bayboro Presents: Uncle John&#039;s Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-presents-uncle-johns-band-tickets-1978777804681" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=e091835aa0148ae30fd94c149339b906" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>30</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621704755" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d', 'Bayboro Presents: Uncle John\&#039;s Band')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.5&amp;fp-y=0.5&amp;s=8cff6cd92310b15a4b2c7a8a994f305d" alt="Bayboro Presents: Uncle John&#039;s Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Dec</strong>
+                <span>31</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Bayboro Presents: Uncle John&#039;s Band</h3>
+                <p class="event-time">
+                  8:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-presents-uncle-johns-band-tickets-1978777805684" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>5</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  5:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381771674" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793069328_99a42c22.jpg', 'SHREK RAVE')">
+              <img src="uploads/events/event_1793069328_99a42c22.jpg" alt="SHREK RAVE flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>8</span>
+              </span>
+              <div class="event-card-info">
+                <h3>SHREK RAVE</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">&quot;IT&#039;S  DUMB JUST COME HAVE FUN.  WHO CARES.  COOL IS DEAD.</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://wl.eventim.us/event/shrek-rave/709073?afflky=GloryDaysPresents&amp;utm_id=97758_v0_s00_e0_tv0&amp;fbclid=IwT01FWAVF9QBleHRuA2FlbQIxMABwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHhDWECMuYDBWzEvnZeS7jc1nfvJ0zevWOGVErq0iEQ1RjEU8fWl_n3rQr0xY_aem_B_CpWwSyX3eXe5OwHNe8mg" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>12</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  5:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381772677" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>12</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431400141" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793238007_87ac8839.jpg', 'Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band')">
+              <img src="uploads/events/event_1793238007_87ac8839.jpg" alt="Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>13</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Wednesday Blues &amp; $5 Jacks Presents: Kid Royal Band</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Get ready to sway with the awesome Kid Royal Band at Bayboro Brewing Co. every Wednesday!</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="event-detail.php?id=122" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793300229_88981559.jpg', 'Mason Jennings')">
+              <img src="uploads/events/event_1793300229_88981559.jpg" alt="Mason Jennings flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>17</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Mason Jennings</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Glory Days &amp; Brokenmold Present! Mason Jennings</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://wl.eventim.us/event/mason-jennings/708620?afflky=GloryDaysPresents" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>19</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  5:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381773680" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11', 'BAYBORO BREWING - Mondays are for Gaming')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&amp;fit=crop&amp;w=640&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.531&amp;fp-y=0.041&amp;s=429c507bb232d89effae922679bb8f11" alt="BAYBORO BREWING - Mondays are for Gaming flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Jan</strong>
+                <span>26</span>
+              </span>
+              <div class="event-card-info">
+                <h3>BAYBORO BREWING - Mondays are for Gaming</h3>
+                <p class="event-time">
+                  5:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/bayboro-brewing-mondays-are-for-gaming-tickets-1998381774683" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Feb</strong>
+                <span>9</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431401144" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1793059978_d5414839.jpg', 'Honey Hounds + ISTA')">
+              <img src="uploads/events/event_1793059978_d5414839.jpg" alt="Honey Hounds + ISTA flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Feb</strong>
+                <span>12</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Honey Hounds + ISTA</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Doors at 8pm<br />
+Show at 9pm<br />
+<br />
+Honey Hounds are an upbeat BootyShakin Blues trio from Jacksonville Beach, Florida that formed in 2015. The trio is quickly making a name for themselves with their artistically vintage approach to their music and image.They engage their audience in an experience that take you back to when Blues Rock ruled the airwaves. If you want something with funk and grit with some good indie soul vibes then look no further.</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">Blues</span>
+                                <span class="event-badge event-badge-price">TBD</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://tickets.venuepilot.com/e/honey-hounds-ista-2027-02-12-bayboro-brewing-st-petersburg-959f82" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1792515485_cd5b6921.png', 'Kevin Steel Band w/ The New Brutarians')">
+              <img src="uploads/events/event_1792515485_cd5b6921.png" alt="Kevin Steel Band w/ The New Brutarians flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Feb</strong>
+                <span>26</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Kevin Steel Band w/ The New Brutarians</h3>
+                <p class="event-time">
+                  8:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Kevin Steel Band w/ The New Brutarians</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price"></span>
+                <span class="event-badge event-badge-age">All Ages</span>
+              </div>
+                              <a href="https://tickets.venuepilot.com/e/kevin-steele-band-2027-02-26-bayboro-brewing-st-petersburg-0b9fcd" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Mar</strong>
+                <span>9</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431402147" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>Apr</strong>
+                <span>13</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431403150" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/event_1794852806_b6b80965.jpg', 'Cursive')">
+              <img src="uploads/events/event_1794852806_b6b80965.jpg" alt="Cursive flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>May</strong>
+                <span>6</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Cursive</h3>
+                <p class="event-time">
+                  7:00pm                                  </p>
+              </div>
+            </div>
+                          <p class="event-description">Aestheticized presents:<br />
+Cursive<br />
+w/ Small Brown Bike<br />
+<br />
+7pm / 18&amp;Up</p>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price"></span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://cursive27.eventbrite.com" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6', 'Techno &amp; Tequila Tuesdays')">
+              <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&amp;fit=crop&amp;h=230&amp;w=460&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;fp-x=0.005&amp;fp-y=0.005&amp;s=083eafff71ed97a6bbc4d4c26b0c94c6" alt="Techno &amp; Tequila Tuesdays flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>May</strong>
+                <span>11</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Techno &amp; Tequila Tuesdays</h3>
+                <p class="event-time">
+                  7:00pm                   – 10:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                <span class="event-badge event-badge-price">Free</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://www.eventbrite.com/e/techno-tequila-tuesdays-tickets-1999431404153" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                <div class="event-card">
+                      <div class="event-card-image" onclick="openLightbox('uploads/events/ticketspot_8310e041-94a4-427a-af96-14f0768e9047.jpg', 'Life Afterlife: Medium Travis Holp Live')">
+              <img src="uploads/events/ticketspot_8310e041-94a4-427a-af96-14f0768e9047.jpg" alt="Life Afterlife: Medium Travis Holp Live flyer">
+              <div class="event-card-zoom">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
+              </div>
+            </div>
+                    <div class="event-card-body">
+            <div class="event-card-meta">
+              <span class="event-date-badge">
+                <strong>May</strong>
+                <span>21</span>
+              </span>
+              <div class="event-card-info">
+                <h3>Life Afterlife: Medium Travis Holp Live</h3>
+                <p class="event-time">
+                  8:00pm                   – 9:00pm                </p>
+              </div>
+            </div>
+                        <div class="event-card-footer">
+              <div class="event-badges">
+                                  <span class="event-badge event-badge-genre">Music</span>
+                                <span class="event-badge event-badge-price">See tickets</span>
+                <span class="event-badge event-badge-age">18+</span>
+              </div>
+                              <a href="https://wl.eventim.us/event/life-afterlife-medium-travis-holp-live/703642?afflky=GloryDaysPresents" target="_blank" rel="noopener" class="eventbrite-btn">
+                  Buy Tickets
+                </a>
+                          </div>
+          </div>
+        </div>
+                  </div>
+
+    <!-- ═══ CALENDAR VIEW ═══ -->
+    <div class="events-calendar" id="calendarView" style="display:none;">
+      <div class="calendar-nav">
+        <button onclick="changeMonth(-1)" class="calendar-nav-btn">&larr; Prev</button>
+        <h2 id="calendarTitle"></h2>
+        <button onclick="changeMonth(1)" class="calendar-nav-btn">Next &rarr;</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="calendar-header">Sun</div>
+        <div class="calendar-header">Mon</div>
+        <div class="calendar-header">Tue</div>
+        <div class="calendar-header">Wed</div>
+        <div class="calendar-header">Thu</div>
+        <div class="calendar-header">Fri</div>
+        <div class="calendar-header">Sat</div>
+      </div>
+      <div class="calendar-days" id="calendarDays"></div>
+      <div class="calendar-events-panel" id="calendarEventsPanel">
+        <h3 id="calendarEventsTitle">Select a date to see events</h3>
+        <div id="calendarEventsList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="event-lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script>
+  // ═══ DATA ═══
+  const events = [{"id":"eb_1977621356714","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-11-18","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621356714","ticketingEnabled":false},{"id":"eb_1978777799666","title":"Bayboro Presents: Uncle John's Band","description":"","date":"2026-11-19","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8cff6cd92310b15a4b2c7a8a994f305d","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-presents-uncle-johns-band-tickets-1978777799666","ticketingEnabled":false},{"id":19,"title":"Cherry Flavored ENT","description":"Come and support your local bands! Get 4 shows for the price of one! Discover new quality music with us on Friday night!\r\n\r\nRice Paper Scissors\r\nThe Pilot Waves\r\nMirror Parts\r\nThe Jackettes","date":"2026-11-20","time":"7:00pm","endTime":"8:00pm","coverCharge":"See tickets","ageRestriction":"18+","genre":"Music","image":"uploads\/events\/ticketspot_f6d6c8d2-4d24-4775-a75d-09b0a2a87b10.png","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/cherry-flavored-local-band-night-tickets-1999390485765?aff=oddtdtcreator&keep_tld=true","ticketingEnabled":false},{"id":20,"title":"Road to Nowhere (Talking Heads Tribute) with Special Guests The Family Funk","description":"","date":"2026-11-21","time":"9:00pm","endTime":"10:00pm","coverCharge":"","ageRestriction":"18+","genre":"Music","image":"uploads\/events\/ticketspot_5c1d0a1b-9ad6-4bce-a191-f8a5dca99b51.jpg","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/road-to-nowhere-talking-heads-tribute-with-special-guests-the-family-funk-tickets-2002677296705","ticketingEnabled":false},{"id":52,"title":"Dyke Night","description":"","date":"2026-11-22","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":null,"eventbriteUrl":null,"ticketingEnabled":false},{"id":"eb_1998488474826","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2026-11-23","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998488474826","ticketingEnabled":false},{"id":"eb_1977621357717","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-11-25","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621357717","ticketingEnabled":false},{"id":54,"title":"Thanksgiving","description":"Closed for Thanksgiving","date":"2026-11-26","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"","eventbriteUrl":null,"ticketingEnabled":false},{"id":118,"title":"Cherry Flavored ENT presents","description":"Get ready for an awesome night out! Cherry Flavored Local Band Night: Vol. 2 is back. Join us in person to catch some amazing local bands rocking the stage. It's the perfect chance to hang with friends, discover new music, and soak up a chill, fun vibe. See you there!\r\n\r\nFireplace\r\nPOCKET.KNIFE.DANCE.PARTY\r\nFiendish Thingies\r\nFoxlair","date":"2026-11-28","time":"6:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793225020_88e1e675.jpg","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/cherry-flavored-local-band-night-vol-2-tickets-2000994589683","ticketingEnabled":false},{"id":"eb_1998488475829","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2026-11-30","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998488475829","ticketingEnabled":false},{"id":"eb_1977621358720","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-12-02","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621358720","ticketingEnabled":false},{"id":"eb_1978777801672","title":"Bayboro Presents: Uncle John's Band","description":"","date":"2026-12-03","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8cff6cd92310b15a4b2c7a8a994f305d","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-presents-uncle-johns-band-tickets-1978777801672","ticketingEnabled":false},{"id":58,"title":"Mia Marlene Album release","description":"Everything Happens in Allamakee County : Album Release","date":"2026-12-04","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793289690_6c6824b8.jpg","eventbriteUrl":"https:\/\/tickets.venuepilot.com\/e\/mia-marlene-album-release-show-2026-12-04-bayboro-brewing-st-petersburg-ffe607","ticketingEnabled":false},{"id":59,"title":"CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT \ud83d\udc30","description":"CLUB SLAYYY: SLAYYYTER + HYPERPOP NIGHT \ud83d\udc30\r\n\r\nWOR$T PARTY IN ST. PETERSBURG:","date":"2026-12-05","time":"9:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"dance","image":"uploads\/events\/event_1792030285_0d39d98c.png","eventbriteUrl":"https:\/\/wl.eventim.us\/event\/club-slayyy-slayyyter-hyperpop-night\/708533?afflky=GloryDaysPresents","ticketingEnabled":false},{"id":"eb_1998488476832","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2026-12-07","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998488476832","ticketingEnabled":false},{"id":"eb_1999431399138","title":"Techno & Tequila Tuesdays","description":"","date":"2026-12-08","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431399138","ticketingEnabled":false},{"id":109,"title":"RadioStPete fundraiser w\/ The Petty Experience","description":"RadioStPete fundraiser w\/ The Petty Experience","date":"2026-12-09","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793063448_f511dbf7.jpg","eventbriteUrl":null,"ticketingEnabled":false},{"id":21,"title":"Brothers Within x TreeHouse!","description":"","date":"2026-12-11","time":"8:00pm","endTime":"9:00pm","coverCharge":"See tickets","ageRestriction":"18+","genre":"Music","image":"uploads\/events\/ticketspot_a03b6ab8-992f-4e18-b594-e3a44b4f3a28.png","eventbriteUrl":"https:\/\/www.eventliveus.com\/event\/10484\/treehouse-brotherswithin","ticketingEnabled":false},{"id":65,"title":"Wippersnap pre party and DTMP holiday party","description":"Whippersnap and DTMP are teaming up for a very special holiday party at Bayboro. MiniM and Zenzi will be throwing down all night, and we\u2019ll have Whippersnap ticket giveaways and special prices on merch bundles.","date":"2026-12-12","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793465867_a74de897.jpg","eventbriteUrl":"https:\/\/tickets.venuepilot.com\/e\/dtmp-holiday-party-whippersnap-pregame-feat-minim-and-zenzi-2026-12-12-bayboro-brewing-st-petersburg-13be33","ticketingEnabled":false},{"id":119,"title":"Jordan Sneed Music School show","description":"Jordan Sneed Music School show","date":"2026-12-13","time":"5:30pm","endTime":null,"coverCharge":"","ageRestriction":"All Ages","genre":"music school","image":"","eventbriteUrl":null,"ticketingEnabled":false},{"id":141,"title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2026-12-14","time":"7:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":null,"eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998488477835","ticketingEnabled":false},{"id":"eb_1977621360726","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-12-16","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621360726","ticketingEnabled":false},{"id":"eb_1978777803678","title":"Bayboro Presents: Uncle John's Band","description":"","date":"2026-12-17","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8cff6cd92310b15a4b2c7a8a994f305d","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-presents-uncle-johns-band-tickets-1978777803678","ticketingEnabled":false},{"id":67,"title":"Akin to Fire","description":"Akin to Fire Joined by Before Arcadia and Common Ground\r\n\r\ndoors 6 pm\r\nShow at 7 pm","date":"2026-12-18","time":"7:00pm","endTime":"9:30pm","coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793673460_820b63aa.jpg","eventbriteUrl":"https:\/\/tickets.venuepilot.com\/e\/akin-to-fire-album-release-party-2026-12-18-bayboro-brewing-st-petersburg-fb03ca","ticketingEnabled":false},{"id":147,"title":"Dyke Night","description":"12\/20 Dyke Night 8-1am full venue (confirmed)","date":"2026-12-20","time":"8:00pm","endTime":"1:00am","coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"","eventbriteUrl":null,"ticketingEnabled":false},{"id":"eb_1998488478838","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2026-12-21","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998488478838","ticketingEnabled":false},{"id":"eb_1977621361729","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-12-23","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621361729","ticketingEnabled":false},{"id":"eb_1978777804681","title":"Bayboro Presents: Uncle John's Band","description":"","date":"2026-12-24","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8cff6cd92310b15a4b2c7a8a994f305d","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-presents-uncle-johns-band-tickets-1978777804681","ticketingEnabled":false},{"id":"eb_1977621704755","title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"","date":"2026-12-30","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174989723%2F233319339199%2F1%2Foriginal.20260115-195703?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e091835aa0148ae30fd94c149339b906","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/wednesday-blues-5-jacks-presents-kid-royal-band-tickets-1977621704755","ticketingEnabled":false},{"id":"eb_1978777805684","title":"Bayboro Presents: Uncle John's Band","description":"","date":"2026-12-31","time":"8:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193641107%2F233319339199%2F1%2Foriginal.20260916-110027?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8cff6cd92310b15a4b2c7a8a994f305d","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-presents-uncle-johns-band-tickets-1978777805684","ticketingEnabled":false},{"id":"eb_1998381771674","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2027-01-05","time":"5:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998381771674","ticketingEnabled":false},{"id":108,"title":"SHREK RAVE","description":"\"IT'S  DUMB JUST COME HAVE FUN.  WHO CARES.  COOL IS DEAD.","date":"2027-01-08","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793069328_99a42c22.jpg","eventbriteUrl":"https:\/\/wl.eventim.us\/event\/shrek-rave\/709073?afflky=GloryDaysPresents&utm_id=97758_v0_s00_e0_tv0&fbclid=IwT01FWAVF9QBleHRuA2FlbQIxMABwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHhDWECMuYDBWzEvnZeS7jc1nfvJ0zevWOGVErq0iEQ1RjEU8fWl_n3rQr0xY_aem_B_CpWwSyX3eXe5OwHNe8mg","ticketingEnabled":false},{"id":"eb_1998381772677","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2027-01-12","time":"5:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998381772677","ticketingEnabled":false},{"id":"eb_1999431400141","title":"Techno & Tequila Tuesdays","description":"","date":"2027-01-12","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431400141","ticketingEnabled":false},{"id":122,"title":"Wednesday Blues & $5 Jacks Presents: Kid Royal Band","description":"Get ready to sway with the awesome Kid Royal Band at Bayboro Brewing Co. every Wednesday!","date":"2027-01-13","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793238007_87ac8839.jpg","eventbriteUrl":null,"ticketingEnabled":true},{"id":74,"title":"Mason Jennings","description":"Glory Days & Brokenmold Present! Mason Jennings","date":"2027-01-17","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1793300229_88981559.jpg","eventbriteUrl":"https:\/\/wl.eventim.us\/event\/mason-jennings\/708620?afflky=GloryDaysPresents","ticketingEnabled":false},{"id":"eb_1998381773680","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2027-01-19","time":"5:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998381773680","ticketingEnabled":false},{"id":"eb_1998381774683","title":"BAYBORO BREWING - Mondays are for Gaming","description":"","date":"2027-01-26","time":"5:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191359218%2F233319339199%2F1%2Foriginal.20260818-182325?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.531&fp-y=0.041&s=429c507bb232d89effae922679bb8f11","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/bayboro-brewing-mondays-are-for-gaming-tickets-1998381774683","ticketingEnabled":false},{"id":"eb_1999431401144","title":"Techno & Tequila Tuesdays","description":"","date":"2027-02-09","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431401144","ticketingEnabled":false},{"id":104,"title":"Honey Hounds + ISTA","description":"Doors at 8pm\r\nShow at 9pm\r\n\r\nHoney Hounds are an upbeat BootyShakin Blues trio from Jacksonville Beach, Florida that formed in 2015. The trio is quickly making a name for themselves with their artistically vintage approach to their music and image.They engage their audience in an experience that take you back to when Blues Rock ruled the airwaves. If you want something with funk and grit with some good indie soul vibes then look no further.","date":"2027-02-12","time":"8:00pm","endTime":null,"coverCharge":"TBD","ageRestriction":"18+","genre":"Blues","image":"uploads\/events\/event_1793059978_d5414839.jpg","eventbriteUrl":"https:\/\/tickets.venuepilot.com\/e\/honey-hounds-ista-2027-02-12-bayboro-brewing-st-petersburg-959f82","ticketingEnabled":false},{"id":105,"title":"Kevin Steel Band w\/ The New Brutarians","description":"Kevin Steel Band w\/ The New Brutarians","date":"2027-02-26","time":"8:00pm","endTime":null,"coverCharge":"","ageRestriction":"All Ages","genre":"","image":"uploads\/events\/event_1792515485_cd5b6921.png","eventbriteUrl":"https:\/\/tickets.venuepilot.com\/e\/kevin-steele-band-2027-02-26-bayboro-brewing-st-petersburg-0b9fcd","ticketingEnabled":false},{"id":"eb_1999431402147","title":"Techno & Tequila Tuesdays","description":"","date":"2027-03-09","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431402147","ticketingEnabled":false},{"id":"eb_1999431403150","title":"Techno & Tequila Tuesdays","description":"","date":"2027-04-13","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431403150","ticketingEnabled":false},{"id":148,"title":"Cursive","description":"Aestheticized presents:\r\nCursive\r\nw\/ Small Brown Bike\r\n\r\n7pm \/ 18&Up","date":"2027-05-06","time":"7:00pm","endTime":null,"coverCharge":"","ageRestriction":"18+","genre":"","image":"uploads\/events\/event_1794852806_b6b80965.jpg","eventbriteUrl":"https:\/\/cursive27.eventbrite.com","ticketingEnabled":false},{"id":"eb_1999431404153","title":"Techno & Tequila Tuesdays","description":"","date":"2027-05-11","time":"7:00pm","endTime":"10:00pm","coverCharge":"Free","ageRestriction":"18+","genre":"","image":"https:\/\/img.evbuc.com\/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1068360143%2F2211079304373%2F1%2Foriginal.20250707-200839?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.005&fp-y=0.005&s=083eafff71ed97a6bbc4d4c26b0c94c6","eventbriteUrl":"https:\/\/www.eventbrite.com\/e\/techno-tequila-tuesdays-tickets-1999431404153","ticketingEnabled":false},{"id":22,"title":"Life Afterlife: Medium Travis Holp Live","description":"","date":"2027-05-21","time":"8:00pm","endTime":"9:00pm","coverCharge":"See tickets","ageRestriction":"18+","genre":"Music","image":"uploads\/events\/ticketspot_8310e041-94a4-427a-af96-14f0768e9047.jpg","eventbriteUrl":"https:\/\/wl.eventim.us\/event\/life-afterlife-medium-travis-holp-live\/703642?afflky=GloryDaysPresents","ticketingEnabled":false}];
+  let currentMonth = new Date().getMonth();
+  let currentYear = new Date().getFullYear();
+
+  // ═══ VIEW TOGGLE ═══
+  function switchView(view) {
+    const feed = document.getElementById('feedView');
+    const cal = document.getElementById('calendarView');
+    const btnF = document.getElementById('btnFeed');
+    const btnC = document.getElementById('btnCalendar');
+
+    if (view === 'calendar') {
+      feed.style.display = 'none';
+      cal.style.display = 'block';
+      btnF.classList.remove('active');
+      btnC.classList.add('active');
+      renderCalendar();
+    } else {
+      feed.style.display = 'block';
+      cal.style.display = 'none';
+      btnC.classList.remove('active');
+      btnF.classList.add('active');
+    }
+    localStorage.setItem('bayboro_events_view', view);
+  }
+
+  // Restore saved view preference
+  const savedView = localStorage.getItem('bayboro_events_view');
+  if (savedView === 'calendar') {
+    switchView('calendar');
+  }
+
+  // ═══ CALENDAR ═══
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  function changeMonth(delta) {
+    currentMonth += delta;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    renderCalendar();
+  }
+
+  function renderCalendar() {
+    document.getElementById('calendarTitle').textContent = monthNames[currentMonth] + ' ' + currentYear;
+    const daysContainer = document.getElementById('calendarDays');
+    daysContainer.innerHTML = '';
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+
+    // Event dates for this month
+    const eventDates = {};
+    events.forEach(ev => {
+      const d = new Date(ev.date + 'T00:00:00');
+      if (d.getMonth() === currentMonth && d.getFullYear() === currentYear) {
+        const day = d.getDate();
+        if (!eventDates[day]) eventDates[day] = [];
+        eventDates[day].push(ev);
+      }
+    });
+
+    // Blank cells before first day
+    for (let i = 0; i < firstDay; i++) {
+      const blank = document.createElement('div');
+      blank.className = 'calendar-day calendar-day-empty';
+      daysContainer.appendChild(blank);
+    }
+
+    // Day cells
+    for (let d = 1; d <= daysInMonth; d++) {
+      const cell = document.createElement('div');
+      cell.className = 'calendar-day';
+
+      const isToday = d === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear();
+      if (isToday) cell.classList.add('calendar-day-today');
+
+      const num = document.createElement('span');
+      num.className = 'calendar-day-num';
+      num.textContent = d;
+      cell.appendChild(num);
+
+      if (eventDates[d]) {
+        cell.classList.add('calendar-day-has-event');
+        const dot = document.createElement('span');
+        dot.className = 'calendar-day-dot';
+        if (eventDates[d].length > 1) {
+          dot.textContent = eventDates[d].length;
+        }
+        cell.appendChild(dot);
+        cell.onclick = () => showDayEvents(d, eventDates[d]);
+      }
+
+      daysContainer.appendChild(cell);
+    }
+
+    // Clear events panel
+    document.getElementById('calendarEventsTitle').textContent = 'Select a date to see events';
+    document.getElementById('calendarEventsList').innerHTML = '';
+  }
+
+  function showDayEvents(day, dayEvents) {
+    const title = document.getElementById('calendarEventsTitle');
+    const list = document.getElementById('calendarEventsList');
+
+    title.textContent = monthNames[currentMonth] + ' ' + day + ', ' + currentYear;
+    list.innerHTML = '';
+
+    // Highlight selected day
+    document.querySelectorAll('.calendar-day-selected').forEach(el => el.classList.remove('calendar-day-selected'));
+    const allDays = document.querySelectorAll('.calendar-day');
+    allDays.forEach(el => {
+      const num = el.querySelector('.calendar-day-num');
+      if (num && parseInt(num.textContent) === day && el.classList.contains('calendar-day-has-event')) {
+        el.classList.add('calendar-day-selected');
+      }
+    });
+
+    dayEvents.forEach(ev => {
+      const card = document.createElement('div');
+      card.className = 'calendar-event-card';
+      card.innerHTML = `
+        ${ev.image ? `<div class="cal-event-img" onclick="openLightbox('${ev.image}', '${ev.title.replace(/'/g, "\\'")}')">
+          <img src="${ev.image}" alt="${ev.title}">
+        </div>` : ''}
+        <div class="cal-event-info">
+          <h4>${ev.title}</h4>
+          <p class="cal-event-time">${ev.time}${ev.endTime ? ' – ' + ev.endTime : ''}</p>
+          ${ev.description ? `<p class="cal-event-desc">${ev.description}</p>` : ''}
+          <div class="event-badges">
+            ${ev.genre ? `<span class="event-badge event-badge-genre">${ev.genre}</span>` : ''}
+            <span class="event-badge event-badge-price">${ev.coverCharge}</span>
+            <span class="event-badge event-badge-age">${ev.ageRestriction}</span>
+          </div>
+          ${ev.ticketingEnabled ? `<a href="event-detail.php?id=${ev.id}" class="eventbrite-btn" style="margin-top:12px;">Buy Tickets</a>` : (ev.eventbriteUrl ? `<a href="${ev.eventbriteUrl}" target="_blank" rel="noopener" class="eventbrite-btn" style="margin-top:12px;">Buy Tickets</a>` : '')}
+        </div>
+      `;
+      list.appendChild(card);
+    });
+
+    document.getElementById('calendarEventsPanel').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // ═══ LIGHTBOX ═══
+  function openLightbox(src, caption) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxCaption').textContent = caption;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e) {
+    if (e && e.target !== document.getElementById('lightbox') && e.target !== document.querySelector('.lightbox-close') && e.target.className !== 'lightbox-close') return;
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+  </script>
+
+  <!-- Newsletter (moved here from the homepage) -->
+  <section style="background: #000; padding: 40px 20px;">
+    <div class="newsletter-section">
+      <h2><span>Stay in the Know</span></h2>
+      <form id="newsletterForm" onsubmit="return submitNewsletter(event)">
+        <label>Enter Your Email Below</label>
+        <input type="email" id="newsletterEmail" placeholder="" required>
+        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+        <p class="note" id="newsletterMsg" style="display:none;"></p>
+        <button type="submit" class="btn-dark" id="newsletterBtn">Sign Up for Upcoming Event Notices</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+  function submitNewsletter(e) {
+    e.preventDefault();
+    var btn = document.getElementById('newsletterBtn');
+    var msg = document.getElementById('newsletterMsg');
+    var email = document.getElementById('newsletterEmail').value;
+    btn.disabled = true;
+    btn.textContent = 'Signing up...';
+    msg.style.display = 'none';
+    var form = document.getElementById('newsletterForm');
+    var data = new FormData(form);
+    data.append('email', email);
+    fetch('api/newsletter-signup.php', { method: 'POST', body: data })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        msg.textContent = data.message;
+        msg.style.display = 'block';
+        msg.style.color = data.success ? '#6ba3a0' : '#e88';
+        if (data.success) {
+          document.getElementById('newsletterEmail').value = '';
+        }
+      })
+      .catch(function() {
+        msg.textContent = 'Something went wrong. Please try again.';
+        msg.style.display = 'block';
+        msg.style.color = '#e88';
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Sign Up for Upcoming Event Notices';
+      });
+    return false;
+  }
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p><span>2390 5th Ave S<br>St. Petersburg, FL 33712<br>727-767-9666</span></p>
+    <p style="margin-top: 16px;">&copy; 2026 <span>by Bayboro</span> &nbsp;|&nbsp; <a href="#"><span>Privacy Policy</span></a></p>
+  </footer>
+
+    <script>
+  // Hero video backgrounds: sections carrying data-hero-video get an
+  // autoplaying, muted, looping video layer behind their text.
+  document.querySelectorAll('[data-hero-video]').forEach(function (sec) {
+    var v = document.createElement('video');
+    v.className = 'hero-bg-video';
+    v.src = sec.getAttribute('data-hero-video');
+    v.autoplay = true; v.muted = true; v.loop = true; v.playsInline = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    sec.insertBefore(v, sec.firstChild);
+    v.play && v.play().catch(function () {});
+  });
+
+  // Carousels scroll slowly and INFINITELY: the cards are duplicated and the
+  // position wraps by exactly one copy-width, so the loop never ends and even
+  // a carousel whose cards fit on screen keeps moving. Interaction (hover,
+  // touch, wheel, arrows) pauses the drift briefly. In Edit Site mode the
+  // duplication is skipped so every editable element stays unique.
+  var cmsEditing = !!document.querySelector('[data-cms-type]');
+  document.querySelectorAll('.photo-scroll-container').forEach(function (track) {
+    if (track.children.length < 2) return;
+    if (cmsEditing) {
+      // Edit Site mode: hold perfectly still so cards are stable click
+      // targets, and give EVERY carousel paging arrows so off-screen
+      // cards can be reached and edited.
+      var esec = track.closest('.photo-scroll-section') || track.parentElement;
+      var page = function (dir) {
+        var card = track.querySelector('.photo-scroll-card');
+        var w = card ? card.getBoundingClientRect().width + 20 : 300;
+        track.scrollBy({ left: dir * w, behavior: 'smooth' });
+      };
+      esec.querySelectorAll('.carousel-arrow').forEach(function (b) {
+        b.addEventListener('click', function () { page(parseInt(b.dataset.dir, 10) || 1); });
+      });
+      if (getComputedStyle(esec).position === 'static') esec.style.position = 'relative';
+      [[-1, '‹', 'left'], [1, '›', 'right']].forEach(function (cfg) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = cfg[1];
+        b.title = 'Scroll the carousel to edit more cards';
+        b.style.cssText = 'position:absolute;top:50%;' + cfg[2] + ':10px;transform:translateY(-50%);'
+          + 'z-index:60;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.45);'
+          + 'background:rgba(10,12,20,.88);color:#fff;font-size:22px;line-height:1;cursor:pointer;';
+        b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); page(cfg[0]); });
+        esec.appendChild(b);
+      });
+      return;
+    }
+    var paused = false, resumeT = null, last = null;
+    // Sub-pixel steps vanish if we read scrollLeft back each frame (browsers
+    // round it), so the true position lives in this float.
+    var pos = 0;
+    var period = 0;   // width of one full copy of the cards; 0 = not cloned yet
+
+    function ensureLoop() {
+      if (period || cmsEditing) return;
+      var baseW = track.scrollWidth;
+      if (!baseW || track.clientWidth === 0) return;
+      var kids = Array.prototype.slice.call(track.children);
+      var addCopy = function () {
+        kids.forEach(function (k) {
+          var c = k.cloneNode(true);
+          c.setAttribute('aria-hidden', 'true');
+          c.classList.add('psc-clone');
+          track.appendChild(c);
+        });
+      };
+      addCopy();
+      period = track.scrollWidth - baseW;   // one copy incl. the joining gap
+      if (period < 8) { period = 0; return; }
+      // Enough runway that the wrap point is always reachable.
+      var guard = 0;
+      while (track.scrollWidth - track.clientWidth < period + 16 && guard++ < 6) addCopy();
+    }
+
+    function rest(ms) {
+      paused = true;
+      clearTimeout(resumeT);
+      resumeT = setTimeout(function () { paused = false; last = null; pos = track.scrollLeft; }, ms);
+    }
+    ['pointerdown', 'wheel', 'touchstart'].forEach(function (ev) {
+      track.addEventListener(ev, function () { rest(2500); }, { passive: true });
+    });
+    track.addEventListener('mouseenter', function () { paused = true; clearTimeout(resumeT); });
+    track.addEventListener('mouseleave', function () { rest(800); });
+
+    function tick(ts) {
+      if (last === null) { last = ts; pos = track.scrollLeft; }
+      var dt = Math.min(50, ts - last);
+      last = ts;
+      if (!paused && !document.hidden) {
+        ensureLoop();   // card widths arrive with the images, so retry per frame
+        var max = track.scrollWidth - track.clientWidth;
+        if (max > 4) {
+          if (Math.abs(track.scrollLeft - pos) > 2) pos = track.scrollLeft;  // manual scroll happened
+          pos += 0.025 * dt;   // ~25px per second, always forward
+          if (period && pos >= period) pos -= period;        // seamless wrap
+          else if (!period && pos >= max) pos = 0;           // edit mode fallback
+          pos = Math.max(0, Math.min(max, pos));
+          track.scrollLeft = pos;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    var sec = track.closest('.photo-scroll-section');
+    if (sec) sec.querySelectorAll('.carousel-arrow').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var card = track.querySelector('.photo-scroll-card');
+        var w = card ? card.getBoundingClientRect().width + 20 : 300;
+        track.scrollBy({ left: (parseInt(b.dataset.dir, 10) || 1) * w, behavior: 'smooth' });
+        rest(6000);
+      });
+    });
+  });
+  </script>
+
+    
+</body>
+</html>

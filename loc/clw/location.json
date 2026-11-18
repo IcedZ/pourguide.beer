@@ -1,0 +1,32 @@
+{
+  "name": "Clearwater",
+  "url": "https://clw.pourguide.beer",
+  "timezone": "America/New_York",
+  "title": "Clearwater breweries today — pourguide.beer",
+  "description": "What’s on tap, which food trucks are parked, and what’s happening tonight at breweries from Clearwater and Safety Harbor up to Tarpon Springs.",
+  "shareTitle": "Clearwater breweries today",
+  "shareDescription": "Taps, food trucks and events at North and Central Pinellas breweries, on one page.",
+  "wordmark": "clearwater",
+  "showPourguideAbove": true,
+  "footerNote": "Breweries from the central and north regions of Visit St. Pete/Clearwater’s <a href=\"https://www.visitstpeteclearwater.com/eat-drink/gulp-coast-beer-trail/central\">Gulp Coast beer trail</a> (Dunedin has <a href=\"https://dunedin.pourguide.beer\">its own guide</a>).",
+  "fixturesNow": "2026-11-17T16:00:00-05:00",
+  "areas": [
+    {
+      "name": "Clearwater",
+      "match": [
+        "Clearwater Beach",
+        "Safety Harbor"
+      ],
+      "note": "Clearwater, the beach and Safety Harbor"
+    },
+    {
+      "name": "Palm Harbor",
+      "note": "Both on the Pinellas Trail"
+    },
+    {
+      "name": "Tarpon Springs",
+      "note": "Downtown, near the Sponge Docks"
+    }
+  ],
+  "otherAreasHeading": "Largo, Seminole & the beaches"
+}

@@ -1,0 +1,12 @@
+# Brewery order on stpete.pourguide.beer
+#
+# Breweries listed under `pinned` always appear first in their area, in the order listed.
+# Every other brewery is shuffled into a new random order each time the page loads.
+#
+# Brewery ids: 3-daughters, bayboro, cage, grand-central, green-bench, gulfport, mad-beach,
+# mastrys, overflow, pinellas-ale-works, ratc, sea-dog, st-pete-brewing
+
+pinned: []
+
+# Small label shown on pinned breweries. Set to "" to show no label.
+pinnedLabel: Featured

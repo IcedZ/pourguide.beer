@@ -22,7 +22,18 @@ interface ManualEntry {
   tapsNote?: string;
   taps?: Beer[];
   items?: { kind: Item['kind']; title: string; date: string; start?: string; end?: string; url?: string; description?: string }[];
-  recurring?: { kind: Item['kind']; title: string; weekday: string; start?: string; end?: string; from?: string; until?: string; url?: string }[];
+  recurring?: {
+    kind: Item['kind'];
+    title: string;
+    weekday: string;
+    /** Only these weeks of the month: 1–5, or -1 for the last. Leave out for every week. */
+    weeks?: number[];
+    start?: string;
+    end?: string;
+    from?: string;
+    until?: string;
+    url?: string;
+  }[];
   hide?: string[];
 }
 
@@ -145,6 +156,11 @@ function manualItems(m: ManualEntry, ctx: Ctx): Item[] {
       if (WEEKDAYS.indexOf(r.weekday.slice(0, 3).toLowerCase()) !== dow) continue;
       if (r.from && day < String(r.from)) continue;
       if (r.until && day > String(r.until)) continue;
+      if (r.weeks?.length) {
+        const dom = Number(day.slice(8, 10));
+        const isLast = Number(addDays(day, 7).slice(5, 7)) !== Number(day.slice(5, 7));
+        if (!r.weeks.some((w) => (w === -1 ? isLast : Math.ceil(dom / 7) === w))) continue;
+      }
       out.push(mk(day, r));
     }
   }

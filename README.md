@@ -51,9 +51,18 @@ Each brewery is a `BreweryDef` with its address, hours and one or more `sources`
 | Squarespace list sections (one list per group of beers) | `parseSqsUserItems` |
 | iMenuPro menu (`imenupro.com/!<code>`) | `fetchIMenuPro` + `parseIMenuPro` |
 | BentoBox site with dated event pages | `fetchBentoEvents(origin, fixturePrefix)` |
+| SpotHopper site (images on static.spotapps.co) | `parseSpotMenu`, `parseSpotEvents` |
+| Craftpeak / Arryved website ("Powered by Arryved", a `.taplist` block) | `parseCraftpeakTaplist` |
+| BeerMenus web menu or widget (`beermenus.com/web_menus/<id>`, `menu_widgets/<id>`) | `parseBeerMenus`, `fetchBeerMenusWidget` |
+| Zoogle calendar (images.zoogletools.com) | `parseZoogleEvents` + `zoogleTimes` |
+| WordPress Eventer plugin (`/eventer/<slug>/edate/<date>` links) | `parseEventerList` |
 | Nothing readable | `noteOnly('Tap list', 'Where their list lives')`, plus `manual.yaml` |
 
 A brewery that serves food from its own kitchen gets `kitchen: { name?, menuUrl? }`. Its Food trucks column then says so and links to the menu (if there is one online), whether or not trucks are listed.
+
+A location can group its breweries into colored clusters by neighborhood with `areas` in `location.json`: `[{ name, match?, note?, color? }]`. A brewery joins a cluster when its `area` is the cluster's `name` or one of `match`. Each cluster gets a colored stripe, a heading and a jump link under the summary; breweries are shuffled within each cluster, and any not in a cluster go last under `otherAreasHeading` (default "Around town"). Colors default to the area palette in `shared/theme.css`. `loc/tpa/location.json` has an example. Leave `areas` out for one plain list.
+
+`manual.yaml` recurring items can take `weeks: [1, 3]` (1st and 3rd of the month) or `weeks: [-1]` (last).
 
 A location can name places that aren't breweries (distilleries, a winery) in `location.json` under `alsoNearby: { heading, intro, places: [{ name, url, note }] }`. They're listed and linked under the breweries, with no taps or hours. `loc/staug/location.json` has an example.
 
@@ -120,3 +129,19 @@ First Magnitude, Swamp Head, Cypress & Grove, Blackadder, Grand Scheme, Daft Cow
 ### St. Augustine (`loc/staug`)
 
 The breweries on Florida's Historic Coast [craft beverages](https://www.floridashistoriccoast.com/food-drink/craft-beverages/) list as of November 2026: The Bog, Bootlegger Beach (at Jack's Bar-B-Que), Dog Rose, Hornski's and Old Coast Ales. Ancient City Brewing, Disco Witch and King Maker are closed, and A1A Ale Works no longer brews, so they're left out. The distilleries and San Sebastian Winery are named under "Not beer, but nearby" (`alsoNearby` in `location.json`). Dog Rose posts its beer menu as an image and Bootlegger Beach only uses Instagram, so their rows show a note; Dog Rose's weekly pizza and Sunday band are in `manual.yaml`, and its dated events and food trucks come from its BentoBox event pages. Old Coast's dated music line-up on its home page was out of date when the guide was built, so the guide also shows "Live music" on Wednesday evenings for any week without a named act.
+
+### Dunedin (`loc/dunedin`)
+
+The Dunedin breweries on the Gulp Coast beer trail's north region, November 2026: 7venth Sun, Caledonia, Cueni, Dunedin Brewery, HOB, Soggy Bottom and Woodwright. Truck & Ladder (formerly Beach Island) has closed. Woodwright and Dunedin Brewery don't post a tap list. Caledonia's weekly and monthly nights are in `manual.yaml`. Cotherman Distilling is under "Not beer, but nearby".
+
+### St. Pete (`loc/stpete`)
+
+The Gulp Coast trail's south region: St. Petersburg, Gulfport and the beaches, in three clusters (Grand Central & Warehouse Arts, Downtown & the Edge, The Beaches) plus Gulfport. Live tap lists from Grand Central, Green Bench and Mad Beach; events from 3 Daughters, Bayboro and Green Bench. Right Around the Corner, Cage, St. Pete Brewing and Mastry’s only load their menus in a browser, so those rows show a note. Overflow has no working website.
+
+### Tampa (`loc/tpa`)
+
+By neighborhood: Ybor City, Seminole Heights, and Tampa Heights & Downtown, plus Tampa Bay Brewing's Westchase brewpub. Live tap lists from Angry Chair and both Magnanimous taprooms (BeerMenus). Cigar City is listed in Ybor as opening soon (it left Spruce Street in 2026). Left out because they've closed: Tampa Bay Brewing's Ybor taproom, Florida Avenue's Seminole Heights taproom, Southern Brewing & Winemaking, and 7venth Sun's Seminole Heights taproom.
+
+### Clearwater (`loc/clw`)
+
+The Gulp Coast trail's central and north regions without Dunedin, plus 3 Daughters' Clearwater Beach rooftop: clusters for Clearwater (with the beach and Safety Harbor), Palm Harbor and Tarpon Springs, then Largo, Seminole and Indian Rocks Beach. Live tap lists from Crooked Thumb, de Bine and Rapp; Rapp's food trucks come from its Google Calendar. Troubled Waters (Safety Harbor) is left out because its website has lapsed and it couldn't be confirmed open.
